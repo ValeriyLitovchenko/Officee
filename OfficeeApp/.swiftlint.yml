@@ -1,0 +1,78 @@
+#  LUA
+# https://realm.github.io/SwiftLint/rule-directory.html
+
+disabled_rules:
+- trailing_whitespace
+- identifier_name
+- missing_docs
+- opening_brace
+  
+opt_in_rules:
+- array_init
+- attributes
+- closure_spacing
+- collection_alignment
+- colon
+- convenience_type
+- discouraged_object_literal
+- empty_count
+- empty_string
+- empty_collection_literal
+- enum_case_associated_values_count
+- fatal_error_message
+- force_unwrapping
+- first_where
+- last_where
+- legacy_random
+- literal_expression_end_indentation
+- missing_docs
+- multiline_arguments
+- multiline_parameters
+- multiline_function_chains
+- multiline_literal_brackets
+- operator_usage_whitespace
+- overridden_super_call
+- pattern_matching_keywords
+- prefer_self_type_over_type_of_self
+- redundant_nil_coalescing
+- redundant_type_annotation
+- strict_fileprivate
+- toggle_bool
+- trailing_closure
+- unneeded_parentheses_in_closure_argument
+- unused_import
+- yoda_condition
+
+trailing_closure:
+    only_single_muted_parameter: true
+
+line_length:
+    ignores_function_declarations: true
+    ignores_comments: true
+    ignores_urls: true
+ 
+legacy_hashing: error
+ 
+function_body_length:
+    warning: 60
+function_parameter_count:
+    warning: 6
+    error: 8
+type_name:
+    max_length: 60
+    
+force_cast: warning
+force_try: warning
+
+cyclomatic_complexity:
+    warning: 15
+    error: 25
+
+multiline_arguments:
+  first_argument_location: next_line
+  only_enforce_after_first_closure_on_first_line: true
+  
+private_over_fileprivate:
+  validate_extensions: true
+  
+reporter: "xcode"
