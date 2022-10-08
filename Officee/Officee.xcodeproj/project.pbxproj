@@ -32,6 +32,8 @@
 		641DFDEA28F18B8D00F13AEA /* ManagedRoom+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDE928F18B8D00F13AEA /* ManagedRoom+Operations.swift */; };
 		641DFDF028F18D1E00F13AEA /* PeopleFeedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDEF28F18D1E00F13AEA /* PeopleFeedStorage.swift */; };
 		641DFDF328F18E8000F13AEA /* CoreDataPeopleFeedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDF228F18E8000F13AEA /* CoreDataPeopleFeedStorage.swift */; };
+		641DFDF528F1913D00F13AEA /* RoomsFeedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDF428F1913C00F13AEA /* RoomsFeedStorage.swift */; };
+		641DFDF728F1922D00F13AEA /* CoreDataRoomsFeedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDF628F1922D00F13AEA /* CoreDataRoomsFeedStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		641DFDE928F18B8D00F13AEA /* ManagedRoom+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedRoom+Operations.swift"; sourceTree = "<group>"; };
 		641DFDEF28F18D1E00F13AEA /* PeopleFeedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedStorage.swift; sourceTree = "<group>"; };
 		641DFDF228F18E8000F13AEA /* CoreDataPeopleFeedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPeopleFeedStorage.swift; sourceTree = "<group>"; };
+		641DFDF428F1913C00F13AEA /* RoomsFeedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedStorage.swift; sourceTree = "<group>"; };
+		641DFDF628F1922D00F13AEA /* CoreDataRoomsFeedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRoomsFeedStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,7 @@
 				641DFDCE28F1780C00F13AEA /* Infrastructure */,
 				641DFDD028F1781E00F13AEA /* Room.swift */,
 				641DFDE528F1868E00F13AEA /* LocalRoom.swift */,
+				641DFDF428F1913C00F13AEA /* RoomsFeedStorage.swift */,
 			);
 			path = "Rooms Feed";
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				641DFDE928F18B8D00F13AEA /* ManagedRoom+Operations.swift */,
+				641DFDF628F1922D00F13AEA /* CoreDataRoomsFeedStorage.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -392,7 +398,9 @@
 				641DFDC728F1650A00F13AEA /* PeopleFeedApiEndpoint.swift in Sources */,
 				641DFDD328F17A5C00F13AEA /* RoomsFeedApiEndpoint.swift in Sources */,
 				641DFDF028F18D1E00F13AEA /* PeopleFeedStorage.swift in Sources */,
+				641DFDF528F1913D00F13AEA /* RoomsFeedStorage.swift in Sources */,
 				641DFDD528F17AD900F13AEA /* RoomsFeedResultMapper.swift in Sources */,
+				641DFDF728F1922D00F13AEA /* CoreDataRoomsFeedStorage.swift in Sources */,
 				641DFDBC28F15C8C00F13AEA /* NetworkService.swift in Sources */,
 				641DFDE828F187D600F13AEA /* ManagedPerson+Operations.swift in Sources */,
 				641DFDE628F1868E00F13AEA /* LocalRoom.swift in Sources */,

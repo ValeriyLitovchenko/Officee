@@ -9,7 +9,7 @@ import Foundation
 
 extension CoreDataStorage: PeopleFeedStorage {
   public func getPeople(for query: String?) throws -> [LocalPerson] {
-    try self.performSync { context in
+    try performSync { context in
       Result {
         let result = try ManagedPerson.findPeople(in: context, query: query)
         return result.map(\.asLocalPerson)
@@ -18,7 +18,7 @@ extension CoreDataStorage: PeopleFeedStorage {
   }
   
   public func hasStoredPeople() throws -> Bool {
-    try self.performSync { context in
+    try performSync { context in
       Result {
         try ManagedPerson.isPeopleStored(in: context)
       }
@@ -37,7 +37,7 @@ extension CoreDataStorage: PeopleFeedStorage {
     }
   }
   
-  public func deleteAll() throws {
+  public func deleteAllPeople() throws {
     try performSync { context in
       Result {
         try ManagedPerson.deleteAll(in: context)

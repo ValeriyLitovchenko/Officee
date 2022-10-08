@@ -16,5 +16,5 @@ public protocol PeopleFeedStorage {
   /// Save people
   func save(people: [LocalPerson]) throws
   /// Remove all people
-  func deleteAll() throws
+  func deleteAllPeople() throws
 }
