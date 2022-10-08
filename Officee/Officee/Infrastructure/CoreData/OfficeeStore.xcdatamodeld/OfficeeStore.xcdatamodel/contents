@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="ManagedPerson" representedClassName="ManagedPerson" syncable="YES" codeGenerationType="category">
+        <attribute name="avatar" attributeType="String"/>
+        <attribute name="email" attributeType="String"/>
+        <attribute name="favoriteColor" attributeType="String"/>
+        <attribute name="firstName" attributeType="String"/>
+        <attribute name="fullName" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="jobTitle" attributeType="String"/>
+        <attribute name="lastName" attributeType="String"/>
+        <attribute name="meetingDescription" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ManagedRoom" representedClassName="ManagedRoom" syncable="YES" codeGenerationType="category">
+        <attribute name="id" attributeType="String"/>
+        <attribute name="isOccupied" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="maxOccupancy" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="ManagedPerson" positionX="-63" positionY="-18" width="128" height="164"/>
+        <element name="ManagedRoom" positionX="-54" positionY="54" width="128" height="89"/>
+    </elements>
 </model>

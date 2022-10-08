@@ -24,6 +24,12 @@
 		641DFDD528F17AD900F13AEA /* RoomsFeedResultMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDD428F17AD900F13AEA /* RoomsFeedResultMapper.swift */; };
 		641DFDD828F17DB800F13AEA /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDD728F17DB800F13AEA /* CoreDataStorage.swift */; };
 		641DFDDE28F182EC00F13AEA /* OfficeeStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDDC28F182EC00F13AEA /* OfficeeStore.xcdatamodeld */; };
+		641DFDE128F1848900F13AEA /* ManagedRoom+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDE028F1848900F13AEA /* ManagedRoom+CoreDataClass.swift */; };
+		641DFDE228F1848900F13AEA /* ManagedPerson+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDDF28F1848900F13AEA /* ManagedPerson+CoreDataClass.swift */; };
+		641DFDE428F1865700F13AEA /* LocalPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDE328F1865700F13AEA /* LocalPerson.swift */; };
+		641DFDE628F1868E00F13AEA /* LocalRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDE528F1868E00F13AEA /* LocalRoom.swift */; };
+		641DFDE828F187D600F13AEA /* ManagedPerson+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDE728F187D600F13AEA /* ManagedPerson+Operations.swift */; };
+		641DFDEA28F18B8D00F13AEA /* ManagedRoom+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDE928F18B8D00F13AEA /* ManagedRoom+Operations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +52,12 @@
 		641DFDD428F17AD900F13AEA /* RoomsFeedResultMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedResultMapper.swift; sourceTree = "<group>"; };
 		641DFDD728F17DB800F13AEA /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		641DFDDD28F182EC00F13AEA /* OfficeeStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OfficeeStore.xcdatamodel; sourceTree = "<group>"; };
+		641DFDDF28F1848900F13AEA /* ManagedPerson+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ManagedPerson+CoreDataClass.swift"; path = "/Users/valeriyl/Desktop/Projects/TechnicalTask/Officee/Officee/Officee/Infrastructure/CoreData/ManagedPerson+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		641DFDE028F1848900F13AEA /* ManagedRoom+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ManagedRoom+CoreDataClass.swift"; path = "/Users/valeriyl/Desktop/Projects/TechnicalTask/Officee/Officee/Officee/Infrastructure/CoreData/ManagedRoom+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		641DFDE328F1865700F13AEA /* LocalPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPerson.swift; sourceTree = "<group>"; };
+		641DFDE528F1868E00F13AEA /* LocalRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRoom.swift; sourceTree = "<group>"; };
+		641DFDE728F187D600F13AEA /* ManagedPerson+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedPerson+Operations.swift"; sourceTree = "<group>"; };
+		641DFDE928F18B8D00F13AEA /* ManagedRoom+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedRoom+Operations.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +167,7 @@
 			children = (
 				641DFDC428F164D500F13AEA /* Infrastructure */,
 				641DFDCB28F1691F00F13AEA /* Person.swift */,
+				641DFDE328F1865700F13AEA /* LocalPerson.swift */,
 			);
 			path = "People Feed";
 			sourceTree = "<group>";
@@ -163,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				641DFDC528F164F900F13AEA /* API */,
+				641DFDEC28F18C3400F13AEA /* CoreData */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -181,6 +195,7 @@
 			children = (
 				641DFDCE28F1780C00F13AEA /* Infrastructure */,
 				641DFDD028F1781E00F13AEA /* Room.swift */,
+				641DFDE528F1868E00F13AEA /* LocalRoom.swift */,
 			);
 			path = "Rooms Feed";
 			sourceTree = "<group>";
@@ -189,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				641DFDCF28F1781100F13AEA /* API */,
+				641DFDEB28F18C0600F13AEA /* CoreData */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -206,7 +222,25 @@
 			isa = PBXGroup;
 			children = (
 				641DFDD728F17DB800F13AEA /* CoreDataStorage.swift */,
+				641DFDDF28F1848900F13AEA /* ManagedPerson+CoreDataClass.swift */,
+				641DFDE028F1848900F13AEA /* ManagedRoom+CoreDataClass.swift */,
 				641DFDDC28F182EC00F13AEA /* OfficeeStore.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		641DFDEB28F18C0600F13AEA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDE928F18B8D00F13AEA /* ManagedRoom+Operations.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		641DFDEC28F18C3400F13AEA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDE728F187D600F13AEA /* ManagedPerson+Operations.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -336,10 +370,13 @@
 			files = (
 				641DFDBE28F15F5700F13AEA /* Cancellable.swift in Sources */,
 				641DFDC028F160ED00F13AEA /* RestApiNetworkService.swift in Sources */,
+				641DFDE428F1865700F13AEA /* LocalPerson.swift in Sources */,
+				641DFDE128F1848900F13AEA /* ManagedRoom+CoreDataClass.swift in Sources */,
 				641DFDAC28F0B0B000F13AEA /* HTTPClient.swift in Sources */,
 				641DFDB228F0B2EA00F13AEA /* URLSessionHTTPClient.swift in Sources */,
 				641DFDCA28F1691200F13AEA /* PeopleFeedResultMapper.swift in Sources */,
 				641DFDB928F0B51C00F13AEA /* HTTPURLResponseValidator.swift in Sources */,
+				641DFDE228F1848900F13AEA /* ManagedPerson+CoreDataClass.swift in Sources */,
 				641DFDD128F1781E00F13AEA /* Room.swift in Sources */,
 				641DFDCC28F1691F00F13AEA /* Person.swift in Sources */,
 				641DFDD828F17DB800F13AEA /* CoreDataStorage.swift in Sources */,
@@ -349,7 +386,10 @@
 				641DFDD328F17A5C00F13AEA /* RoomsFeedApiEndpoint.swift in Sources */,
 				641DFDD528F17AD900F13AEA /* RoomsFeedResultMapper.swift in Sources */,
 				641DFDBC28F15C8C00F13AEA /* NetworkService.swift in Sources */,
+				641DFDE828F187D600F13AEA /* ManagedPerson+Operations.swift in Sources */,
+				641DFDE628F1868E00F13AEA /* LocalRoom.swift in Sources */,
 				641DFDB528F0B34F00F13AEA /* Aliases.swift in Sources */,
+				641DFDEA28F18B8D00F13AEA /* ManagedRoom+Operations.swift in Sources */,
 				641DFDC228F163AF00F13AEA /* ApiEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
