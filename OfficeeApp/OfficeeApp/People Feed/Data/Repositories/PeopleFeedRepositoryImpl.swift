@@ -5,8 +5,8 @@
 //  Created by Valeriy L on 08.10.2022.
 //
 
-import Combine
 import Officee
+import Combine
 
 final class PeopleFeedRepositoryImpl: PeopleFeedRepository {
   
