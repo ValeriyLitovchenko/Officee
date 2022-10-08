@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		641DFD3328F095C200F13AEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFD3228F095C200F13AEA /* AppDelegate.swift */; };
-		641DFD3728F095C200F13AEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFD3628F095C200F13AEA /* ViewController.swift */; };
-		641DFD3A28F095C200F13AEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 641DFD3828F095C200F13AEA /* Main.storyboard */; };
 		641DFD3C28F095C300F13AEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 641DFD3B28F095C300F13AEA /* Assets.xcassets */; };
 		641DFD3F28F095C300F13AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 641DFD3D28F095C300F13AEA /* LaunchScreen.storyboard */; };
 		641DFD9C28F09CE200F13AEA /* Officee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641DFD9B28F09CE200F13AEA /* Officee.framework */; };
@@ -65,11 +63,8 @@
 /* Begin PBXFileReference section */
 		641DFD2F28F095C200F13AEA /* OfficeeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfficeeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		641DFD3228F095C200F13AEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		641DFD3628F095C200F13AEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		641DFD3928F095C200F13AEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		641DFD3B28F095C300F13AEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		641DFD3E28F095C300F13AEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		641DFD4028F095C300F13AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		641DFD9B28F09CE200F13AEA /* Officee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Officee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		641DFD9D28F09CE600F13AEA /* OfficeeiOSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OfficeeiOSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		641DFDFF28F1ACD100F13AEA /* PeopleFeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedRepository.swift; sourceTree = "<group>"; };
@@ -143,11 +138,7 @@
 				64468BCA28F1EFAB000F901B /* Service Locator */,
 				64468BDF28F20290000F901B /* Presentation */,
 				64468BF228F20A99000F901B /* Helpers */,
-				641DFD3628F095C200F13AEA /* ViewController.swift */,
-				641DFD3828F095C200F13AEA /* Main.storyboard */,
-				641DFD3B28F095C300F13AEA /* Assets.xcassets */,
-				641DFD3D28F095C300F13AEA /* LaunchScreen.storyboard */,
-				641DFD4028F095C300F13AEA /* Info.plist */,
+				64468C0228F21619000F901B /* Resources */,
 			);
 			path = OfficeeApp;
 			sourceTree = "<group>";
@@ -248,6 +239,7 @@
 		64468BDF28F20290000F901B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				641DFD3D28F095C300F13AEA /* LaunchScreen.storyboard */,
 				64468BE028F2036C000F901B /* Proxy Launch Scene */,
 			);
 			path = Presentation;
@@ -343,6 +335,14 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		64468C0228F21619000F901B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				641DFD3B28F095C300F13AEA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -412,7 +412,6 @@
 				641DFD3F28F095C300F13AEA /* LaunchScreen.storyboard in Resources */,
 				641DFD3C28F095C300F13AEA /* Assets.xcassets in Resources */,
 				64468C0128F2121B000F901B /* ProxyLaunchControllerView.xib in Resources */,
-				641DFD3A28F095C200F13AEA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +457,6 @@
 				64468BD328F1F164000F901B /* SwinjectResolver+ServiceLocating.swift in Sources */,
 				641DFE2428F1BC7500F13AEA /* NetworkService+Combine.swift in Sources */,
 				64468BD628F1F225000F901B /* NetworkLayerAssembly.swift in Sources */,
-				641DFD3728F095C200F13AEA /* ViewController.swift in Sources */,
 				641DFE0028F1ACD100F13AEA /* PeopleFeedRepository.swift in Sources */,
 				64468BE228F20474000F901B /* ProxyLaunchFlowCoordinator.swift in Sources */,
 				64468BDC28F1F7E7000F901B /* AppFlowCoordinator.swift in Sources */,
@@ -479,14 +477,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		641DFD3828F095C200F13AEA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				641DFD3928F095C200F13AEA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		641DFD3D28F095C300F13AEA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -620,10 +610,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OfficeeApp/Info.plist;
+				INFOPLIST_FILE = OfficeeApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -649,10 +638,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = OfficeeApp/Info.plist;
+				INFOPLIST_FILE = OfficeeApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
