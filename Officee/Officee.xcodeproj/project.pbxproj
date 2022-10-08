@@ -22,6 +22,8 @@
 		641DFDD128F1781E00F13AEA /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDD028F1781E00F13AEA /* Room.swift */; };
 		641DFDD328F17A5C00F13AEA /* RoomsFeedApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDD228F17A5C00F13AEA /* RoomsFeedApiEndpoint.swift */; };
 		641DFDD528F17AD900F13AEA /* RoomsFeedResultMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDD428F17AD900F13AEA /* RoomsFeedResultMapper.swift */; };
+		641DFDD828F17DB800F13AEA /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDD728F17DB800F13AEA /* CoreDataStorage.swift */; };
+		641DFDDE28F182EC00F13AEA /* OfficeeStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDDC28F182EC00F13AEA /* OfficeeStore.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		641DFDD028F1781E00F13AEA /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		641DFDD228F17A5C00F13AEA /* RoomsFeedApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedApiEndpoint.swift; sourceTree = "<group>"; };
 		641DFDD428F17AD900F13AEA /* RoomsFeedResultMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedResultMapper.swift; sourceTree = "<group>"; };
+		641DFDD728F17DB800F13AEA /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
+		641DFDDD28F182EC00F13AEA /* OfficeeStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OfficeeStore.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			children = (
 				641DFDAD28F0B1EB00F13AEA /* API */,
 				641DFDBA28F0B5AF00F13AEA /* Network */,
+				641DFDD628F17D9700F13AEA /* CoreData */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -195,6 +200,15 @@
 				641DFDD428F17AD900F13AEA /* RoomsFeedResultMapper.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		641DFDD628F17D9700F13AEA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDD728F17DB800F13AEA /* CoreDataStorage.swift */,
+				641DFDDC28F182EC00F13AEA /* OfficeeStore.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,7 +342,9 @@
 				641DFDB928F0B51C00F13AEA /* HTTPURLResponseValidator.swift in Sources */,
 				641DFDD128F1781E00F13AEA /* Room.swift in Sources */,
 				641DFDCC28F1691F00F13AEA /* Person.swift in Sources */,
+				641DFDD828F17DB800F13AEA /* CoreDataStorage.swift in Sources */,
 				641DFDB728F0B42000F13AEA /* HTTPURLResponse+StatusCode.swift in Sources */,
+				641DFDDE28F182EC00F13AEA /* OfficeeStore.xcdatamodeld in Sources */,
 				641DFDC728F1650A00F13AEA /* PeopleFeedApiEndpoint.swift in Sources */,
 				641DFDD328F17A5C00F13AEA /* RoomsFeedApiEndpoint.swift in Sources */,
 				641DFDD528F17AD900F13AEA /* RoomsFeedResultMapper.swift in Sources */,
@@ -607,6 +623,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		641DFDDC28F182EC00F13AEA /* OfficeeStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				641DFDDD28F182EC00F13AEA /* OfficeeStore.xcdatamodel */,
+			);
+			currentVersion = 641DFDDD28F182EC00F13AEA /* OfficeeStore.xcdatamodel */;
+			path = OfficeeStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 641DFD4728F096C100F13AEA /* Project object */;
 }
