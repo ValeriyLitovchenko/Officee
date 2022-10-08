@@ -16,6 +16,10 @@
 		641DFD9E28F09CE600F13AEA /* OfficeeiOSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641DFD9D28F09CE600F13AEA /* OfficeeiOSCore.framework */; };
 		641DFDA028F09D3A00F13AEA /* Officee.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 641DFD9B28F09CE200F13AEA /* Officee.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		641DFDA128F09D3F00F13AEA /* OfficeeiOSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 641DFD9D28F09CE600F13AEA /* OfficeeiOSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		641DFE0028F1ACD100F13AEA /* PeopleFeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDFF28F1ACD100F13AEA /* PeopleFeedRepository.swift */; };
+		641DFE0528F1ADFE00F13AEA /* RoomsFeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFE0428F1ADFE00F13AEA /* RoomsFeedRepository.swift */; };
+		641DFE0828F1AE6C00F13AEA /* PeopleFeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFE0728F1AE6C00F13AEA /* PeopleFeedRequest.swift */; };
+		641DFE0A28F1AED200F13AEA /* RoomsFeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFE0928F1AED200F13AEA /* RoomsFeedRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +47,10 @@
 		641DFD4028F095C300F13AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		641DFD9B28F09CE200F13AEA /* Officee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Officee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		641DFD9D28F09CE600F13AEA /* OfficeeiOSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OfficeeiOSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		641DFDFF28F1ACD100F13AEA /* PeopleFeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedRepository.swift; sourceTree = "<group>"; };
+		641DFE0428F1ADFE00F13AEA /* RoomsFeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedRepository.swift; sourceTree = "<group>"; };
+		641DFE0728F1AE6C00F13AEA /* PeopleFeedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedRequest.swift; sourceTree = "<group>"; };
+		641DFE0928F1AED200F13AEA /* RoomsFeedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,8 @@
 		641DFD3128F095C200F13AEA /* OfficeeApp */ = {
 			isa = PBXGroup;
 			children = (
+				641DFE0128F1AD8C00F13AEA /* People Feed */,
+				641DFE0228F1ADDB00F13AEA /* Rooms Feed */,
 				641DFD3228F095C200F13AEA /* AppDelegate.swift */,
 				641DFD3628F095C200F13AEA /* ViewController.swift */,
 				641DFD3828F095C200F13AEA /* Main.storyboard */,
@@ -95,6 +105,40 @@
 				641DFD9B28F09CE200F13AEA /* Officee.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		641DFE0128F1AD8C00F13AEA /* People Feed */ = {
+			isa = PBXGroup;
+			children = (
+				641DFE0B28F1AFC700F13AEA /* Domain */,
+			);
+			path = "People Feed";
+			sourceTree = "<group>";
+		};
+		641DFE0228F1ADDB00F13AEA /* Rooms Feed */ = {
+			isa = PBXGroup;
+			children = (
+				641DFE0F28F1B10600F13AEA /* Domain */,
+			);
+			path = "Rooms Feed";
+			sourceTree = "<group>";
+		};
+		641DFE0B28F1AFC700F13AEA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				641DFE0728F1AE6C00F13AEA /* PeopleFeedRequest.swift */,
+				641DFDFF28F1ACD100F13AEA /* PeopleFeedRepository.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		641DFE0F28F1B10600F13AEA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				641DFE0928F1AED200F13AEA /* RoomsFeedRequest.swift */,
+				641DFE0428F1ADFE00F13AEA /* RoomsFeedRepository.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +235,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				641DFE0828F1AE6C00F13AEA /* PeopleFeedRequest.swift in Sources */,
+				641DFE0528F1ADFE00F13AEA /* RoomsFeedRepository.swift in Sources */,
 				641DFD3728F095C200F13AEA /* ViewController.swift in Sources */,
+				641DFE0028F1ACD100F13AEA /* PeopleFeedRepository.swift in Sources */,
+				641DFE0A28F1AED200F13AEA /* RoomsFeedRequest.swift in Sources */,
 				641DFD3328F095C200F13AEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

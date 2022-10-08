@@ -35,7 +35,7 @@ public final class CoreDataStorage {
     let description = NSPersistentStoreDescription(url: storeURL)
     let container = NSPersistentContainer(name: CoreDataStorage.modelName, managedObjectModel: model)
     container.persistentStoreDescriptions = [description]
-    persistentContainer = NSPersistentContainer(name: CoreDataStorage.modelName)
+    persistentContainer = container
     
     var error: Swift.Error?
     persistentContainer.loadPersistentStores { error = $1 }

@@ -13,4 +13,16 @@ public struct Room: Identifiable {
   public let name: String
   public let isOccupied: Bool
   public let maxOccupancy: Int
+  
+  public init(
+    id: Room.Identifier,
+    name: String,
+    isOccupied: Bool,
+    maxOccupancy: Int
+  ) {
+    self.id = id
+    self.name = name
+    self.isOccupied = isOccupied
+    self.maxOccupancy = maxOccupancy
+  }
 }

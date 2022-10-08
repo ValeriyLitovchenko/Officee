@@ -21,4 +21,24 @@ public struct Person: Identifiable {
   public var fullName: String {
     "\(firstName) \(lastName)"
   }
+  
+  public init(
+    id: Person.Identifier,
+    firstName: String,
+    lastName: String,
+    avatar: String,
+    email: String,
+    jobTitle: String,
+    favoriteColor: String,
+    meetingDescription: String?
+  ) {
+    self.id = id
+    self.firstName = firstName
+    self.lastName = lastName
+    self.avatar = avatar
+    self.email = email
+    self.jobTitle = jobTitle
+    self.favoriteColor = favoriteColor
+    self.meetingDescription = meetingDescription
+  }
 }
