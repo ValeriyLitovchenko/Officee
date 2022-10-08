@@ -23,6 +23,7 @@
 		641DFE2328F1BC7000F13AEA /* PeopleFeedRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFE1128F1B16000F13AEA /* PeopleFeedRepositoryImpl.swift */; };
 		641DFE2428F1BC7500F13AEA /* NetworkService+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFE1728F1B68F00F13AEA /* NetworkService+Combine.swift */; };
 		64468B9B28F1D077000F901B /* RoomsFeedRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468B9A28F1D077000F901B /* RoomsFeedRepositoryImpl.swift */; };
+		64468BC628F1ED1B000F901B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BC528F1ED1B000F901B /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +58,7 @@
 		641DFE1128F1B16000F13AEA /* PeopleFeedRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedRepositoryImpl.swift; sourceTree = "<group>"; };
 		641DFE1728F1B68F00F13AEA /* NetworkService+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+Combine.swift"; sourceTree = "<group>"; };
 		64468B9A28F1D077000F901B /* RoomsFeedRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedRepositoryImpl.swift; sourceTree = "<group>"; };
+		64468BC528F1ED1B000F901B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +94,10 @@
 		641DFD3128F095C200F13AEA /* OfficeeApp */ = {
 			isa = PBXGroup;
 			children = (
+				64468BC428F1ED03000F901B /* Application */,
 				641DFE1528F1B66600F13AEA /* Infrastructure */,
 				641DFE0128F1AD8C00F13AEA /* People Feed */,
 				641DFE0228F1ADDB00F13AEA /* Rooms Feed */,
-				641DFD3228F095C200F13AEA /* AppDelegate.swift */,
 				641DFD3628F095C200F13AEA /* ViewController.swift */,
 				641DFD3828F095C200F13AEA /* Main.storyboard */,
 				641DFD3B28F095C300F13AEA /* Assets.xcassets */,
@@ -196,6 +198,15 @@
 				64468B9A28F1D077000F901B /* RoomsFeedRepositoryImpl.swift */,
 			);
 			path = repositories;
+			sourceTree = "<group>";
+		};
+		64468BC428F1ED03000F901B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				641DFD3228F095C200F13AEA /* AppDelegate.swift */,
+				64468BC528F1ED1B000F901B /* AppConstants.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				641DFE0A28F1AED200F13AEA /* RoomsFeedRequest.swift in Sources */,
 				641DFD3328F095C200F13AEA /* AppDelegate.swift in Sources */,
 				641DFE2328F1BC7000F13AEA /* PeopleFeedRepositoryImpl.swift in Sources */,
+				64468BC628F1ED1B000F901B /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
