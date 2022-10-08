@@ -34,6 +34,21 @@
 		641DFDF728F1922D00F13AEA /* CoreDataRoomsFeedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDF628F1922D00F13AEA /* CoreDataRoomsFeedStorage.swift */; };
 		641DFE1F28F1BB3800F13AEA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFE1E28F1BB3800F13AEA /* Person.swift */; };
 		641DFE2228F1BB6B00F13AEA /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFE2128F1BB6B00F13AEA /* Room.swift */; };
+		64468BB428F1D6CB000F901B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468B9F28F1D6CB000F901B /* BaseViewController.swift */; };
+		64468BB528F1D6CB000F901B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BA028F1D6CB000F901B /* BaseView.swift */; };
+		64468BB628F1D6CB000F901B /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BA228F1D6CB000F901B /* UITableViewCell+Identifier.swift */; };
+		64468BB728F1D6CB000F901B /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BA328F1D6CB000F901B /* UIViewExtensions.swift */; };
+		64468BB828F1D6CB000F901B /* UITableViewCell+SelectionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BA428F1D6CB000F901B /* UITableViewCell+SelectionColor.swift */; };
+		64468BB928F1D6CB000F901B /* UITableViewCell+NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BA528F1D6CB000F901B /* UITableViewCell+NibInstantiable.swift */; };
+		64468BBA28F1D6CB000F901B /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BA728F1D6CB000F901B /* Aliases.swift */; };
+		64468BBB28F1D6CB000F901B /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BA828F1D6CB000F901B /* NibInstantiable.swift */; };
+		64468BBC28F1D6CB000F901B /* ApplicableActionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BA928F1D6CB000F901B /* ApplicableActionModel.swift */; };
+		64468BBE28F1D6CB000F901B /* TableSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BAD28F1D6CB000F901B /* TableSceneModels.swift */; };
+		64468BBF28F1D6CB000F901B /* BaseTableViewReusableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BAE28F1D6CB000F901B /* BaseTableViewReusableViews.swift */; };
+		64468BC028F1D6CB000F901B /* TableSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BAF28F1D6CB000F901B /* TableSectionModel.swift */; };
+		64468BC128F1D6CB000F901B /* CommonTableViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BB028F1D6CB000F901B /* CommonTableViewModelState.swift */; };
+		64468BC228F1D6CB000F901B /* BaseTableViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BB228F1D6CB000F901B /* BaseTableViewControllerView.swift */; };
+		64468BC328F1D6CB000F901B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BB328F1D6CB000F901B /* BaseTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +81,21 @@
 		641DFDF628F1922D00F13AEA /* CoreDataRoomsFeedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRoomsFeedStorage.swift; sourceTree = "<group>"; };
 		641DFE1E28F1BB3800F13AEA /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		641DFE2128F1BB6B00F13AEA /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		64468B9F28F1D6CB000F901B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		64468BA028F1D6CB000F901B /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		64468BA228F1D6CB000F901B /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
+		64468BA328F1D6CB000F901B /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		64468BA428F1D6CB000F901B /* UITableViewCell+SelectionColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+SelectionColor.swift"; sourceTree = "<group>"; };
+		64468BA528F1D6CB000F901B /* UITableViewCell+NibInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+NibInstantiable.swift"; sourceTree = "<group>"; };
+		64468BA728F1D6CB000F901B /* Aliases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
+		64468BA828F1D6CB000F901B /* NibInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibInstantiable.swift; sourceTree = "<group>"; };
+		64468BA928F1D6CB000F901B /* ApplicableActionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicableActionModel.swift; sourceTree = "<group>"; };
+		64468BAD28F1D6CB000F901B /* TableSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSceneModels.swift; sourceTree = "<group>"; };
+		64468BAE28F1D6CB000F901B /* BaseTableViewReusableViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewReusableViews.swift; sourceTree = "<group>"; };
+		64468BAF28F1D6CB000F901B /* TableSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSectionModel.swift; sourceTree = "<group>"; };
+		64468BB028F1D6CB000F901B /* CommonTableViewModelState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewModelState.swift; sourceTree = "<group>"; };
+		64468BB228F1D6CB000F901B /* BaseTableViewControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewControllerView.swift; sourceTree = "<group>"; };
+		64468BB328F1D6CB000F901B /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +137,10 @@
 		641DFD6028F0982100F13AEA /* OfficeeiOSCore */ = {
 			isa = PBXGroup;
 			children = (
+				64468B9D28F1D6CB000F901B /* BaseSceneClasses */,
+				64468BAB28F1D6CB000F901B /* BaseTableViewSceneClasses */,
+				64468BA128F1D6CB000F901B /* Extensions */,
+				64468BA628F1D6CB000F901B /* Helpers */,
 			);
 			path = OfficeeiOSCore;
 			sourceTree = "<group>";
@@ -273,6 +307,73 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		64468B9D28F1D6CB000F901B /* BaseSceneClasses */ = {
+			isa = PBXGroup;
+			children = (
+				64468B9E28F1D6CB000F901B /* View */,
+			);
+			path = BaseSceneClasses;
+			sourceTree = "<group>";
+		};
+		64468B9E28F1D6CB000F901B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64468B9F28F1D6CB000F901B /* BaseViewController.swift */,
+				64468BA028F1D6CB000F901B /* BaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		64468BA128F1D6CB000F901B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				64468BA228F1D6CB000F901B /* UITableViewCell+Identifier.swift */,
+				64468BA328F1D6CB000F901B /* UIViewExtensions.swift */,
+				64468BA428F1D6CB000F901B /* UITableViewCell+SelectionColor.swift */,
+				64468BA528F1D6CB000F901B /* UITableViewCell+NibInstantiable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		64468BA628F1D6CB000F901B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				64468BA728F1D6CB000F901B /* Aliases.swift */,
+				64468BA828F1D6CB000F901B /* NibInstantiable.swift */,
+				64468BA928F1D6CB000F901B /* ApplicableActionModel.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		64468BAB28F1D6CB000F901B /* BaseTableViewSceneClasses */ = {
+			isa = PBXGroup;
+			children = (
+				64468BAC28F1D6CB000F901B /* Models */,
+				64468BB128F1D6CB000F901B /* View */,
+			);
+			path = BaseTableViewSceneClasses;
+			sourceTree = "<group>";
+		};
+		64468BAC28F1D6CB000F901B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				64468BAD28F1D6CB000F901B /* TableSceneModels.swift */,
+				64468BAE28F1D6CB000F901B /* BaseTableViewReusableViews.swift */,
+				64468BAF28F1D6CB000F901B /* TableSectionModel.swift */,
+				64468BB028F1D6CB000F901B /* CommonTableViewModelState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		64468BB128F1D6CB000F901B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64468BB228F1D6CB000F901B /* BaseTableViewControllerView.swift */,
+				64468BB328F1D6CB000F901B /* BaseTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -389,6 +490,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64468BB828F1D6CB000F901B /* UITableViewCell+SelectionColor.swift in Sources */,
+				64468BB428F1D6CB000F901B /* BaseViewController.swift in Sources */,
+				64468BB528F1D6CB000F901B /* BaseView.swift in Sources */,
+				64468BC128F1D6CB000F901B /* CommonTableViewModelState.swift in Sources */,
+				64468BBC28F1D6CB000F901B /* ApplicableActionModel.swift in Sources */,
+				64468BBE28F1D6CB000F901B /* TableSceneModels.swift in Sources */,
+				64468BBA28F1D6CB000F901B /* Aliases.swift in Sources */,
+				64468BC028F1D6CB000F901B /* TableSectionModel.swift in Sources */,
+				64468BB728F1D6CB000F901B /* UIViewExtensions.swift in Sources */,
+				64468BC328F1D6CB000F901B /* BaseTableViewController.swift in Sources */,
+				64468BBF28F1D6CB000F901B /* BaseTableViewReusableViews.swift in Sources */,
+				64468BC228F1D6CB000F901B /* BaseTableViewControllerView.swift in Sources */,
+				64468BB628F1D6CB000F901B /* UITableViewCell+Identifier.swift in Sources */,
+				64468BB928F1D6CB000F901B /* UITableViewCell+NibInstantiable.swift in Sources */,
+				64468BBB28F1D6CB000F901B /* NibInstantiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
