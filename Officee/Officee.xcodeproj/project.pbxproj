@@ -6,9 +6,36 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		641DFDAC28F0B0B000F13AEA /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDAB28F0B0B000F13AEA /* HTTPClient.swift */; };
+		641DFDB228F0B2EA00F13AEA /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDB128F0B2EA00F13AEA /* URLSessionHTTPClient.swift */; };
+		641DFDB528F0B34F00F13AEA /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDB428F0B34F00F13AEA /* Aliases.swift */; };
+		641DFDB728F0B42000F13AEA /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDB628F0B42000F13AEA /* HTTPURLResponse+StatusCode.swift */; };
+		641DFDB928F0B51C00F13AEA /* HTTPURLResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDB828F0B51C00F13AEA /* HTTPURLResponseValidator.swift */; };
+		641DFDBC28F15C8C00F13AEA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDBB28F15C8C00F13AEA /* NetworkService.swift */; };
+		641DFDBE28F15F5700F13AEA /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDBD28F15F5700F13AEA /* Cancellable.swift */; };
+		641DFDC028F160ED00F13AEA /* RestApiNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDBF28F160ED00F13AEA /* RestApiNetworkService.swift */; };
+		641DFDC228F163AF00F13AEA /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDC128F163AF00F13AEA /* ApiEndpoint.swift */; };
+		641DFDC728F1650A00F13AEA /* PeopleFeedApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDC628F1650A00F13AEA /* PeopleFeedApiEndpoint.swift */; };
+		641DFDCA28F1691200F13AEA /* PeopleFeedResultMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDC928F1691200F13AEA /* PeopleFeedResultMapper.swift */; };
+		641DFDCC28F1691F00F13AEA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDCB28F1691F00F13AEA /* Person.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		641DFD5F28F0982100F13AEA /* OfficeeiOSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OfficeeiOSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		641DFD9328F099A500F13AEA /* Officee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Officee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		641DFDAB28F0B0B000F13AEA /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		641DFDB128F0B2EA00F13AEA /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		641DFDB428F0B34F00F13AEA /* Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
+		641DFDB628F0B42000F13AEA /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
+		641DFDB828F0B51C00F13AEA /* HTTPURLResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseValidator.swift; sourceTree = "<group>"; };
+		641DFDBB28F15C8C00F13AEA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		641DFDBD28F15F5700F13AEA /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		641DFDBF28F160ED00F13AEA /* RestApiNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiNetworkService.swift; sourceTree = "<group>"; };
+		641DFDC128F163AF00F13AEA /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
+		641DFDC628F1650A00F13AEA /* PeopleFeedApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedApiEndpoint.swift; sourceTree = "<group>"; };
+		641DFDC928F1691200F13AEA /* PeopleFeedResultMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedResultMapper.swift; sourceTree = "<group>"; };
+		641DFDCB28F1691F00F13AEA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +84,84 @@
 		641DFD9428F099A500F13AEA /* Officee */ = {
 			isa = PBXGroup;
 			children = (
+				641DFDA928F0B08800F13AEA /* Infrastructure */,
+				641DFDC328F1646600F13AEA /* People Feed */,
+				641DFDB328F0B34300F13AEA /* Helpers */,
 			);
 			path = Officee;
+			sourceTree = "<group>";
+		};
+		641DFDA928F0B08800F13AEA /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDAD28F0B1EB00F13AEA /* API */,
+				641DFDBA28F0B5AF00F13AEA /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		641DFDAD28F0B1EB00F13AEA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDC128F163AF00F13AEA /* ApiEndpoint.swift */,
+				641DFDAB28F0B0B000F13AEA /* HTTPClient.swift */,
+				641DFDB128F0B2EA00F13AEA /* URLSessionHTTPClient.swift */,
+				641DFDAE28F0B2B700F13AEA /* Helpers */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		641DFDAE28F0B2B700F13AEA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDB628F0B42000F13AEA /* HTTPURLResponse+StatusCode.swift */,
+				641DFDB828F0B51C00F13AEA /* HTTPURLResponseValidator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		641DFDB328F0B34300F13AEA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDB428F0B34F00F13AEA /* Aliases.swift */,
+				641DFDBD28F15F5700F13AEA /* Cancellable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		641DFDBA28F0B5AF00F13AEA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDBB28F15C8C00F13AEA /* NetworkService.swift */,
+				641DFDBF28F160ED00F13AEA /* RestApiNetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		641DFDC328F1646600F13AEA /* People Feed */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDC428F164D500F13AEA /* Infrastructure */,
+				641DFDCB28F1691F00F13AEA /* Person.swift */,
+			);
+			path = "People Feed";
+			sourceTree = "<group>";
+		};
+		641DFDC428F164D500F13AEA /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDC528F164F900F13AEA /* API */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		641DFDC528F164F900F13AEA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDC628F1650A00F13AEA /* PeopleFeedApiEndpoint.swift */,
+				641DFDC928F1691200F13AEA /* PeopleFeedResultMapper.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +287,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				641DFDBE28F15F5700F13AEA /* Cancellable.swift in Sources */,
+				641DFDC028F160ED00F13AEA /* RestApiNetworkService.swift in Sources */,
+				641DFDAC28F0B0B000F13AEA /* HTTPClient.swift in Sources */,
+				641DFDB228F0B2EA00F13AEA /* URLSessionHTTPClient.swift in Sources */,
+				641DFDCA28F1691200F13AEA /* PeopleFeedResultMapper.swift in Sources */,
+				641DFDB928F0B51C00F13AEA /* HTTPURLResponseValidator.swift in Sources */,
+				641DFDCC28F1691F00F13AEA /* Person.swift in Sources */,
+				641DFDB728F0B42000F13AEA /* HTTPURLResponse+StatusCode.swift in Sources */,
+				641DFDC728F1650A00F13AEA /* PeopleFeedApiEndpoint.swift in Sources */,
+				641DFDBC28F15C8C00F13AEA /* NetworkService.swift in Sources */,
+				641DFDB528F0B34F00F13AEA /* Aliases.swift in Sources */,
+				641DFDC228F163AF00F13AEA /* ApiEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
