@@ -31,6 +31,20 @@
 		64468BD628F1F225000F901B /* NetworkLayerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BD528F1F225000F901B /* NetworkLayerAssembly.swift */; };
 		64468BD828F1F38B000F901B /* StorageAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BD728F1F38B000F901B /* StorageAssembly.swift */; };
 		64468BDA28F1F5D9000F901B /* RepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BD928F1F5D9000F901B /* RepositoryAssembly.swift */; };
+		64468BDC28F1F7E7000F901B /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BDB28F1F7E7000F901B /* AppFlowCoordinator.swift */; };
+		64468BDE28F1FA2D000F901B /* AppFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BDD28F1FA2C000F901B /* AppFlowFactory.swift */; };
+		64468BE228F20474000F901B /* ProxyLaunchFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BE128F20474000F901B /* ProxyLaunchFlowCoordinator.swift */; };
+		64468BE528F20584000F901B /* ProxyLaunchFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BE428F20584000F901B /* ProxyLaunchFlowFactory.swift */; };
+		64468BE828F207EB000F901B /* ProxyLaunchCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BE728F207EB000F901B /* ProxyLaunchCoordinatorFactory.swift */; };
+		64468BEB28F20979000F901B /* ProxyLaunchControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BEA28F20979000F901B /* ProxyLaunchControllerView.swift */; };
+		64468BED28F209A9000F901B /* ProxyLaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BEC28F209A9000F901B /* ProxyLaunchController.swift */; };
+		64468BF128F209CF000F901B /* ProxyLaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BF028F209CF000F901B /* ProxyLaunchViewModel.swift */; };
+		64468BF428F20AA3000F901B /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BF328F20AA3000F901B /* Aliases.swift */; };
+		64468BF628F20B58000F901B /* ProxyLaunchViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BF528F20B58000F901B /* ProxyLaunchViewModelImpl.swift */; };
+		64468BFB28F20FA9000F901B /* LoadFeedsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BFA28F20FA9000F901B /* LoadFeedsUseCase.swift */; };
+		64468BFD28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BFC28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift */; };
+		64468BFF28F210A5000F901B /* UsecaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BFE28F210A5000F901B /* UsecaseAssembly.swift */; };
+		64468C0128F2121B000F901B /* ProxyLaunchControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64468C0028F2121B000F901B /* ProxyLaunchControllerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +86,20 @@
 		64468BD528F1F225000F901B /* NetworkLayerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerAssembly.swift; sourceTree = "<group>"; };
 		64468BD728F1F38B000F901B /* StorageAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAssembly.swift; sourceTree = "<group>"; };
 		64468BD928F1F5D9000F901B /* RepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAssembly.swift; sourceTree = "<group>"; };
+		64468BDB28F1F7E7000F901B /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		64468BDD28F1FA2C000F901B /* AppFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowFactory.swift; sourceTree = "<group>"; };
+		64468BE128F20474000F901B /* ProxyLaunchFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyLaunchFlowCoordinator.swift; sourceTree = "<group>"; };
+		64468BE428F20584000F901B /* ProxyLaunchFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyLaunchFlowFactory.swift; sourceTree = "<group>"; };
+		64468BE728F207EB000F901B /* ProxyLaunchCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyLaunchCoordinatorFactory.swift; sourceTree = "<group>"; };
+		64468BEA28F20979000F901B /* ProxyLaunchControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyLaunchControllerView.swift; sourceTree = "<group>"; };
+		64468BEC28F209A9000F901B /* ProxyLaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyLaunchController.swift; sourceTree = "<group>"; };
+		64468BF028F209CF000F901B /* ProxyLaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyLaunchViewModel.swift; sourceTree = "<group>"; };
+		64468BF328F20AA3000F901B /* Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
+		64468BF528F20B58000F901B /* ProxyLaunchViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyLaunchViewModelImpl.swift; sourceTree = "<group>"; };
+		64468BFA28F20FA9000F901B /* LoadFeedsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedsUseCase.swift; sourceTree = "<group>"; };
+		64468BFC28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedsUseCaseImpl.swift; sourceTree = "<group>"; };
+		64468BFE28F210A5000F901B /* UsecaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsecaseAssembly.swift; sourceTree = "<group>"; };
+		64468C0028F2121B000F901B /* ProxyLaunchControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProxyLaunchControllerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +138,11 @@
 			children = (
 				64468BC428F1ED03000F901B /* Application */,
 				641DFE1528F1B66600F13AEA /* Infrastructure */,
-				641DFE0128F1AD8C00F13AEA /* People Feed */,
-				641DFE0228F1ADDB00F13AEA /* Rooms Feed */,
-				64468BCA28F1EFAB000F901B /* ServiceLocator */,
+				641DFE1028F1B15100F13AEA /* Data */,
+				641DFE0B28F1AFC700F13AEA /* Domain */,
+				64468BCA28F1EFAB000F901B /* Service Locator */,
+				64468BDF28F20290000F901B /* Presentation */,
+				64468BF228F20A99000F901B /* Helpers */,
 				641DFD3628F095C200F13AEA /* ViewController.swift */,
 				641DFD3828F095C200F13AEA /* Main.storyboard */,
 				641DFD3B28F095C300F13AEA /* Assets.xcassets */,
@@ -131,38 +161,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		641DFE0128F1AD8C00F13AEA /* People Feed */ = {
-			isa = PBXGroup;
-			children = (
-				641DFE1028F1B15100F13AEA /* Data */,
-				641DFE0B28F1AFC700F13AEA /* Domain */,
-			);
-			path = "People Feed";
-			sourceTree = "<group>";
-		};
-		641DFE0228F1ADDB00F13AEA /* Rooms Feed */ = {
-			isa = PBXGroup;
-			children = (
-				64468B9828F1D058000F901B /* Data */,
-				641DFE0F28F1B10600F13AEA /* Domain */,
-			);
-			path = "Rooms Feed";
-			sourceTree = "<group>";
-		};
 		641DFE0B28F1AFC700F13AEA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				641DFE0728F1AE6C00F13AEA /* PeopleFeedRequest.swift */,
-				641DFDFF28F1ACD100F13AEA /* PeopleFeedRepository.swift */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		641DFE0F28F1B10600F13AEA /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				641DFE0928F1AED200F13AEA /* RoomsFeedRequest.swift */,
-				641DFE0428F1ADFE00F13AEA /* RoomsFeedRepository.swift */,
+				64468BF728F20E8E000F901B /* Entities */,
+				64468BF828F20EA7000F901B /* Interfaces */,
+				64468BF928F20EE4000F901B /* UseCases */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -179,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				641DFE1128F1B16000F13AEA /* PeopleFeedRepositoryImpl.swift */,
+				64468B9A28F1D077000F901B /* RoomsFeedRepositoryImpl.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -199,39 +204,25 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		64468B9828F1D058000F901B /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				64468B9928F1D05C000F901B /* repositories */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		64468B9928F1D05C000F901B /* repositories */ = {
-			isa = PBXGroup;
-			children = (
-				64468B9A28F1D077000F901B /* RoomsFeedRepositoryImpl.swift */,
-			);
-			path = repositories;
-			sourceTree = "<group>";
-		};
 		64468BC428F1ED03000F901B /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				641DFD3228F095C200F13AEA /* AppDelegate.swift */,
 				64468BC528F1ED1B000F901B /* AppConstants.swift */,
+				64468BDD28F1FA2C000F901B /* AppFlowFactory.swift */,
+				64468BDB28F1F7E7000F901B /* AppFlowCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
 		};
-		64468BCA28F1EFAB000F901B /* ServiceLocator */ = {
+		64468BCA28F1EFAB000F901B /* Service Locator */ = {
 			isa = PBXGroup;
 			children = (
 				64468BD428F1F204000F901B /* Assembly */,
 				64468BCE28F1EFF4000F901B /* Driver */,
 				64468BCC28F1EFD2000F901B /* ServiceLocating.swift */,
 			);
-			path = ServiceLocator;
+			path = "Service Locator";
 			sourceTree = "<group>";
 		};
 		64468BCE28F1EFF4000F901B /* Driver */ = {
@@ -249,8 +240,107 @@
 				64468BD528F1F225000F901B /* NetworkLayerAssembly.swift */,
 				64468BD728F1F38B000F901B /* StorageAssembly.swift */,
 				64468BD928F1F5D9000F901B /* RepositoryAssembly.swift */,
+				64468BFE28F210A5000F901B /* UsecaseAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		64468BDF28F20290000F901B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				64468BE028F2036C000F901B /* Proxy Launch Scene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		64468BE028F2036C000F901B /* Proxy Launch Scene */ = {
+			isa = PBXGroup;
+			children = (
+				64468BE628F2058C000F901B /* Factory */,
+				64468BE328F20535000F901B /* Flows */,
+				64468BE928F20952000F901B /* Proxy Launch */,
+			);
+			path = "Proxy Launch Scene";
+			sourceTree = "<group>";
+		};
+		64468BE328F20535000F901B /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				64468BE128F20474000F901B /* ProxyLaunchFlowCoordinator.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		64468BE628F2058C000F901B /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				64468BE428F20584000F901B /* ProxyLaunchFlowFactory.swift */,
+				64468BE728F207EB000F901B /* ProxyLaunchCoordinatorFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		64468BE928F20952000F901B /* Proxy Launch */ = {
+			isa = PBXGroup;
+			children = (
+				64468BEF28F209BB000F901B /* View Model */,
+				64468BEE28F209B1000F901B /* View */,
+			);
+			path = "Proxy Launch";
+			sourceTree = "<group>";
+		};
+		64468BEE28F209B1000F901B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64468C0028F2121B000F901B /* ProxyLaunchControllerView.xib */,
+				64468BEA28F20979000F901B /* ProxyLaunchControllerView.swift */,
+				64468BEC28F209A9000F901B /* ProxyLaunchController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		64468BEF28F209BB000F901B /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				64468BF028F209CF000F901B /* ProxyLaunchViewModel.swift */,
+				64468BF528F20B58000F901B /* ProxyLaunchViewModelImpl.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		64468BF228F20A99000F901B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				64468BF328F20AA3000F901B /* Aliases.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		64468BF728F20E8E000F901B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				641DFE0728F1AE6C00F13AEA /* PeopleFeedRequest.swift */,
+				641DFE0928F1AED200F13AEA /* RoomsFeedRequest.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		64468BF828F20EA7000F901B /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDFF28F1ACD100F13AEA /* PeopleFeedRepository.swift */,
+				641DFE0428F1ADFE00F13AEA /* RoomsFeedRepository.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		64468BF928F20EE4000F901B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				64468BFA28F20FA9000F901B /* LoadFeedsUseCase.swift */,
+				64468BFC28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +411,7 @@
 			files = (
 				641DFD3F28F095C300F13AEA /* LaunchScreen.storyboard in Resources */,
 				641DFD3C28F095C300F13AEA /* Assets.xcassets in Resources */,
+				64468C0128F2121B000F901B /* ProxyLaunchControllerView.xib in Resources */,
 				641DFD3A28F095C200F13AEA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,21 +444,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64468BFB28F20FA9000F901B /* LoadFeedsUseCase.swift in Sources */,
 				641DFE0828F1AE6C00F13AEA /* PeopleFeedRequest.swift in Sources */,
 				641DFE0528F1ADFE00F13AEA /* RoomsFeedRepository.swift in Sources */,
+				64468BED28F209A9000F901B /* ProxyLaunchController.swift in Sources */,
 				64468B9B28F1D077000F901B /* RoomsFeedRepositoryImpl.swift in Sources */,
+				64468BE828F207EB000F901B /* ProxyLaunchCoordinatorFactory.swift in Sources */,
+				64468BF428F20AA3000F901B /* Aliases.swift in Sources */,
+				64468BFD28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift in Sources */,
 				64468BDA28F1F5D9000F901B /* RepositoryAssembly.swift in Sources */,
+				64468BE528F20584000F901B /* ProxyLaunchFlowFactory.swift in Sources */,
 				64468BCD28F1EFD2000F901B /* ServiceLocating.swift in Sources */,
 				64468BD328F1F164000F901B /* SwinjectResolver+ServiceLocating.swift in Sources */,
 				641DFE2428F1BC7500F13AEA /* NetworkService+Combine.swift in Sources */,
 				64468BD628F1F225000F901B /* NetworkLayerAssembly.swift in Sources */,
 				641DFD3728F095C200F13AEA /* ViewController.swift in Sources */,
 				641DFE0028F1ACD100F13AEA /* PeopleFeedRepository.swift in Sources */,
+				64468BE228F20474000F901B /* ProxyLaunchFlowCoordinator.swift in Sources */,
+				64468BDC28F1F7E7000F901B /* AppFlowCoordinator.swift in Sources */,
+				64468BF628F20B58000F901B /* ProxyLaunchViewModelImpl.swift in Sources */,
 				64468BD028F1EFFA000F901B /* SwinjectServiceLocator.swift in Sources */,
 				641DFE0A28F1AED200F13AEA /* RoomsFeedRequest.swift in Sources */,
+				64468BEB28F20979000F901B /* ProxyLaunchControllerView.swift in Sources */,
+				64468BFF28F210A5000F901B /* UsecaseAssembly.swift in Sources */,
 				641DFD3328F095C200F13AEA /* AppDelegate.swift in Sources */,
 				641DFE2328F1BC7000F13AEA /* PeopleFeedRepositoryImpl.swift in Sources */,
 				64468BC628F1ED1B000F901B /* AppConstants.swift in Sources */,
+				64468BDE28F1FA2D000F901B /* AppFlowFactory.swift in Sources */,
+				64468BF128F209CF000F901B /* ProxyLaunchViewModel.swift in Sources */,
 				64468BD828F1F38B000F901B /* StorageAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

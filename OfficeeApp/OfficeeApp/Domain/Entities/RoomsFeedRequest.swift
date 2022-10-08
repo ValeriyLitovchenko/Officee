@@ -11,3 +11,9 @@ struct RoomsFeedRequest {
   let query: String?
   let shouldRefresh: Bool
 }
+
+extension RoomsFeedRequest {
+  static var refreshRequest: RoomsFeedRequest {
+    RoomsFeedRequest(query: nil, shouldRefresh: true)
+  }
+}

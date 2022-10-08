@@ -11,3 +11,9 @@ struct PeopleFeedRequest {
   let query: String?
   let shouldRefresh: Bool
 }
+
+extension PeopleFeedRequest {
+  static var refreshRequest: PeopleFeedRequest {
+    PeopleFeedRequest(query: nil, shouldRefresh: true)
+  }
+}

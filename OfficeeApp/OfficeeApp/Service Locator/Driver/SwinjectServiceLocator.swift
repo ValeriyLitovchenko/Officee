@@ -21,7 +21,8 @@ struct SwinjectServiceLocator: ServiceLocating {
       [
         NetworkLayerAssembly(),
         StorageAssembly(),
-        RepositoryAssembly()
+        RepositoryAssembly(),
+        UsecaseAssembly()
       ],
       container: container)
   }
