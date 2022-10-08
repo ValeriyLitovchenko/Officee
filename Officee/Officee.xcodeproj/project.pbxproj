@@ -19,6 +19,9 @@
 		641DFDC728F1650A00F13AEA /* PeopleFeedApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDC628F1650A00F13AEA /* PeopleFeedApiEndpoint.swift */; };
 		641DFDCA28F1691200F13AEA /* PeopleFeedResultMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDC928F1691200F13AEA /* PeopleFeedResultMapper.swift */; };
 		641DFDCC28F1691F00F13AEA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDCB28F1691F00F13AEA /* Person.swift */; };
+		641DFDD128F1781E00F13AEA /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDD028F1781E00F13AEA /* Room.swift */; };
+		641DFDD328F17A5C00F13AEA /* RoomsFeedApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDD228F17A5C00F13AEA /* RoomsFeedApiEndpoint.swift */; };
+		641DFDD528F17AD900F13AEA /* RoomsFeedResultMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDD428F17AD900F13AEA /* RoomsFeedResultMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		641DFDC628F1650A00F13AEA /* PeopleFeedApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedApiEndpoint.swift; sourceTree = "<group>"; };
 		641DFDC928F1691200F13AEA /* PeopleFeedResultMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedResultMapper.swift; sourceTree = "<group>"; };
 		641DFDCB28F1691F00F13AEA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		641DFDD028F1781E00F13AEA /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		641DFDD228F17A5C00F13AEA /* RoomsFeedApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedApiEndpoint.swift; sourceTree = "<group>"; };
+		641DFDD428F17AD900F13AEA /* RoomsFeedResultMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedResultMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 			children = (
 				641DFDA928F0B08800F13AEA /* Infrastructure */,
 				641DFDC328F1646600F13AEA /* People Feed */,
+				641DFDCD28F1780200F13AEA /* Rooms Feed */,
 				641DFDB328F0B34300F13AEA /* Helpers */,
 			);
 			path = Officee;
@@ -160,6 +167,32 @@
 			children = (
 				641DFDC628F1650A00F13AEA /* PeopleFeedApiEndpoint.swift */,
 				641DFDC928F1691200F13AEA /* PeopleFeedResultMapper.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		641DFDCD28F1780200F13AEA /* Rooms Feed */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDCE28F1780C00F13AEA /* Infrastructure */,
+				641DFDD028F1781E00F13AEA /* Room.swift */,
+			);
+			path = "Rooms Feed";
+			sourceTree = "<group>";
+		};
+		641DFDCE28F1780C00F13AEA /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDCF28F1781100F13AEA /* API */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		641DFDCF28F1781100F13AEA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				641DFDD228F17A5C00F13AEA /* RoomsFeedApiEndpoint.swift */,
+				641DFDD428F17AD900F13AEA /* RoomsFeedResultMapper.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -293,9 +326,12 @@
 				641DFDB228F0B2EA00F13AEA /* URLSessionHTTPClient.swift in Sources */,
 				641DFDCA28F1691200F13AEA /* PeopleFeedResultMapper.swift in Sources */,
 				641DFDB928F0B51C00F13AEA /* HTTPURLResponseValidator.swift in Sources */,
+				641DFDD128F1781E00F13AEA /* Room.swift in Sources */,
 				641DFDCC28F1691F00F13AEA /* Person.swift in Sources */,
 				641DFDB728F0B42000F13AEA /* HTTPURLResponse+StatusCode.swift in Sources */,
 				641DFDC728F1650A00F13AEA /* PeopleFeedApiEndpoint.swift in Sources */,
+				641DFDD328F17A5C00F13AEA /* RoomsFeedApiEndpoint.swift in Sources */,
+				641DFDD528F17AD900F13AEA /* RoomsFeedResultMapper.swift in Sources */,
 				641DFDBC28F15C8C00F13AEA /* NetworkService.swift in Sources */,
 				641DFDB528F0B34F00F13AEA /* Aliases.swift in Sources */,
 				641DFDC228F163AF00F13AEA /* ApiEndpoint.swift in Sources */,
