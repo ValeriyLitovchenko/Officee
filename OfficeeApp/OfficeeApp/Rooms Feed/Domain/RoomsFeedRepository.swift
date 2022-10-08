@@ -5,6 +5,7 @@
 //  Created by Valeriy L on 08.10.2022.
 //
 
+import Officee
 import Combine
 
 protocol RoomsFeedRepository {
