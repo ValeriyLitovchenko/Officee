@@ -14,14 +14,24 @@ public protocol NibInstantiable: NSObjectProtocol {
 public extension NibInstantiable {
   static var nib: UINib {
     let nibName = String(describing: self)
+    let platformOrientedNibName = PlatformInterfaseSuffix.addSuffixFor(
+      interfaceId: nibName,
+      withIdiom: UIDevice.current.userInterfaceIdiom
+    )
     
     guard Bundle.main.path(
-      forResource: nibName,
-      ofType: "nib") != nil else {
-        
+            forResource: platformOrientedNibName,
+            ofType: "nib") != nil else {
+      
+      guard Bundle.main.path(
+              forResource: nibName,
+              ofType: "nib") != nil else {
         fatalError("Interface instructions (xib file) does not exist for \(nibName)")
       }
+      
+      return UINib(nibName: nibName, bundle: nil)
+    }
     
-    return UINib(nibName: nibName, bundle: nil)
+    return UINib(nibName: platformOrientedNibName, bundle: nil)
   }
 }

@@ -49,6 +49,7 @@
 		64468BC128F1D6CB000F901B /* CommonTableViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BB028F1D6CB000F901B /* CommonTableViewModelState.swift */; };
 		64468BC228F1D6CB000F901B /* BaseTableViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BB228F1D6CB000F901B /* BaseTableViewControllerView.swift */; };
 		64468BC328F1D6CB000F901B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BB328F1D6CB000F901B /* BaseTableViewController.swift */; };
+		6449001428F3636400B52F05 /* PlatformInterfaseSuffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6449001328F3636400B52F05 /* PlatformInterfaseSuffix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		64468BB028F1D6CB000F901B /* CommonTableViewModelState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewModelState.swift; sourceTree = "<group>"; };
 		64468BB228F1D6CB000F901B /* BaseTableViewControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewControllerView.swift; sourceTree = "<group>"; };
 		64468BB328F1D6CB000F901B /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		6449001328F3636400B52F05 /* PlatformInterfaseSuffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformInterfaseSuffix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +343,7 @@
 				64468BA728F1D6CB000F901B /* Aliases.swift */,
 				64468BA828F1D6CB000F901B /* NibInstantiable.swift */,
 				64468BA928F1D6CB000F901B /* ApplicableActionModel.swift */,
+				6449001328F3636400B52F05 /* PlatformInterfaseSuffix.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				64468BB828F1D6CB000F901B /* UITableViewCell+SelectionColor.swift in Sources */,
 				64468BB428F1D6CB000F901B /* BaseViewController.swift in Sources */,
 				64468BB528F1D6CB000F901B /* BaseView.swift in Sources */,
+				6449001428F3636400B52F05 /* PlatformInterfaseSuffix.swift in Sources */,
 				64468BC128F1D6CB000F901B /* CommonTableViewModelState.swift in Sources */,
 				64468BBC28F1D6CB000F901B /* ApplicableActionModel.swift in Sources */,
 				64468BBE28F1D6CB000F901B /* TableSceneModels.swift in Sources */,
