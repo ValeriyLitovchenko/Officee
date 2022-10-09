@@ -133,9 +133,9 @@ final class RoomsFeedViewModel: SearchFeedViewModel {
       rooms.forEach { room in
         let model = RoomCellModel(
           identifier: room.id,
-          name: room.name,
+          name: "\(NSLocalizedString("Room", comment: "")) \(room.name)",
           isOccupied: room.isOccupied,
-          maxOccupancy: "\(room.maxOccupancy)")
+          maxOccupancy: "\(NSLocalizedString("Maximum:", comment: "")) \(room.maxOccupancy)")
         items.append(model)
         items.append(SpacingCellModel(height: 10.0))
       }

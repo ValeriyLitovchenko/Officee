@@ -13,27 +13,27 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="99" id="098-xH-bnP" customClass="RoomCell" customModule="OfficeeApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="411" height="99"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="098-xH-bnP" id="Pfj-YB-cHm">
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="098-xH-bnP" id="Pfj-YB-cHm">
                 <rect key="frame" x="0.0" y="0.0" width="411" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCp-GP-gsV" userLabel="Container">
-                        <rect key="frame" x="15" y="0.0" width="381" height="97"/>
+                        <rect key="frame" x="15" y="0.0" width="381" height="92"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R8I-DG-ziL">
-                                <rect key="frame" x="0.0" y="0.0" width="381" height="97"/>
+                                <rect key="frame" x="0.0" y="0.0" width="381" height="92"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="3gb-Ib-P89">
-                                        <rect key="frame" x="0.0" y="0.0" width="297.5" height="43"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="308.5" height="43"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="257" horizontalCompressionResistancePriority="997" verticalCompressionResistancePriority="998" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PA-Ub-kt0" userLabel="Name Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="297.5" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="308.5" height="23"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="997" verticalCompressionResistancePriority="998" text="Max Occupancy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIj-XD-e0x" userLabel="Max Occupancy Label">
-                                                <rect key="frame" x="0.0" y="26" width="297.5" height="17"/>
+                                                <rect key="frame" x="0.0" y="26" width="308.5" height="17"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -41,8 +41,8 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="257" verticalHuggingPriority="251" horizontalCompressionResistancePriority="998" text="Occupied" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nh-zg-B7f" userLabel="Occupancy Status Label">
-                                        <rect key="frame" x="307.5" y="0.0" width="73.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <rect key="frame" x="318.5" y="0.0" width="62.5" height="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -67,7 +67,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="KCp-GP-gsV" secondAttribute="trailing" constant="15" id="0il-uT-bXO"/>
-                    <constraint firstAttribute="bottom" secondItem="KCp-GP-gsV" secondAttribute="bottom" constant="2" id="5IP-oW-fYn"/>
+                    <constraint firstAttribute="bottom" secondItem="KCp-GP-gsV" secondAttribute="bottom" constant="7" id="5IP-oW-fYn"/>
                     <constraint firstItem="KCp-GP-gsV" firstAttribute="top" secondItem="Pfj-YB-cHm" secondAttribute="top" id="8kp-uk-ZaV"/>
                     <constraint firstAttribute="bottom" secondItem="xaP-60-UCi" secondAttribute="bottom" id="WiB-Fj-nEp"/>
                     <constraint firstItem="KCp-GP-gsV" firstAttribute="leading" secondItem="Pfj-YB-cHm" secondAttribute="leading" constant="15" id="lEt-rL-KnM"/>

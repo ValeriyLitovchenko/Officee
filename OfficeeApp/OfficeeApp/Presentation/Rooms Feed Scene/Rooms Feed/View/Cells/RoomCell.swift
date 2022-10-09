@@ -45,6 +45,8 @@ final class RoomCell: BaseTableCell {
   
   // MARK: - Functions
   
+  override func setHighlighted(_ highlighted: Bool, animated: Bool) {}
+  
   override func configure(with model: BaseTableCellModel) {
     guard let model = model as? RoomCellModel else {
       fatalError("Wrong item provided to cell")
