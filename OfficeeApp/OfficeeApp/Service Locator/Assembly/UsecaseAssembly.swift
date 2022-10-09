@@ -22,5 +22,9 @@ struct UsecaseAssembly: Swinject.Assembly {
     container.register(GetRoomsUseCase.self) { resolver in
       GetRoomsUseCaseImpl(repository: resolver.resolve())
     }
+    
+    container.register(SendEmailUseCase.self) { resolver in
+      SendEmailUseCaseImpl()
+    }
   }
 }

@@ -8,10 +8,10 @@
 import OfficeeiOSCore
 
 protocol PersonDetailsViewModel {
-  var sceneTitle: String { get }
   var statePublisher: ValuePublisher<PersonDetailsViewModelState> { get }
   
   func loadData()
+  func sendMessageAction()
 }
 
 typealias PersonDetailsViewModelState = CommonTableViewModelState

@@ -27,7 +27,10 @@ final class PersonDetailsController: BaseTableViewController<PersonDetailsContro
   private func setupUI() {
     let `view` = contentView
     
-    title = viewModel.sceneTitle
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      barButtonSystemItem: .compose,
+      target: self,
+      action: #selector(sendMessageAction))
     
     cancellable = viewModel.statePublisher
       .receive(on: DispatchQueue.main)
@@ -39,5 +42,10 @@ final class PersonDetailsController: BaseTableViewController<PersonDetailsContro
         
         self.display(content: content)
       })
+  }
+  
+  @objc
+  private func sendMessageAction() {
+    viewModel.sendMessageAction()
   }
 }

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="42" id="KdH-02-uwz" customClass="PersonDetailsAttributeCell" customModule="OfficeeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="266" height="42"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KdH-02-uwz" id="Vag-cg-H5O">
+                <rect key="frame" x="0.0" y="0.0" width="266" height="42"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="998" verticalCompressionResistancePriority="998" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPU-Sa-NyL">
+                        <rect key="frame" x="25" y="0.0" width="41.5" height="20.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" horizontalCompressionResistancePriority="997" verticalCompressionResistancePriority="998" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YQ-Bg-pOT">
+                        <rect key="frame" x="76.5" y="0.0" width="164.5" height="20.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3YQ-Bg-pOT" firstAttribute="top" secondItem="Vag-cg-H5O" secondAttribute="top" priority="998" id="A8b-CA-hEC"/>
+                    <constraint firstItem="3YQ-Bg-pOT" firstAttribute="leading" secondItem="LPU-Sa-NyL" secondAttribute="trailing" constant="10" id="Emb-rA-Fqc"/>
+                    <constraint firstAttribute="trailing" secondItem="3YQ-Bg-pOT" secondAttribute="trailing" constant="25" id="Fch-KO-E4B"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LPU-Sa-NyL" secondAttribute="bottom" priority="998" id="NDD-8g-yHe"/>
+                    <constraint firstItem="LPU-Sa-NyL" firstAttribute="leading" secondItem="Vag-cg-H5O" secondAttribute="leading" constant="25" id="fDb-jm-tSG"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3YQ-Bg-pOT" secondAttribute="bottom" priority="998" id="pme-sh-aJ1"/>
+                    <constraint firstItem="LPU-Sa-NyL" firstAttribute="top" secondItem="Vag-cg-H5O" secondAttribute="top" priority="998" id="pvN-XJ-cEf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="LPU-Sa-NyL" firstAttribute="width" relation="lessThanOrEqual" secondItem="KdH-02-uwz" secondAttribute="width" multiplier="0.5" constant="-30" id="yYB-CZ-gT9"/>
+            </constraints>
+            <connections>
+                <outlet property="attributeNameLabel" destination="LPU-Sa-NyL" id="HuY-8a-esx"/>
+                <outlet property="attributeValueLabel" destination="3YQ-Bg-pOT" id="atv-R0-yI4"/>
+            </connections>
+            <point key="canvasLocation" x="30.434782608695656" y="75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

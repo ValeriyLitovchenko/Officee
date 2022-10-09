@@ -53,6 +53,7 @@ final class PersonCell: BaseTableCell {
     avatarView.accessibilityIgnoresInvertColors = true
   }
   
+  // With empty body disables cell highlighting while tapping on it
   override func setHighlighted(_ highlighted: Bool, animated: Bool) {}
   
   override func configure(with model: BaseTableCellModel) {
