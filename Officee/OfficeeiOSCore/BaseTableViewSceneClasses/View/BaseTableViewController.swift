@@ -75,7 +75,7 @@ open class BaseTableViewController<View: BaseTableViewControllerView, ViewModel>
     guard let cell = tableView.dequeueReusableCell(
       withIdentifier: model.type.identifier,
       for: indexPath) as? BaseTableCell else {
-      fatalError("Unable to create cell. Nib might be not registered")
+      fatalError("Unable to create cell. Nib might be not registered for \(model.type.identifier)")
     }
     
     cell.configure(with: model)
