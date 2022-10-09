@@ -50,6 +50,8 @@
 		6449000D28F35E2F00B52F05 /* SendEmailUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6449000C28F35E2F00B52F05 /* SendEmailUseCaseImpl.swift */; };
 		6449001028F35FF200B52F05 /* PlatformFlowUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6449000F28F35FF200B52F05 /* PlatformFlowUseCase.swift */; };
 		6449001228F361CB00B52F05 /* UIViewController+CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6449001128F361CB00B52F05 /* UIViewController+CloseButton.swift */; };
+		6449001628F3655D00B52F05 /* PersonCell~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6449001528F3655D00B52F05 /* PersonCell~iPad.xib */; };
+		6449001828F369E000B52F05 /* RoomCell~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6449001728F369E000B52F05 /* RoomCell~iPad.xib */; };
 		6449FFD428F329A500B52F05 /* RoomsFeedControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6449FFD328F329A500B52F05 /* RoomsFeedControllerView.swift */; };
 		6449FFD628F329AF00B52F05 /* RoomsFeedControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6449FFD528F329AF00B52F05 /* RoomsFeedControllerView.xib */; };
 		6449FFD828F32A0B00B52F05 /* RoomsFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6449FFD728F32A0B00B52F05 /* RoomsFeedController.swift */; };
@@ -162,6 +164,8 @@
 		6449000C28F35E2F00B52F05 /* SendEmailUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEmailUseCaseImpl.swift; sourceTree = "<group>"; };
 		6449000F28F35FF200B52F05 /* PlatformFlowUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformFlowUseCase.swift; sourceTree = "<group>"; };
 		6449001128F361CB00B52F05 /* UIViewController+CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CloseButton.swift"; sourceTree = "<group>"; };
+		6449001528F3655D00B52F05 /* PersonCell~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "PersonCell~iPad.xib"; sourceTree = "<group>"; };
+		6449001728F369E000B52F05 /* RoomCell~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "RoomCell~iPad.xib"; sourceTree = "<group>"; };
 		6449FFD328F329A500B52F05 /* RoomsFeedControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedControllerView.swift; sourceTree = "<group>"; };
 		6449FFD528F329AF00B52F05 /* RoomsFeedControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomsFeedControllerView.xib; sourceTree = "<group>"; };
 		6449FFD728F32A0B00B52F05 /* RoomsFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedController.swift; sourceTree = "<group>"; };
@@ -638,6 +642,7 @@
 			isa = PBXGroup;
 			children = (
 				64553D5B28F3265F00EA58DB /* RoomCell.xib */,
+				6449001728F369E000B52F05 /* RoomCell~iPad.xib */,
 				64553D5928F3247500EA58DB /* RoomCell.swift */,
 			);
 			path = Cells;
@@ -780,6 +785,7 @@
 			isa = PBXGroup;
 			children = (
 				64A5996E28F2F843007090E2 /* PersonCell.xib */,
+				6449001528F3655D00B52F05 /* PersonCell~iPad.xib */,
 				64A5996C28F2F5D9007090E2 /* PersonCell.swift */,
 			);
 			path = Cells;
@@ -919,7 +925,9 @@
 				641DFD3C28F095C300F13AEA /* Assets.xcassets in Resources */,
 				64A5997928F3005C007090E2 /* SpacingCell.xib in Resources */,
 				64A5996F28F2F843007090E2 /* PersonCell.xib in Resources */,
+				6449001828F369E000B52F05 /* RoomCell~iPad.xib in Resources */,
 				6449FFF628F349F000B52F05 /* PersonDetailsAvatarCell.xib in Resources */,
+				6449001628F3655D00B52F05 /* PersonCell~iPad.xib in Resources */,
 				64A5995228F2C2EA007090E2 /* SearchFeedControllerView.xib in Resources */,
 				6449FFD628F329AF00B52F05 /* RoomsFeedControllerView.xib in Resources */,
 				64A5998828F30DDD007090E2 /* PeopleFeedControllerView.xib in Resources */,
