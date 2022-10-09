@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct PeopleFeedSceneFactoryImpl: PeopleFeedSceneFactory {
+  let serviceLocating: ServiceLocating
+}
+
 protocol PeopleFeedSceneFactory {
   var serviceLocating: ServiceLocating { get }
   func peopleFeedController() -> PeopleFeedController

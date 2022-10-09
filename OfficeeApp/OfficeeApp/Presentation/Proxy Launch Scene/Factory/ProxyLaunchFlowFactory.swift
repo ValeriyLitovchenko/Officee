@@ -10,13 +10,15 @@ import UIKit.UIWindow
 struct ProxyLaunchFlowFactoryImpl: ProxyLaunchFlowFactory {
   let serviceLocating: ServiceLocating
   
-  func proxyLaunchController() -> ProxyLaunchController {
-    let viewModel = ProxyLaunchViewModelImpl(loadFeedsUseCase: serviceLocating.resolve())
+  func proxyLaunchController(with navigationActions: ProxyLaunchNavigationActions) -> ProxyLaunchController {
+    let viewModel = ProxyLaunchViewModelImpl(
+      loadFeedsUseCase: serviceLocating.resolve(),
+      navigationActions: navigationActions)
     return ProxyLaunchController(viewModel: viewModel)
   }
 }
 
-protocol ProxyLaunchFlowFactory {
+protocol ProxyLaunchFlowFactory: TabBarSceneCoordinatorFactory {
   var serviceLocating: ServiceLocating { get }
-  func proxyLaunchController() -> ProxyLaunchController
+  func proxyLaunchController(with navigationActions: ProxyLaunchNavigationActions) -> ProxyLaunchController
 }

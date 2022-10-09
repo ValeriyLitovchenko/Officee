@@ -18,12 +18,17 @@ final class ProxyLaunchViewModelImpl: ProxyLaunchViewModel {
   private let isLoadingSubject = ValueSubject<Bool>(false)
   
   private let loadFeedsUseCase: LoadFeedsUseCase
+  private let navigationActions: ProxyLaunchNavigationActions
   private var cancelable: Cancellable?
   
   // MARK: - Constructor
   
-  init(loadFeedsUseCase: LoadFeedsUseCase) {
+  init(
+    loadFeedsUseCase: LoadFeedsUseCase,
+    navigationActions: ProxyLaunchNavigationActions
+  ) {
     self.loadFeedsUseCase = loadFeedsUseCase
+    self.navigationActions = navigationActions
   }
   
   // MARK: - Functions
@@ -35,7 +40,10 @@ final class ProxyLaunchViewModelImpl: ProxyLaunchViewModel {
         self?.isLoadingSubject.send(true)
       })
       .sink(receiveCompletion: { [weak self] _ in
-        self?.isLoadingSubject.send(false)
+        guard let self = self else { return }
+        
+        self.isLoadingSubject.send(false)
+        self.navigationActions.openTabBar()
       }, receiveValue: { _ in })
   }
 }

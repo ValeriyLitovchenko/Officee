@@ -127,7 +127,7 @@ final class PeopleFeedViewModel: SearchFeedViewModel {
   
   private func buildContent(_ people: [Person]) -> TableSections {
     var items: [BaseTableCellModel] = [
-      SpacingCellModel(height: 10.0)
+      SpacingCellModel(height: 20.0)
     ]
     
     if people.isEmpty {
@@ -135,7 +135,7 @@ final class PeopleFeedViewModel: SearchFeedViewModel {
     } else {
       people.forEach { person in
         let model = PersonCellModel(
-          identifier: person.id,
+          identifier: person.id + person.fullName,
           fullName: person.fullName,
           avatar: person.avatar,
           meetingDescription: person.meetingDescription)

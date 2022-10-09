@@ -45,6 +45,13 @@ final class PersonCell: BaseTableCell {
   
   // MARK: - Functions
   
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    avatarView.accessibilityIgnoresInvertColors = true
+  }
+  
+  override func setHighlighted(_ highlighted: Bool, animated: Bool) {}
+  
   override func configure(with model: BaseTableCellModel) {
     guard let model = model as? PersonCellModel else {
       fatalError("Wrong item provided to cell")

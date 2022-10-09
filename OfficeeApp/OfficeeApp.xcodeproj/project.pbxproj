@@ -43,6 +43,7 @@
 		64468BFD28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BFC28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift */; };
 		64468BFF28F210A5000F901B /* UsecaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BFE28F210A5000F901B /* UsecaseAssembly.swift */; };
 		64468C0128F2121B000F901B /* ProxyLaunchControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64468C0028F2121B000F901B /* ProxyLaunchControllerView.xib */; };
+		64553D4B28F31F9500EA58DB /* PeopleFeedCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64553D4A28F31F9500EA58DB /* PeopleFeedCoordinatorFactory.swift */; };
 		64A5994128F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5993F28F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift */; };
 		64A5994228F2BDC9007090E2 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */; };
 		64A5994628F2BDD2007090E2 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */; };
@@ -66,6 +67,13 @@
 		64A5997428F2FCF5007090E2 /* UIImageView+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5997328F2FCF5007090E2 /* UIImageView+SetImage.swift */; };
 		64A5997728F2FFD0007090E2 /* SpacingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5997628F2FFD0007090E2 /* SpacingCell.swift */; };
 		64A5997928F3005C007090E2 /* SpacingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64A5997828F3005C007090E2 /* SpacingCell.xib */; };
+		64A5997E28F30842007090E2 /* TabBarSceneFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5997D28F30842007090E2 /* TabBarSceneFlowCoordinator.swift */; };
+		64A5998128F3095F007090E2 /* TabBarSceneCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5998028F3095F007090E2 /* TabBarSceneCoordinatorFactory.swift */; };
+		64A5998428F30A4D007090E2 /* ProxyLaunchNavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5998328F30A4D007090E2 /* ProxyLaunchNavigationActions.swift */; };
+		64A5998628F30CCC007090E2 /* TabBarSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5998528F30CCC007090E2 /* TabBarSceneFactory.swift */; };
+		64A5998828F30DDD007090E2 /* PeopleFeedControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64A5998728F30DDD007090E2 /* PeopleFeedControllerView.xib */; };
+		64A5998A28F31C8F007090E2 /* PeopleFeedFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5998928F31C8F007090E2 /* PeopleFeedFlowCoordinator.swift */; };
+		64A5998D28F31E2E007090E2 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5998C28F31E2E007090E2 /* FlowCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,6 +126,7 @@
 		64468BFC28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedsUseCaseImpl.swift; sourceTree = "<group>"; };
 		64468BFE28F210A5000F901B /* UsecaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsecaseAssembly.swift; sourceTree = "<group>"; };
 		64468C0028F2121B000F901B /* ProxyLaunchControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProxyLaunchControllerView.xib; sourceTree = "<group>"; };
+		64553D4A28F31F9500EA58DB /* PeopleFeedCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedCoordinatorFactory.swift; sourceTree = "<group>"; };
 		64A5993F28F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicatorView.swift"; sourceTree = "<group>"; };
 		64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
@@ -140,6 +149,13 @@
 		64A5997328F2FCF5007090E2 /* UIImageView+SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SetImage.swift"; sourceTree = "<group>"; };
 		64A5997628F2FFD0007090E2 /* SpacingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingCell.swift; sourceTree = "<group>"; };
 		64A5997828F3005C007090E2 /* SpacingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpacingCell.xib; sourceTree = "<group>"; };
+		64A5997D28F30842007090E2 /* TabBarSceneFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSceneFlowCoordinator.swift; sourceTree = "<group>"; };
+		64A5998028F3095F007090E2 /* TabBarSceneCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSceneCoordinatorFactory.swift; sourceTree = "<group>"; };
+		64A5998328F30A4D007090E2 /* ProxyLaunchNavigationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyLaunchNavigationActions.swift; sourceTree = "<group>"; };
+		64A5998528F30CCC007090E2 /* TabBarSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSceneFactory.swift; sourceTree = "<group>"; };
+		64A5998728F30DDD007090E2 /* PeopleFeedControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleFeedControllerView.xib; sourceTree = "<group>"; };
+		64A5998928F31C8F007090E2 /* PeopleFeedFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedFlowCoordinator.swift; sourceTree = "<group>"; };
+		64A5998C28F31E2E007090E2 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,8 +303,9 @@
 			isa = PBXGroup;
 			children = (
 				641DFD3D28F095C300F13AEA /* LaunchScreen.storyboard */,
-				64A5997528F2FFC4007090E2 /* Cells */,
+				64A5998B28F31E21007090E2 /* Feed */,
 				64A5993C28F2BD3F007090E2 /* Search Feed */,
+				64A5997B28F3081F007090E2 /* Tab Bar Scene */,
 				64A5993928F2BC0B007090E2 /* People Feed Scene */,
 				64468BE028F2036C000F901B /* Proxy Launch Scene */,
 			);
@@ -325,6 +342,7 @@
 		64468BE928F20952000F901B /* Proxy Launch */ = {
 			isa = PBXGroup;
 			children = (
+				64A5998228F30A37007090E2 /* Navigation */,
 				64468BEF28F209BB000F901B /* View Model */,
 				64468BEE28F209B1000F901B /* View */,
 			);
@@ -490,6 +508,7 @@
 		64A5995D28F2E44D007090E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				64A5998728F30DDD007090E2 /* PeopleFeedControllerView.xib */,
 				64A5996728F2EE65007090E2 /* PeopleFeedControllerView.swift */,
 				64A5995E28F2E466007090E2 /* PeopleFeedController.swift */,
 				64A5996B28F2F5CB007090E2 /* Cells */,
@@ -501,6 +520,7 @@
 			isa = PBXGroup;
 			children = (
 				64A5996128F2E49E007090E2 /* PeopleFeedSceneFactory.swift */,
+				64553D4A28F31F9500EA58DB /* PeopleFeedCoordinatorFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -508,6 +528,7 @@
 		64A5996328F2E6FF007090E2 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				64A5998928F31C8F007090E2 /* PeopleFeedFlowCoordinator.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -530,13 +551,64 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		64A5997528F2FFC4007090E2 /* Cells */ = {
+		64A5997528F2FFC4007090E2 /* Commmon Cells */ = {
 			isa = PBXGroup;
 			children = (
 				64A5997828F3005C007090E2 /* SpacingCell.xib */,
 				64A5997628F2FFD0007090E2 /* SpacingCell.swift */,
 			);
-			path = Cells;
+			path = "Commmon Cells";
+			sourceTree = "<group>";
+		};
+		64A5997B28F3081F007090E2 /* Tab Bar Scene */ = {
+			isa = PBXGroup;
+			children = (
+				64A5997F28F3092F007090E2 /* Factory */,
+				64A5997C28F30830007090E2 /* Flow */,
+			);
+			path = "Tab Bar Scene";
+			sourceTree = "<group>";
+		};
+		64A5997C28F30830007090E2 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				64A5997D28F30842007090E2 /* TabBarSceneFlowCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		64A5997F28F3092F007090E2 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				64A5998028F3095F007090E2 /* TabBarSceneCoordinatorFactory.swift */,
+				64A5998528F30CCC007090E2 /* TabBarSceneFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		64A5998228F30A37007090E2 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				64A5998328F30A4D007090E2 /* ProxyLaunchNavigationActions.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		64A5998B28F31E21007090E2 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				64A5998E28F31EE7007090E2 /* Flow */,
+				64A5997528F2FFC4007090E2 /* Commmon Cells */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		64A5998E28F31EE7007090E2 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				64A5998C28F31E2E007090E2 /* FlowCoordinator.swift */,
+			);
+			path = Flow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -612,6 +684,7 @@
 				64A5997928F3005C007090E2 /* SpacingCell.xib in Resources */,
 				64A5996F28F2F843007090E2 /* PersonCell.xib in Resources */,
 				64A5995228F2C2EA007090E2 /* SearchFeedControllerView.xib in Resources */,
+				64A5998828F30DDD007090E2 /* PeopleFeedControllerView.xib in Resources */,
 				64468C0128F2121B000F901B /* ProxyLaunchControllerView.xib in Resources */,
 				64A5996A28F2EED2007090E2 /* SearchFeedNoResultsCell.xib in Resources */,
 			);
@@ -649,6 +722,7 @@
 				641DFE0828F1AE6C00F13AEA /* PeopleFeedRequest.swift in Sources */,
 				641DFE0528F1ADFE00F13AEA /* RoomsFeedRepository.swift in Sources */,
 				64A5995828F2D4C4007090E2 /* PeopleFeedViewModel.swift in Sources */,
+				64A5998128F3095F007090E2 /* TabBarSceneCoordinatorFactory.swift in Sources */,
 				64468BED28F209A9000F901B /* ProxyLaunchController.swift in Sources */,
 				64468B9B28F1D077000F901B /* RoomsFeedRepositoryImpl.swift in Sources */,
 				64468BE828F207EB000F901B /* ProxyLaunchCoordinatorFactory.swift in Sources */,
@@ -659,6 +733,8 @@
 				64468BDA28F1F5D9000F901B /* RepositoryAssembly.swift in Sources */,
 				64468BE528F20584000F901B /* ProxyLaunchFlowFactory.swift in Sources */,
 				64468BCD28F1EFD2000F901B /* ServiceLocating.swift in Sources */,
+				64A5998628F30CCC007090E2 /* TabBarSceneFactory.swift in Sources */,
+				64553D4B28F31F9500EA58DB /* PeopleFeedCoordinatorFactory.swift in Sources */,
 				64468BD328F1F164000F901B /* SwinjectResolver+ServiceLocating.swift in Sources */,
 				64A5994C28F2BEEA007090E2 /* SearchFeedViewModel.swift in Sources */,
 				641DFE2428F1BC7500F13AEA /* NetworkService+Combine.swift in Sources */,
@@ -671,7 +747,9 @@
 				64A5994128F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift in Sources */,
 				64A5997428F2FCF5007090E2 /* UIImageView+SetImage.swift in Sources */,
 				64468BF628F20B58000F901B /* ProxyLaunchViewModelImpl.swift in Sources */,
+				64A5998D28F31E2E007090E2 /* FlowCoordinator.swift in Sources */,
 				64A5994E28F2C2D4007090E2 /* SearchFeedController.swift in Sources */,
+				64A5998428F30A4D007090E2 /* ProxyLaunchNavigationActions.swift in Sources */,
 				64A5995C28F2D6C3007090E2 /* GetPeopleUseCaseImpl.swift in Sources */,
 				64468BD028F1EFFA000F901B /* SwinjectServiceLocator.swift in Sources */,
 				641DFE0A28F1AED200F13AEA /* RoomsFeedRequest.swift in Sources */,
@@ -686,7 +764,9 @@
 				64A5996828F2EE65007090E2 /* PeopleFeedControllerView.swift in Sources */,
 				64A5994728F2BDD2007090E2 /* KeyboardScrollViewObserver.swift in Sources */,
 				64468BDE28F1FA2D000F901B /* AppFlowFactory.swift in Sources */,
+				64A5997E28F30842007090E2 /* TabBarSceneFlowCoordinator.swift in Sources */,
 				64468BF128F209CF000F901B /* ProxyLaunchViewModel.swift in Sources */,
+				64A5998A28F31C8F007090E2 /* PeopleFeedFlowCoordinator.swift in Sources */,
 				64A5995A28F2D672007090E2 /* GetPeopleUseCase.swift in Sources */,
 				64A5995028F2C2E2007090E2 /* SearchFeedControllerView.swift in Sources */,
 				64A5996228F2E49E007090E2 /* PeopleFeedSceneFactory.swift in Sources */,

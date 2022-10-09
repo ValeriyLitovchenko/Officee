@@ -12,7 +12,7 @@ final class ProxyLaunchFlowCoordinator {
   // MARK: - Properties
   
   private let flowFactory: ProxyLaunchFlowFactory
-  private weak var window: UIWindow?
+  private let window: UIWindow
   
   // MARK: - Constructor
   
@@ -25,6 +25,12 @@ final class ProxyLaunchFlowCoordinator {
   }
   
   func start() {
-    window?.rootViewController = flowFactory.proxyLaunchController()
+    let navigatioActions = ProxyLaunchNavigationActions(openTabBar: openTabBar)
+    window.rootViewController = flowFactory.proxyLaunchController(with: navigatioActions)
+  }
+  
+  private func openTabBar() {
+    let coordinator = flowFactory.tabBarCoordinator()
+    window.rootViewController = coordinator.start()
   }
 }

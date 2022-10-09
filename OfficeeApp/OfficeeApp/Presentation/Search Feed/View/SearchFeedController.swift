@@ -75,6 +75,7 @@ class SearchFeedController<View: SearchFeedControllerView>:
       .receive(on: DispatchQueue.main)
       .sink(receiveValue: { [weak self] state in
         view.activityIndicator.setIsAnimating(state == .loading)
+        view.tableView.refreshControl?.endRefreshing()
         
         guard case let .contentReady(content) = state,
               let self = self else { return }
