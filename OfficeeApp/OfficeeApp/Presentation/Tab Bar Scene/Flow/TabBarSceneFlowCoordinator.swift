@@ -26,7 +26,6 @@ final class TabBarSceneFlowCoordinatorImpl: TabBarSceneFlowCoordinator {
     let peopleFeed = sceneFactory.peopleFeedCoordinator().start()
     let roomsFeed = sceneFactory.roomsFeedCoordinator().start()
     let tabBarController = UITabBarController()
-    tabBarController.tabBar.tintColor = .systemRed
     tabBarController.setViewControllers(
       [
         peopleFeed,

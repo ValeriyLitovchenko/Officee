@@ -19,5 +19,7 @@ final class SpacingCellModel: BaseTableCellModel {
 }
 
 final class SpacingCell: BaseTableCell {
+  // With empty body disables cell highlighting while tapping on it
+  override func setHighlighted(_ highlighted: Bool, animated: Bool) {}
   override func configure(with _: BaseTableCellModel) {}
 }

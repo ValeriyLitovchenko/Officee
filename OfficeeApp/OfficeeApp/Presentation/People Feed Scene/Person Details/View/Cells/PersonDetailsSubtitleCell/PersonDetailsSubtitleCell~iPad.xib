@@ -18,15 +18,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTb-ph-QlN">
-                        <rect key="frame" x="25" y="0.0" width="364" height="69"/>
+                        <rect key="frame" x="50" y="0.0" width="314" height="69"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                         <color key="textColor" systemColor="systemGrayColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="gTb-ph-QlN" secondAttribute="trailing" constant="25" id="MUt-VS-hkV"/>
-                    <constraint firstItem="gTb-ph-QlN" firstAttribute="leading" secondItem="VHK-Th-EcK" secondAttribute="leading" constant="25" id="fwY-rc-hjF"/>
+                    <constraint firstAttribute="trailing" secondItem="gTb-ph-QlN" secondAttribute="trailing" constant="50" id="MUt-VS-hkV"/>
+                    <constraint firstItem="gTb-ph-QlN" firstAttribute="leading" secondItem="VHK-Th-EcK" secondAttribute="leading" constant="50" id="fwY-rc-hjF"/>
                     <constraint firstAttribute="bottom" secondItem="gTb-ph-QlN" secondAttribute="bottom" id="lrV-Tx-nsw"/>
                     <constraint firstItem="gTb-ph-QlN" firstAttribute="top" secondItem="VHK-Th-EcK" secondAttribute="top" id="wJu-Va-i8I"/>
                 </constraints>

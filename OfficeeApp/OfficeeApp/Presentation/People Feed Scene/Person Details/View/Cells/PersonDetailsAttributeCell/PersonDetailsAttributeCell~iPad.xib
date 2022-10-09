@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="998" verticalCompressionResistancePriority="998" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPU-Sa-NyL">
-                        <rect key="frame" x="25" y="0.0" width="41.5" height="20.5"/>
+                        <rect key="frame" x="50" y="0.0" width="41.5" height="20.5"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                        <color key="textColor" name="MineShaft"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" horizontalCompressionResistancePriority="997" verticalCompressionResistancePriority="998" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YQ-Bg-pOT">
-                        <rect key="frame" x="76.5" y="0.0" width="164.5" height="20.5"/>
+                        <rect key="frame" x="101.5" y="0.0" width="114.5" height="20.5"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                         <color key="textColor" systemColor="secondaryLabelColor"/>
                         <nil key="highlightedColor"/>
@@ -34,15 +33,15 @@
                 <constraints>
                     <constraint firstItem="3YQ-Bg-pOT" firstAttribute="top" secondItem="Vag-cg-H5O" secondAttribute="top" priority="998" id="A8b-CA-hEC"/>
                     <constraint firstItem="3YQ-Bg-pOT" firstAttribute="leading" secondItem="LPU-Sa-NyL" secondAttribute="trailing" constant="10" id="Emb-rA-Fqc"/>
-                    <constraint firstAttribute="trailing" secondItem="3YQ-Bg-pOT" secondAttribute="trailing" constant="25" id="Fch-KO-E4B"/>
+                    <constraint firstAttribute="trailing" secondItem="3YQ-Bg-pOT" secondAttribute="trailing" constant="50" id="Fch-KO-E4B"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LPU-Sa-NyL" secondAttribute="bottom" priority="998" id="NDD-8g-yHe"/>
-                    <constraint firstItem="LPU-Sa-NyL" firstAttribute="leading" secondItem="Vag-cg-H5O" secondAttribute="leading" constant="25" id="fDb-jm-tSG"/>
+                    <constraint firstItem="LPU-Sa-NyL" firstAttribute="leading" secondItem="Vag-cg-H5O" secondAttribute="leading" constant="50" id="fDb-jm-tSG"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3YQ-Bg-pOT" secondAttribute="bottom" priority="998" id="pme-sh-aJ1"/>
                     <constraint firstItem="LPU-Sa-NyL" firstAttribute="top" secondItem="Vag-cg-H5O" secondAttribute="top" priority="998" id="pvN-XJ-cEf"/>
                 </constraints>
             </tableViewCellContentView>
             <constraints>
-                <constraint firstItem="LPU-Sa-NyL" firstAttribute="width" relation="lessThanOrEqual" secondItem="KdH-02-uwz" secondAttribute="width" multiplier="0.5" constant="-30" id="yYB-CZ-gT9"/>
+                <constraint firstItem="LPU-Sa-NyL" firstAttribute="width" relation="lessThanOrEqual" secondItem="KdH-02-uwz" secondAttribute="width" multiplier="0.5" constant="-55" id="yYB-CZ-gT9"/>
             </constraints>
             <connections>
                 <outlet property="attributeNameLabel" destination="LPU-Sa-NyL" id="HuY-8a-esx"/>
@@ -52,9 +51,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <namedColor name="MineShaft">
-            <color red="0.18431372549019609" green="0.18431372549019609" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

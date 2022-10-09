@@ -76,6 +76,11 @@
 		64553D5728F322F900EA58DB /* GetRoomsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64553D5628F322F900EA58DB /* GetRoomsUseCaseImpl.swift */; };
 		64553D5A28F3247500EA58DB /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64553D5928F3247500EA58DB /* RoomCell.swift */; };
 		64553D5C28F3265F00EA58DB /* RoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64553D5B28F3265F00EA58DB /* RoomCell.xib */; };
+		64816EEA28F37BDB00F0385F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64816EE928F37BDB00F0385F /* Colors.xcassets */; };
+		64816EEC28F3817500F0385F /* PersonDetailsAttributeCell~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64816EEB28F3817500F0385F /* PersonDetailsAttributeCell~iPad.xib */; };
+		64816EEE28F384D000F0385F /* PersonDetailsSubtitleCell~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64816EED28F384D000F0385F /* PersonDetailsSubtitleCell~iPad.xib */; };
+		64816EF028F384F400F0385F /* PersonDetailsTitleCell~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64816EEF28F384F400F0385F /* PersonDetailsTitleCell~iPad.xib */; };
+		64816EF328F3880E00F0385F /* DefinedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64816EF228F3880E00F0385F /* DefinedColors.swift */; };
 		64A5994128F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5993F28F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift */; };
 		64A5994228F2BDC9007090E2 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */; };
 		64A5994628F2BDD2007090E2 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */; };
@@ -191,6 +196,11 @@
 		64553D5628F322F900EA58DB /* GetRoomsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomsUseCaseImpl.swift; sourceTree = "<group>"; };
 		64553D5928F3247500EA58DB /* RoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
 		64553D5B28F3265F00EA58DB /* RoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomCell.xib; sourceTree = "<group>"; };
+		64816EE928F37BDB00F0385F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		64816EEB28F3817500F0385F /* PersonDetailsAttributeCell~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "PersonDetailsAttributeCell~iPad.xib"; path = "OfficeeApp/Presentation/People Feed Scene/Person Details/View/Cells/PersonDetailsAttributeCell/PersonDetailsAttributeCell~iPad.xib"; sourceTree = SOURCE_ROOT; };
+		64816EED28F384D000F0385F /* PersonDetailsSubtitleCell~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "PersonDetailsSubtitleCell~iPad.xib"; sourceTree = "<group>"; };
+		64816EEF28F384F400F0385F /* PersonDetailsTitleCell~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "PersonDetailsTitleCell~iPad.xib"; sourceTree = "<group>"; };
+		64816EF228F3880E00F0385F /* DefinedColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinedColors.swift; sourceTree = "<group>"; };
 		64A5993F28F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicatorView.swift"; sourceTree = "<group>"; };
 		64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
@@ -258,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				64468BC428F1ED03000F901B /* Application */,
+				64816EF128F387FE00F0385F /* Constants */,
 				641DFE1528F1B66600F13AEA /* Infrastructure */,
 				641DFE1028F1B15100F13AEA /* Data */,
 				641DFE0B28F1AFC700F13AEA /* Domain */,
@@ -478,6 +489,7 @@
 			isa = PBXGroup;
 			children = (
 				641DFD3B28F095C300F13AEA /* Assets.xcassets */,
+				64816EE928F37BDB00F0385F /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -486,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				6449FFFD28F34FA800B52F05 /* PersonDetailsSubtitleCell.xib */,
+				64816EED28F384D000F0385F /* PersonDetailsSubtitleCell~iPad.xib */,
 				6449FFFF28F34FB100B52F05 /* PersonDetailsSubtitleCell.swift */,
 			);
 			path = PersonDetailsSubtitleCell;
@@ -495,6 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				6449000528F350E800B52F05 /* PersonDetailsAttributeCell.xib */,
+				64816EEB28F3817500F0385F /* PersonDetailsAttributeCell~iPad.xib */,
 				6449000328F350E200B52F05 /* PersonDetailsAttributeCell.swift */,
 			);
 			path = PersonDetailsAttributeCell;
@@ -578,6 +592,7 @@
 			isa = PBXGroup;
 			children = (
 				6449FFFB28F34E1000B52F05 /* PersonDetailsTitleCell.xib */,
+				64816EEF28F384F400F0385F /* PersonDetailsTitleCell~iPad.xib */,
 				6449FFF928F34E0B00B52F05 /* PersonDetailsTitleCell.swift */,
 			);
 			path = PersonDetailsTitleCell;
@@ -646,6 +661,14 @@
 				64553D5928F3247500EA58DB /* RoomCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		64816EF128F387FE00F0385F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				64816EF228F3880E00F0385F /* DefinedColors.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		64A5993928F2BC0B007090E2 /* People Feed Scene */ = {
@@ -928,11 +951,15 @@
 				6449001828F369E000B52F05 /* RoomCell~iPad.xib in Resources */,
 				6449FFF628F349F000B52F05 /* PersonDetailsAvatarCell.xib in Resources */,
 				6449001628F3655D00B52F05 /* PersonCell~iPad.xib in Resources */,
+				64816EEA28F37BDB00F0385F /* Colors.xcassets in Resources */,
 				64A5995228F2C2EA007090E2 /* SearchFeedControllerView.xib in Resources */,
 				6449FFD628F329AF00B52F05 /* RoomsFeedControllerView.xib in Resources */,
 				64A5998828F30DDD007090E2 /* PeopleFeedControllerView.xib in Resources */,
 				64468C0128F2121B000F901B /* ProxyLaunchControllerView.xib in Resources */,
+				64816EEC28F3817500F0385F /* PersonDetailsAttributeCell~iPad.xib in Resources */,
 				6449FFEF28F340D800B52F05 /* PersonDetailsControllerView.xib in Resources */,
+				64816EEE28F384D000F0385F /* PersonDetailsSubtitleCell~iPad.xib in Resources */,
+				64816EF028F384F400F0385F /* PersonDetailsTitleCell~iPad.xib in Resources */,
 				6449FFFE28F34FA800B52F05 /* PersonDetailsSubtitleCell.xib in Resources */,
 				64A5996A28F2EED2007090E2 /* SearchFeedNoResultsCell.xib in Resources */,
 				64553D5C28F3265F00EA58DB /* RoomCell.xib in Resources */,
@@ -1040,6 +1067,7 @@
 				64A5996228F2E49E007090E2 /* PeopleFeedSceneFactory.swift in Sources */,
 				64468BD828F1F38B000F901B /* StorageAssembly.swift in Sources */,
 				64553D5328F3220900EA58DB /* RoomsFeedViewModel.swift in Sources */,
+				64816EF328F3880E00F0385F /* DefinedColors.swift in Sources */,
 				6449FFDE28F32B2900B52F05 /* RoomsFeedCoordinatorFactory.swift in Sources */,
 				64553D5728F322F900EA58DB /* GetRoomsUseCaseImpl.swift in Sources */,
 				6449001228F361CB00B52F05 /* UIViewController+CloseButton.swift in Sources */,

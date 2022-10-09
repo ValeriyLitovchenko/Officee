@@ -16,7 +16,9 @@ extension UIView {
   @discardableResult
   func addActivityIndicatorView(bgColor: UIColor = .clear) -> ActivityIndicatorView {
     let indicator = ActivityIndicatorView(
-      style: ActivityIndicatorView.Style(bgColor: bgColor)
+      style: ActivityIndicatorView.Style(
+        bgColor: bgColor,
+        indicatorColor: DefinedColors.activityIndicator.color ?? .lightGray)
     )
     
     indicator.translatesAutoresizingMaskIntoConstraints = false

@@ -29,6 +29,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     appFlowCoordinator.start()
     window?.makeKeyAndVisible()
     
+    setupNavigationBarAppearance()
     return true
+  }
+  
+  // MARK: - Private functions
+  private func setupNavigationBarAppearance() {
+    let appearance = UINavigationBarAppearance()
+    appearance.configureWithOpaqueBackground()
+    appearance.backgroundColor = .systemGray6
+    appearance.backgroundEffect = .none
+    
+    UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    UINavigationBar.appearance().standardAppearance = appearance
+    UINavigationBar.appearance().tintColor = DefinedColors.guardsmanRed.color
+    
+    UITabBar.appearance().tintColor = DefinedColors.guardsmanRed.color
   }
 }

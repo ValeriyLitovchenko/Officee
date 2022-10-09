@@ -139,6 +139,7 @@ final class PeopleFeedViewModel: SearchFeedViewModel {
           identifier: person.id + person.fullName,
           fullName: person.fullName,
           avatar: person.avatar,
+          job: person.jobTitle,
           meetingDescription: person.meetingDescription,
           onAction: { [navigationActions] in
             navigationActions.openPersonDetails(PersonDetailsInput(person: person))

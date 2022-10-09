@@ -23,7 +23,7 @@ struct UsecaseAssembly: Swinject.Assembly {
       GetRoomsUseCaseImpl(repository: resolver.resolve())
     }
     
-    container.register(SendEmailUseCase.self) { resolver in
+    container.register(SendEmailUseCase.self) { _ in
       SendEmailUseCaseImpl()
     }
   }

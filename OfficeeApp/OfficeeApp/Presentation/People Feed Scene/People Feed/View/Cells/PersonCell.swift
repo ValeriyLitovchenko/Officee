@@ -18,6 +18,7 @@ final class PersonCellModel: BaseTableCellModel, ApplicableActionModel {
   
   let fullName: String
   let avatar: String
+  let job: String
   let meetingDescription: String?
   let onAction: VoidCallback
   
@@ -27,11 +28,13 @@ final class PersonCellModel: BaseTableCellModel, ApplicableActionModel {
     identifier: TableCellIdentifier,
     fullName: String,
     avatar: String,
+    job: String,
     meetingDescription: String?,
     onAction: @escaping VoidCallback
   ) {
     self.fullName = fullName
     self.avatar = avatar
+    self.job = job
     self.meetingDescription = meetingDescription
     self.onAction = onAction
     super.init(identifier: identifier)
@@ -43,6 +46,7 @@ final class PersonCell: BaseTableCell {
   // MARK: - Outlets
   
   @IBOutlet private weak var fullNameLabel: UILabel!
+  @IBOutlet private weak var jobLabel: UILabel!
   @IBOutlet private weak var meetingDescriptionLabel: UILabel!
   @IBOutlet private weak var avatarView: UIImageView!
   
@@ -51,6 +55,7 @@ final class PersonCell: BaseTableCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     avatarView.accessibilityIgnoresInvertColors = true
+    avatarView.layer.borderColor = DefinedColors.avatarBorder.color?.cgColor
   }
   
   // With empty body disables cell highlighting while tapping on it
@@ -62,7 +67,10 @@ final class PersonCell: BaseTableCell {
     }
     
     fullNameLabel.text = model.fullName
+    jobLabel.text = model.job
     meetingDescriptionLabel.text = model.meetingDescription
     avatarView.setImage(with: model.avatar)
+    
+    avatarView.layer.borderWidth = model.meetingDescription == nil ? 1.0 : 3.0
   }
 }

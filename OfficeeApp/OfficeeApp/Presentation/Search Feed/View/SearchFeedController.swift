@@ -66,6 +66,7 @@ class SearchFeedController<View: SearchFeedControllerView>:
       primaryAction: UIAction(handler: { [viewModel] _ in
         viewModel.reloadData()
       }))
+    refreshControl.tintColor = DefinedColors.activityIndicator.color
     
     view.tableView.refreshControl = refreshControl
     
