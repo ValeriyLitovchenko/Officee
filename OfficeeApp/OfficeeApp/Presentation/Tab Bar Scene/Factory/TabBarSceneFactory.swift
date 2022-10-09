@@ -11,4 +11,4 @@ struct TabBarSceneFactoryImpl: TabBarSceneFactory {
   let serviceLocating: ServiceLocating
 }
 
-protocol TabBarSceneFactory: PeopleFeedCoordinatorFactory {}
+protocol TabBarSceneFactory: PeopleFeedCoordinatorFactory, RoomsFeedCoordinatorFactory {}

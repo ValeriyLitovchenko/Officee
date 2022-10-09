@@ -23,6 +23,17 @@ class SearchFeedController<View: SearchFeedControllerView>:
   private var onSearchBarCancel: VoidCallback?
   private var cancellable: Cancellable?
   
+  // MARK: - Constructor
+  
+  override init(viewModel: SearchFeedViewModel) {
+    super.init(viewModel: viewModel)
+    title = viewModel.sceneTitle
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
   // MARK: - Lifecycle
   
   override func viewDidLoad() {
@@ -33,6 +44,7 @@ class SearchFeedController<View: SearchFeedControllerView>:
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     keyboardObserver.startObservation()
+    viewModel.loadData()
   }
   
   override func viewWillDisappear(_ animated: Bool) {

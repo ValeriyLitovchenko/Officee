@@ -1,5 +1,5 @@
 //
-//  PeopleFeedViewModel.swift
+//  RoomsFeedViewModel.swift
 //  OfficeeApp
 //
 //  Created by Valeriy L on 09.10.2022.
@@ -10,18 +10,18 @@ import Officee
 import OfficeeiOSCore
 import Combine
 
-final class PeopleFeedViewModel: SearchFeedViewModel {
-  private typealias PeopleFeedOperation = AnyPublisher<[Person], Error>
+final class RoomsFeedViewModel: SearchFeedViewModel {
+  private typealias RoomsFeedOperation = AnyPublisher<[Room], Error>
   
   private enum Constants {
     static let searchOperationDelay = RunLoop.SchedulerTimeType.Stride(0.18)
-    static let peopleSectionIdentifier = "people_section"
+    static let roomsSectionIdentifier = "rooms_section"
   }
   
   // MARK: - Properties
   
-  let sceneTitle = NSLocalizedString("People", comment: "")
-  let searchBarPlaceholder = NSLocalizedString("Enter person name", comment: "")
+  let sceneTitle = NSLocalizedString("Rooms", comment: "")
+  let searchBarPlaceholder = NSLocalizedString("Enter room number", comment: "")
   let searchType = SearchFeedType.variable
   
   var statePublisher: ValuePublisher<SearchFeedViewModelState> {
@@ -36,22 +36,22 @@ final class PeopleFeedViewModel: SearchFeedViewModel {
   private var publishersCancellable: Combine.Cancellable?
   private var queryCancellable: Combine.Cancellable?
   
-  private let getPeopleUseCase: GetPeopleUseCase
+  private let getRoomsUseCase: GetRoomsUseCase
   
   // MARK: - Constructor
   
-  init(getPeopleUseCase: GetPeopleUseCase) {
-    self.getPeopleUseCase = getPeopleUseCase
+  init(getRoomsUseCase: GetRoomsUseCase) {
+    self.getRoomsUseCase = getRoomsUseCase
     
     publishersCancellable = Publishers.CombineLatest(
       refreshDataSubject.eraseToAnyPublisher(),
       searchQuerySubject.eraseToAnyPublisher()
     )
-    .map { [getPeopleUseCase] shouldRefresh, searchQuery in
-      PeopleFeedViewModel.setupFeedOperation(
+    .map { [getRoomsUseCase] shouldRefresh, searchQuery in
+      RoomsFeedViewModel.setupFeedOperation(
         with: searchQuery,
         shouldRefresh: shouldRefresh,
-        getPeopleUseCase: getPeopleUseCase)
+        getRoomsUseCase: getRoomsUseCase)
     }
     .sink(receiveValue: { [weak self] feedOperation in
       self?.perform(feedOperation: feedOperation)
@@ -75,14 +75,15 @@ final class PeopleFeedViewModel: SearchFeedViewModel {
   
   // MARK: - Private Functions
   
-  private func perform(feedOperation: PeopleFeedOperation) {
+  private func perform(feedOperation: RoomsFeedOperation) {
     queryCancellable?.cancel()
     
     queryCancellable = feedOperation
-      .map { [weak self] people in
-        self?.buildContent(people) ?? []
+      .map { [weak self] rooms in
+        self?.buildContent(rooms) ?? []
       }
       .receive(on: DispatchQueue.main)
+      .eraseToAnyPublisher()
       .handleEvents(receiveSubscription: { [weak self] _ in
         self?.stateSubject.send(.loading)
       })
@@ -100,41 +101,41 @@ final class PeopleFeedViewModel: SearchFeedViewModel {
   private static func setupFeedOperation(
     with query: String?,
     shouldRefresh: Bool,
-    getPeopleUseCase: GetPeopleUseCase
-  ) -> PeopleFeedOperation {
+    getRoomsUseCase: GetRoomsUseCase
+  ) -> RoomsFeedOperation {
     if let query = query?.nilIfEmpty {
       return Deferred {
-          Just(PeopleFeedRequest(query: query, shouldRefresh: shouldRefresh))
+          Just(RoomsFeedRequest(query: query, shouldRefresh: shouldRefresh))
             .setFailureType(to: Error.self)
         }
         .delay(
-          for: PeopleFeedViewModel.Constants.searchOperationDelay,
+          for: RoomsFeedViewModel.Constants.searchOperationDelay,
           scheduler: RunLoop.main)
         .eraseToAnyPublisher()
-        .flatMap { [getPeopleUseCase] request in
-          getPeopleUseCase.invoke(with: request)
+        .flatMap { [getRoomsUseCase] request in
+          getRoomsUseCase.invoke(with: request)
         }
         .eraseToAnyPublisher()
     } else {
-      return getPeopleUseCase
-        .invoke(with: PeopleFeedRequest(shouldRefresh: shouldRefresh))
+      return getRoomsUseCase
+        .invoke(with: RoomsFeedRequest(shouldRefresh: shouldRefresh))
     }
   }
   
-  private func buildContent(_ people: [Person]) -> TableSections {
+  private func buildContent(_ rooms: [Room]) -> TableSections {
     var items: [BaseTableCellModel] = [
       SpacingCellModel(height: 20.0)
     ]
     
-    if people.isEmpty {
+    if rooms.isEmpty {
       items.append(SearchFeedNoResultsCellModel())
     } else {
-      people.forEach { person in
-        let model = PersonCellModel(
-          identifier: person.id + person.fullName,
-          fullName: person.fullName,
-          avatar: person.avatar,
-          meetingDescription: person.meetingDescription)
+      rooms.forEach { room in
+        let model = RoomCellModel(
+          identifier: room.id,
+          name: room.name,
+          isOccupied: room.isOccupied,
+          maxOccupancy: "\(room.maxOccupancy)")
         items.append(model)
         items.append(SpacingCellModel(height: 10.0))
       }
@@ -142,7 +143,7 @@ final class PeopleFeedViewModel: SearchFeedViewModel {
     
     return [
       TableSectionModel(
-        identifier: PeopleFeedViewModel.Constants.peopleSectionIdentifier,
+        identifier: RoomsFeedViewModel.Constants.roomsSectionIdentifier,
         items: items)
     ]
   }

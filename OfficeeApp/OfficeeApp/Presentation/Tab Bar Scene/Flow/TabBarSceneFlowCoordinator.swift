@@ -24,8 +24,16 @@ final class TabBarSceneFlowCoordinatorImpl: TabBarSceneFlowCoordinator {
   @discardableResult
   func start() -> UIViewController {
     let tabBarController = UITabBarController()
-    let peopleFeedCoordinator = sceneFactory.peopleFeedCoordinator()
-    tabBarController.setViewControllers([peopleFeedCoordinator.start()], animated: false)
+    let peopleFeed = sceneFactory.peopleFeedCoordinator().start()
+    peopleFeed.tabBarItem = UITabBarItem(title: peopleFeed.title, image: .add, tag: .zero)
+    let roomsFeed = sceneFactory.roomsFeedCoordinator().start()
+    roomsFeed.tabBarItem = UITabBarItem(title: peopleFeed.title, image: .actions, tag: .zero)
+    tabBarController.setViewControllers(
+      [
+        peopleFeed,
+        roomsFeed
+      ],
+      animated: false)
     return tabBarController
   }
 }
