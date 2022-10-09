@@ -47,6 +47,10 @@
 		64A5994228F2BDC9007090E2 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */; };
 		64A5994628F2BDD2007090E2 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */; };
 		64A5994728F2BDD2007090E2 /* KeyboardScrollViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994528F2BDD2007090E2 /* KeyboardScrollViewObserver.swift */; };
+		64A5994C28F2BEEA007090E2 /* SearchFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994B28F2BEEA007090E2 /* SearchFeedViewModel.swift */; };
+		64A5994E28F2C2D4007090E2 /* SearchFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994D28F2C2D4007090E2 /* SearchFeedController.swift */; };
+		64A5995028F2C2E2007090E2 /* SearchFeedControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994F28F2C2E2007090E2 /* SearchFeedControllerView.swift */; };
+		64A5995228F2C2EA007090E2 /* SearchFeedControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64A5995128F2C2EA007090E2 /* SearchFeedControllerView.xib */; };
 		64A5995528F2CF54007090E2 /* String+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5995428F2CF54007090E2 /* String+Extended.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +108,10 @@
 		64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		64A5994528F2BDD2007090E2 /* KeyboardScrollViewObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardScrollViewObserver.swift; sourceTree = "<group>"; };
+		64A5994B28F2BEEA007090E2 /* SearchFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeedViewModel.swift; sourceTree = "<group>"; };
+		64A5994D28F2C2D4007090E2 /* SearchFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeedController.swift; sourceTree = "<group>"; };
+		64A5994F28F2C2E2007090E2 /* SearchFeedControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeedControllerView.swift; sourceTree = "<group>"; };
+		64A5995128F2C2EA007090E2 /* SearchFeedControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchFeedControllerView.xib; sourceTree = "<group>"; };
 		64A5995428F2CF54007090E2 /* String+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extended.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,6 +258,7 @@
 		64468BDF28F20290000F901B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				64A5993C28F2BD3F007090E2 /* Search Feed */,
 				641DFD3D28F095C300F13AEA /* LaunchScreen.storyboard */,
 				64468BE028F2036C000F901B /* Proxy Launch Scene */,
 			);
@@ -354,6 +363,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		64A5993C28F2BD3F007090E2 /* Search Feed */ = {
+			isa = PBXGroup;
+			children = (
+				64A5994928F2BE61007090E2 /* View Model */,
+				64A5994828F2BE58007090E2 /* View */,
+			);
+			path = "Search Feed";
+			sourceTree = "<group>";
 		};
 		64A5993D28F2BD81007090E2 /* Utils */ = {
 			isa = PBXGroup;
@@ -381,6 +398,24 @@
 				64A5994528F2BDD2007090E2 /* KeyboardScrollViewObserver.swift */,
 			);
 			path = KeyboardObservers;
+			sourceTree = "<group>";
+		};
+		64A5994828F2BE58007090E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64A5995128F2C2EA007090E2 /* SearchFeedControllerView.xib */,
+				64A5994F28F2C2E2007090E2 /* SearchFeedControllerView.swift */,
+				64A5994D28F2C2D4007090E2 /* SearchFeedController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		64A5994928F2BE61007090E2 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				64A5994B28F2BEEA007090E2 /* SearchFeedViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		64A5995328F2CF40007090E2 /* Extensions */ = {
@@ -459,6 +494,7 @@
 			files = (
 				641DFD3F28F095C300F13AEA /* LaunchScreen.storyboard in Resources */,
 				641DFD3C28F095C300F13AEA /* Assets.xcassets in Resources */,
+				64A5995228F2C2EA007090E2 /* SearchFeedControllerView.xib in Resources */,
 				64468C0128F2121B000F901B /* ProxyLaunchControllerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +540,7 @@
 				64468BE528F20584000F901B /* ProxyLaunchFlowFactory.swift in Sources */,
 				64468BCD28F1EFD2000F901B /* ServiceLocating.swift in Sources */,
 				64468BD328F1F164000F901B /* SwinjectResolver+ServiceLocating.swift in Sources */,
+				64A5994C28F2BEEA007090E2 /* SearchFeedViewModel.swift in Sources */,
 				641DFE2428F1BC7500F13AEA /* NetworkService+Combine.swift in Sources */,
 				64468BD628F1F225000F901B /* NetworkLayerAssembly.swift in Sources */,
 				641DFE0028F1ACD100F13AEA /* PeopleFeedRepository.swift in Sources */,
@@ -512,6 +549,7 @@
 				64A5995528F2CF54007090E2 /* String+Extended.swift in Sources */,
 				64A5994128F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift in Sources */,
 				64468BF628F20B58000F901B /* ProxyLaunchViewModelImpl.swift in Sources */,
+				64A5994E28F2C2D4007090E2 /* SearchFeedController.swift in Sources */,
 				64468BD028F1EFFA000F901B /* SwinjectServiceLocator.swift in Sources */,
 				641DFE0A28F1AED200F13AEA /* RoomsFeedRequest.swift in Sources */,
 				64A5994228F2BDC9007090E2 /* ActivityIndicatorView.swift in Sources */,
@@ -523,6 +561,7 @@
 				64A5994728F2BDD2007090E2 /* KeyboardScrollViewObserver.swift in Sources */,
 				64468BDE28F1FA2D000F901B /* AppFlowFactory.swift in Sources */,
 				64468BF128F209CF000F901B /* ProxyLaunchViewModel.swift in Sources */,
+				64A5995028F2C2E2007090E2 /* SearchFeedControllerView.swift in Sources */,
 				64468BD828F1F38B000F901B /* StorageAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
