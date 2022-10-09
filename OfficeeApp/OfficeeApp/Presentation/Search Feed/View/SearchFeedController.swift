@@ -121,7 +121,14 @@ class SearchFeedController<View: SearchFeedControllerView>:
     searchBar.delegate = self
     searchBar.placeholder = viewModel.searchBarPlaceholder
     searchBar.alpha = .zero
-    navigationItem.setRightBarButton(nil, animated: true)
+    
+    PlatformFlowUseCase.invoke(
+      iPhoneFlow: { [navigationItem] in
+        navigationItem.setRightBarButton(nil, animated: true)
+      },
+      iPadFlow: {
+        self.addCancelButtonItem()
+      })
     
     UIView.animate(
       withDuration: animated ? SearchFeedControllerConstants.searchBarAnimationDuration : .zero,
@@ -131,6 +138,23 @@ class SearchFeedController<View: SearchFeedControllerView>:
       }, completion: { [weak searchBar] _ in
         searchBar?.becomeFirstResponder()
       })
+  }
+  
+  private func addCancelButtonItem() {
+    let searchButton = UIBarButtonItem(
+      barButtonSystemItem: .cancel,
+      target: self,
+      action: #selector(onCancelButtonAction))
+    
+    navigationItem.setRightBarButton(searchButton, animated: true)
+  }
+  
+  @objc
+  private func onCancelButtonAction() {
+    navigationItem.setRightBarButton(nil, animated: true)
+    view.endEditing(true)
+    viewModel.performSearch(with: nil)
+    onSearchBarCancel?()
   }
   
   // MARK: - UISearchBarDelegate
@@ -155,9 +179,6 @@ class SearchFeedController<View: SearchFeedControllerView>:
   }
   
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-    searchBar.text = nil
-    searchBar.resignFirstResponder()
-    viewModel.performSearch(with: nil)
-    onSearchBarCancel?()
+    onCancelButtonAction()
   }
 }
