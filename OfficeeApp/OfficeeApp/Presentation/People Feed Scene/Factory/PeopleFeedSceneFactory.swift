@@ -26,7 +26,9 @@ extension PeopleFeedSceneFactory {
   }
   
   func personDetailsController(with inputModel: PersonDetailsInput) -> PersonDetailsController {
-    let viewModel = PersonDetailsViewModelImpl(inputModel: inputModel)
+    let viewModel = PersonDetailsViewModelImpl(
+      inputModel: inputModel,
+      sendEmailUseCase: serviceLocating.resolve())
     return PersonDetailsController(viewModel: viewModel)
   }
 }

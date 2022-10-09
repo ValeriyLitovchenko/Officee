@@ -36,7 +36,17 @@ final class PeopleFeedFlowCoordinatorImpl: PeopleFeedFlowCoordinator {
   private func openPersonDetails(_ inputModel: PersonDetailsInput) {
     let personDetails = sceneFactory.personDetailsController(with: inputModel)
     personDetails.hidesBottomBarWhenPushed = true
-    navigationController?.pushViewController(personDetails, animated: true)
+    
+    PlatformFlowUseCase.invoke(
+      iPhoneFlow: { [weak navigationController] in
+        navigationController?.pushViewController(personDetails, animated: true)
+      },
+      iPadFlow: { [weak navigationController] in
+        let personDetailsNavigation = UINavigationController(rootViewController: personDetails)
+        personDetailsNavigation.modalPresentationStyle = .formSheet
+        personDetails.addCloseButtonItem()
+        navigationController?.present(personDetailsNavigation, animated: true)
+      })
   }
 }
 
