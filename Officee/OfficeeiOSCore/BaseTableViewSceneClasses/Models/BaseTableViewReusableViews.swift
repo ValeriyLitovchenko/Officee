@@ -7,14 +7,14 @@
 import UIKit
 
 /// Base type for table cell model objects
-public class BaseTableCellModel: CellModel, Hashable {
+open class BaseTableCellModel: CellModel, Hashable {
   
   // MARK: - Properties
   
   public let cellIdentifier: TableCellIdentifier
   public let cellHeight: CGFloat
   
-  public var type: UITableViewCell.Type {
+  open var type: UITableViewCell.Type {
     fatalError("Should be implemented by subclass")
   }
   
@@ -48,7 +48,7 @@ public class BaseTableCellModel: CellModel, Hashable {
 public typealias TableCellIdentifier = String
 
 /// Base type for table cells
-public class BaseTableCell: UITableViewCell {
+open class BaseTableCell: UITableViewCell {
   
   // MARK: - Destructor
   

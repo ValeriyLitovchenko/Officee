@@ -10,10 +10,18 @@ import Foundation
 struct PeopleFeedRequest {
   let query: String?
   let shouldRefresh: Bool
+  
+  init(
+    query: String? = nil,
+    shouldRefresh: Bool
+  ) {
+    self.query = query
+    self.shouldRefresh = shouldRefresh
+  }
 }
 
 extension PeopleFeedRequest {
   static var refreshRequest: PeopleFeedRequest {
-    PeopleFeedRequest(query: nil, shouldRefresh: true)
+    PeopleFeedRequest(shouldRefresh: true)
   }
 }

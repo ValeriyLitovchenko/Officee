@@ -9,15 +9,16 @@ import UIKit
 import OfficeeiOSCore
 import Combine
 
-final class SearchFeedController: BaseTableViewController<SearchFeedControllerView, SearchFeedViewModel> {
-  
-  private enum Constants {
-    static let searchBarAnimationDuration = TimeInterval(0.2)
-  }
+enum SearchFeedControllerConstants {
+  static let searchBarAnimationDuration = TimeInterval(0.2)
+}
+
+class SearchFeedController<View: SearchFeedControllerView>:
+  BaseTableViewController<View, SearchFeedViewModel>, UISearchBarDelegate {
   
   // MARK: - Properties
   
-  private lazy var keyboardObserver = KeyboardScrollViewObserver(scrollView: contentView.tableView)
+  private(set) lazy var keyboardObserver = KeyboardScrollViewObserver(scrollView: contentView.tableView)
   
   private var onSearchBarCancel: VoidCallback?
   private var cancellable: Cancellable?
@@ -41,12 +42,20 @@ final class SearchFeedController: BaseTableViewController<SearchFeedControllerVi
     keyboardObserver.stopObservation()
   }
   
-  // MARK: - Private Functions
+  // MARK: - Functions
   
-  private func setupUI() {
+  func setupUI() {
     let `view` = contentView
     
     title = viewModel.sceneTitle
+    
+    let refreshControl = UIRefreshControl(
+      frame: .zero,
+      primaryAction: UIAction(handler: { [viewModel] _ in
+        viewModel.reloadData()
+      }))
+    
+    view.tableView.refreshControl = refreshControl
     
     switch viewModel.searchType {
     case .permanent:
@@ -74,9 +83,9 @@ final class SearchFeedController: BaseTableViewController<SearchFeedControllerVi
       })
   }
   
-  private func hideSearchBar() {
+  func hideSearchBar() {
     UIView.animate(
-      withDuration: Constants.searchBarAnimationDuration,
+      withDuration: SearchFeedControllerConstants.searchBarAnimationDuration,
       animations: {
         self.navigationItem.titleView = nil
       }, completion: { [weak self] _ in
@@ -84,7 +93,7 @@ final class SearchFeedController: BaseTableViewController<SearchFeedControllerVi
       })
   }
   
-  private func addSearchButton() {
+  func addSearchButton() {
     let searchButton = UIBarButtonItem(
       barButtonSystemItem: .search,
       target: self,
@@ -94,7 +103,7 @@ final class SearchFeedController: BaseTableViewController<SearchFeedControllerVi
   }
   
   @objc
-  private func showSearchBar(_ animated: Bool = true) {
+  func showSearchBar(_ animated: Bool = true) {
     let searchBar = UISearchBar(frame: .zero)
     searchBar.delegate = self
     searchBar.placeholder = viewModel.searchBarPlaceholder
@@ -102,7 +111,7 @@ final class SearchFeedController: BaseTableViewController<SearchFeedControllerVi
     navigationItem.setRightBarButton(nil, animated: true)
     
     UIView.animate(
-      withDuration: animated ? Constants.searchBarAnimationDuration : .zero,
+      withDuration: animated ? SearchFeedControllerConstants.searchBarAnimationDuration : .zero,
       animations: {
         self.navigationItem.titleView = searchBar
         searchBar.alpha = 1.0
@@ -110,11 +119,8 @@ final class SearchFeedController: BaseTableViewController<SearchFeedControllerVi
         searchBar?.becomeFirstResponder()
       })
   }
-}
-
-// MARK: - UISearchBarDelegate
-
-extension SearchFeedController: UISearchBarDelegate {
+  
+  // MARK: - UISearchBarDelegate
   
   func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
     searchBar.setShowsCancelButton(true, animated: true)
@@ -128,7 +134,7 @@ extension SearchFeedController: UISearchBarDelegate {
     _ searchBar: UISearchBar,
     textDidChange searchText: String
   ) {
-    viewModel.performSearch(with: searchText.nilIfEmpty)
+    viewModel.performSearch(with: searchText)
   }
   
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

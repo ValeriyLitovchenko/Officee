@@ -52,8 +52,20 @@
 		64A5995028F2C2E2007090E2 /* SearchFeedControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994F28F2C2E2007090E2 /* SearchFeedControllerView.swift */; };
 		64A5995228F2C2EA007090E2 /* SearchFeedControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64A5995128F2C2EA007090E2 /* SearchFeedControllerView.xib */; };
 		64A5995528F2CF54007090E2 /* String+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5995428F2CF54007090E2 /* String+Extended.swift */; };
+		64A5995828F2D4C4007090E2 /* PeopleFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5995728F2D4C4007090E2 /* PeopleFeedViewModel.swift */; };
 		64A5995A28F2D672007090E2 /* GetPeopleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5995928F2D672007090E2 /* GetPeopleUseCase.swift */; };
 		64A5995C28F2D6C3007090E2 /* GetPeopleUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5995B28F2D6C3007090E2 /* GetPeopleUseCaseImpl.swift */; };
+		64A5995F28F2E466007090E2 /* PeopleFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5995E28F2E466007090E2 /* PeopleFeedController.swift */; };
+		64A5996228F2E49E007090E2 /* PeopleFeedSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5996128F2E49E007090E2 /* PeopleFeedSceneFactory.swift */; };
+		64A5996628F2E796007090E2 /* SearchFeedNoResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5996528F2E796007090E2 /* SearchFeedNoResultsCell.swift */; };
+		64A5996828F2EE65007090E2 /* PeopleFeedControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5996728F2EE65007090E2 /* PeopleFeedControllerView.swift */; };
+		64A5996A28F2EED2007090E2 /* SearchFeedNoResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64A5996928F2EED2007090E2 /* SearchFeedNoResultsCell.xib */; };
+		64A5996D28F2F5D9007090E2 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5996C28F2F5D9007090E2 /* PersonCell.swift */; };
+		64A5996F28F2F843007090E2 /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64A5996E28F2F843007090E2 /* PersonCell.xib */; };
+		64A5997228F2FCD2007090E2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 64A5997128F2FCD2007090E2 /* Kingfisher */; };
+		64A5997428F2FCF5007090E2 /* UIImageView+SetImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5997328F2FCF5007090E2 /* UIImageView+SetImage.swift */; };
+		64A5997728F2FFD0007090E2 /* SpacingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5997628F2FFD0007090E2 /* SpacingCell.swift */; };
+		64A5997928F3005C007090E2 /* SpacingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64A5997828F3005C007090E2 /* SpacingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -115,8 +127,19 @@
 		64A5994F28F2C2E2007090E2 /* SearchFeedControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeedControllerView.swift; sourceTree = "<group>"; };
 		64A5995128F2C2EA007090E2 /* SearchFeedControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchFeedControllerView.xib; sourceTree = "<group>"; };
 		64A5995428F2CF54007090E2 /* String+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extended.swift"; sourceTree = "<group>"; };
+		64A5995728F2D4C4007090E2 /* PeopleFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedViewModel.swift; sourceTree = "<group>"; };
 		64A5995928F2D672007090E2 /* GetPeopleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPeopleUseCase.swift; sourceTree = "<group>"; };
 		64A5995B28F2D6C3007090E2 /* GetPeopleUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPeopleUseCaseImpl.swift; sourceTree = "<group>"; };
+		64A5995E28F2E466007090E2 /* PeopleFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedController.swift; sourceTree = "<group>"; };
+		64A5996128F2E49E007090E2 /* PeopleFeedSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedSceneFactory.swift; sourceTree = "<group>"; };
+		64A5996528F2E796007090E2 /* SearchFeedNoResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeedNoResultsCell.swift; sourceTree = "<group>"; };
+		64A5996728F2EE65007090E2 /* PeopleFeedControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedControllerView.swift; sourceTree = "<group>"; };
+		64A5996928F2EED2007090E2 /* SearchFeedNoResultsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchFeedNoResultsCell.xib; sourceTree = "<group>"; };
+		64A5996C28F2F5D9007090E2 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		64A5996E28F2F843007090E2 /* PersonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
+		64A5997328F2FCF5007090E2 /* UIImageView+SetImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SetImage.swift"; sourceTree = "<group>"; };
+		64A5997628F2FFD0007090E2 /* SpacingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingCell.swift; sourceTree = "<group>"; };
+		64A5997828F3005C007090E2 /* SpacingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpacingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64A5997228F2FCD2007090E2 /* Kingfisher in Frameworks */,
 				641DFD9E28F09CE600F13AEA /* OfficeeiOSCore.framework in Frameworks */,
 				641DFD9C28F09CE200F13AEA /* Officee.framework in Frameworks */,
 				64468BC928F1EEF1000F901B /* Swinject in Frameworks */,
@@ -262,8 +286,10 @@
 		64468BDF28F20290000F901B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				64A5993C28F2BD3F007090E2 /* Search Feed */,
 				641DFD3D28F095C300F13AEA /* LaunchScreen.storyboard */,
+				64A5997528F2FFC4007090E2 /* Cells */,
+				64A5993C28F2BD3F007090E2 /* Search Feed */,
+				64A5993928F2BC0B007090E2 /* People Feed Scene */,
 				64468BE028F2036C000F901B /* Proxy Launch Scene */,
 			);
 			path = Presentation;
@@ -369,6 +395,25 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		64A5993928F2BC0B007090E2 /* People Feed Scene */ = {
+			isa = PBXGroup;
+			children = (
+				64A5996028F2E47E007090E2 /* Factory */,
+				64A5996328F2E6FF007090E2 /* Flows */,
+				64A5993A28F2BCA0007090E2 /* People Feed */,
+			);
+			path = "People Feed Scene";
+			sourceTree = "<group>";
+		};
+		64A5993A28F2BCA0007090E2 /* People Feed */ = {
+			isa = PBXGroup;
+			children = (
+				64A5995628F2D4AC007090E2 /* View Model */,
+				64A5995D28F2E44D007090E2 /* View */,
+			);
+			path = "People Feed";
+			sourceTree = "<group>";
+		};
 		64A5993C28F2BD3F007090E2 /* Search Feed */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +457,7 @@
 				64A5995128F2C2EA007090E2 /* SearchFeedControllerView.xib */,
 				64A5994F28F2C2E2007090E2 /* SearchFeedControllerView.swift */,
 				64A5994D28F2C2D4007090E2 /* SearchFeedController.swift */,
+				64A5996428F2E770007090E2 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -428,8 +474,69 @@
 			isa = PBXGroup;
 			children = (
 				64A5995428F2CF54007090E2 /* String+Extended.swift */,
+				64A5997328F2FCF5007090E2 /* UIImageView+SetImage.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		64A5995628F2D4AC007090E2 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				64A5995728F2D4C4007090E2 /* PeopleFeedViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		64A5995D28F2E44D007090E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64A5996728F2EE65007090E2 /* PeopleFeedControllerView.swift */,
+				64A5995E28F2E466007090E2 /* PeopleFeedController.swift */,
+				64A5996B28F2F5CB007090E2 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		64A5996028F2E47E007090E2 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				64A5996128F2E49E007090E2 /* PeopleFeedSceneFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		64A5996328F2E6FF007090E2 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		64A5996428F2E770007090E2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				64A5996928F2EED2007090E2 /* SearchFeedNoResultsCell.xib */,
+				64A5996528F2E796007090E2 /* SearchFeedNoResultsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		64A5996B28F2F5CB007090E2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				64A5996E28F2F843007090E2 /* PersonCell.xib */,
+				64A5996C28F2F5D9007090E2 /* PersonCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		64A5997528F2FFC4007090E2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				64A5997828F3005C007090E2 /* SpacingCell.xib */,
+				64A5997628F2FFD0007090E2 /* SpacingCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,6 +559,7 @@
 			name = OfficeeApp;
 			packageProductDependencies = (
 				64468BC828F1EEF1000F901B /* Swinject */,
+				64A5997128F2FCD2007090E2 /* Kingfisher */,
 			);
 			productName = OfficeeApp;
 			productReference = 641DFD2F28F095C200F13AEA /* OfficeeApp.app */;
@@ -483,6 +591,7 @@
 			mainGroup = 641DFD2628F095C200F13AEA;
 			packageReferences = (
 				64468BC728F1EEF1000F901B /* XCRemoteSwiftPackageReference "Swinject" */,
+				64A5997028F2FCD2007090E2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 641DFD3028F095C200F13AEA /* Products */;
 			projectDirPath = "";
@@ -500,8 +609,11 @@
 			files = (
 				641DFD3F28F095C300F13AEA /* LaunchScreen.storyboard in Resources */,
 				641DFD3C28F095C300F13AEA /* Assets.xcassets in Resources */,
+				64A5997928F3005C007090E2 /* SpacingCell.xib in Resources */,
+				64A5996F28F2F843007090E2 /* PersonCell.xib in Resources */,
 				64A5995228F2C2EA007090E2 /* SearchFeedControllerView.xib in Resources */,
 				64468C0128F2121B000F901B /* ProxyLaunchControllerView.xib in Resources */,
+				64A5996A28F2EED2007090E2 /* SearchFeedNoResultsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,12 +648,14 @@
 				64468BFB28F20FA9000F901B /* LoadFeedsUseCase.swift in Sources */,
 				641DFE0828F1AE6C00F13AEA /* PeopleFeedRequest.swift in Sources */,
 				641DFE0528F1ADFE00F13AEA /* RoomsFeedRepository.swift in Sources */,
+				64A5995828F2D4C4007090E2 /* PeopleFeedViewModel.swift in Sources */,
 				64468BED28F209A9000F901B /* ProxyLaunchController.swift in Sources */,
 				64468B9B28F1D077000F901B /* RoomsFeedRepositoryImpl.swift in Sources */,
 				64468BE828F207EB000F901B /* ProxyLaunchCoordinatorFactory.swift in Sources */,
 				64A5994628F2BDD2007090E2 /* KeyboardObserver.swift in Sources */,
 				64468BF428F20AA3000F901B /* Aliases.swift in Sources */,
 				64468BFD28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift in Sources */,
+				64A5995F28F2E466007090E2 /* PeopleFeedController.swift in Sources */,
 				64468BDA28F1F5D9000F901B /* RepositoryAssembly.swift in Sources */,
 				64468BE528F20584000F901B /* ProxyLaunchFlowFactory.swift in Sources */,
 				64468BCD28F1EFD2000F901B /* ServiceLocating.swift in Sources */,
@@ -549,27 +663,33 @@
 				64A5994C28F2BEEA007090E2 /* SearchFeedViewModel.swift in Sources */,
 				641DFE2428F1BC7500F13AEA /* NetworkService+Combine.swift in Sources */,
 				64468BD628F1F225000F901B /* NetworkLayerAssembly.swift in Sources */,
+				64A5996D28F2F5D9007090E2 /* PersonCell.swift in Sources */,
 				641DFE0028F1ACD100F13AEA /* PeopleFeedRepository.swift in Sources */,
 				64468BE228F20474000F901B /* ProxyLaunchFlowCoordinator.swift in Sources */,
 				64468BDC28F1F7E7000F901B /* AppFlowCoordinator.swift in Sources */,
 				64A5995528F2CF54007090E2 /* String+Extended.swift in Sources */,
 				64A5994128F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift in Sources */,
+				64A5997428F2FCF5007090E2 /* UIImageView+SetImage.swift in Sources */,
 				64468BF628F20B58000F901B /* ProxyLaunchViewModelImpl.swift in Sources */,
 				64A5994E28F2C2D4007090E2 /* SearchFeedController.swift in Sources */,
 				64A5995C28F2D6C3007090E2 /* GetPeopleUseCaseImpl.swift in Sources */,
 				64468BD028F1EFFA000F901B /* SwinjectServiceLocator.swift in Sources */,
 				641DFE0A28F1AED200F13AEA /* RoomsFeedRequest.swift in Sources */,
 				64A5994228F2BDC9007090E2 /* ActivityIndicatorView.swift in Sources */,
+				64A5997728F2FFD0007090E2 /* SpacingCell.swift in Sources */,
+				64A5996628F2E796007090E2 /* SearchFeedNoResultsCell.swift in Sources */,
 				64468BEB28F20979000F901B /* ProxyLaunchControllerView.swift in Sources */,
 				64468BFF28F210A5000F901B /* UsecaseAssembly.swift in Sources */,
 				641DFD3328F095C200F13AEA /* AppDelegate.swift in Sources */,
 				641DFE2328F1BC7000F13AEA /* PeopleFeedRepositoryImpl.swift in Sources */,
 				64468BC628F1ED1B000F901B /* AppConstants.swift in Sources */,
+				64A5996828F2EE65007090E2 /* PeopleFeedControllerView.swift in Sources */,
 				64A5994728F2BDD2007090E2 /* KeyboardScrollViewObserver.swift in Sources */,
 				64468BDE28F1FA2D000F901B /* AppFlowFactory.swift in Sources */,
 				64468BF128F209CF000F901B /* ProxyLaunchViewModel.swift in Sources */,
 				64A5995A28F2D672007090E2 /* GetPeopleUseCase.swift in Sources */,
 				64A5995028F2C2E2007090E2 /* SearchFeedControllerView.swift in Sources */,
+				64A5996228F2E49E007090E2 /* PeopleFeedSceneFactory.swift in Sources */,
 				64468BD828F1F38B000F901B /* StorageAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -790,6 +910,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		64A5997028F2FCD2007090E2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -797,6 +925,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 64468BC728F1EEF1000F901B /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		64A5997128F2FCD2007090E2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64A5997028F2FCD2007090E2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

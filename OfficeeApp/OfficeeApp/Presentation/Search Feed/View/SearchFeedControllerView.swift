@@ -8,9 +8,11 @@
 import UIKit
 import OfficeeiOSCore
 
-final class SearchFeedControllerView: BaseTableViewControllerView {
+class SearchFeedControllerView: BaseTableViewControllerView {
   override var usedCells: [UITableViewCell.Type] {
-    []
+    [
+      SearchFeedNoResultsCell.self
+    ]
   }
   
   private(set) lazy var activityIndicator = addActivityIndicatorView()
