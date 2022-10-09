@@ -43,6 +43,11 @@
 		64468BFD28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BFC28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift */; };
 		64468BFF28F210A5000F901B /* UsecaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BFE28F210A5000F901B /* UsecaseAssembly.swift */; };
 		64468C0128F2121B000F901B /* ProxyLaunchControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64468C0028F2121B000F901B /* ProxyLaunchControllerView.xib */; };
+		64A5994128F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5993F28F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift */; };
+		64A5994228F2BDC9007090E2 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */; };
+		64A5994628F2BDD2007090E2 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */; };
+		64A5994728F2BDD2007090E2 /* KeyboardScrollViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994528F2BDD2007090E2 /* KeyboardScrollViewObserver.swift */; };
+		64A5995528F2CF54007090E2 /* String+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5995428F2CF54007090E2 /* String+Extended.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -95,6 +100,11 @@
 		64468BFC28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedsUseCaseImpl.swift; sourceTree = "<group>"; };
 		64468BFE28F210A5000F901B /* UsecaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsecaseAssembly.swift; sourceTree = "<group>"; };
 		64468C0028F2121B000F901B /* ProxyLaunchControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProxyLaunchControllerView.xib; sourceTree = "<group>"; };
+		64A5993F28F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicatorView.swift"; sourceTree = "<group>"; };
+		64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		64A5994528F2BDD2007090E2 /* KeyboardScrollViewObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardScrollViewObserver.swift; sourceTree = "<group>"; };
+		64A5995428F2CF54007090E2 /* String+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extended.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +149,7 @@
 				64468BDF28F20290000F901B /* Presentation */,
 				64468BF228F20A99000F901B /* Helpers */,
 				64468C0228F21619000F901B /* Resources */,
+				64A5993D28F2BD81007090E2 /* Utils */,
 			);
 			path = OfficeeApp;
 			sourceTree = "<group>";
@@ -343,6 +354,43 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		};
+		64A5993D28F2BD81007090E2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				64A5993E28F2BDC9007090E2 /* ActivityIndicatorView */,
+				64A5994328F2BDD2007090E2 /* KeyboardObservers */,
+				64A5995328F2CF40007090E2 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		64A5993E28F2BDC9007090E2 /* ActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				64A5993F28F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift */,
+				64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */,
+			);
+			path = ActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		64A5994328F2BDD2007090E2 /* KeyboardObservers */ = {
+			isa = PBXGroup;
+			children = (
+				64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */,
+				64A5994528F2BDD2007090E2 /* KeyboardScrollViewObserver.swift */,
+			);
+			path = KeyboardObservers;
+			sourceTree = "<group>";
+		};
+		64A5995328F2CF40007090E2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				64A5995428F2CF54007090E2 /* String+Extended.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -449,6 +497,7 @@
 				64468BED28F209A9000F901B /* ProxyLaunchController.swift in Sources */,
 				64468B9B28F1D077000F901B /* RoomsFeedRepositoryImpl.swift in Sources */,
 				64468BE828F207EB000F901B /* ProxyLaunchCoordinatorFactory.swift in Sources */,
+				64A5994628F2BDD2007090E2 /* KeyboardObserver.swift in Sources */,
 				64468BF428F20AA3000F901B /* Aliases.swift in Sources */,
 				64468BFD28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift in Sources */,
 				64468BDA28F1F5D9000F901B /* RepositoryAssembly.swift in Sources */,
@@ -460,14 +509,18 @@
 				641DFE0028F1ACD100F13AEA /* PeopleFeedRepository.swift in Sources */,
 				64468BE228F20474000F901B /* ProxyLaunchFlowCoordinator.swift in Sources */,
 				64468BDC28F1F7E7000F901B /* AppFlowCoordinator.swift in Sources */,
+				64A5995528F2CF54007090E2 /* String+Extended.swift in Sources */,
+				64A5994128F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift in Sources */,
 				64468BF628F20B58000F901B /* ProxyLaunchViewModelImpl.swift in Sources */,
 				64468BD028F1EFFA000F901B /* SwinjectServiceLocator.swift in Sources */,
 				641DFE0A28F1AED200F13AEA /* RoomsFeedRequest.swift in Sources */,
+				64A5994228F2BDC9007090E2 /* ActivityIndicatorView.swift in Sources */,
 				64468BEB28F20979000F901B /* ProxyLaunchControllerView.swift in Sources */,
 				64468BFF28F210A5000F901B /* UsecaseAssembly.swift in Sources */,
 				641DFD3328F095C200F13AEA /* AppDelegate.swift in Sources */,
 				641DFE2328F1BC7000F13AEA /* PeopleFeedRepositoryImpl.swift in Sources */,
 				64468BC628F1ED1B000F901B /* AppConstants.swift in Sources */,
+				64A5994728F2BDD2007090E2 /* KeyboardScrollViewObserver.swift in Sources */,
 				64468BDE28F1FA2D000F901B /* AppFlowFactory.swift in Sources */,
 				64468BF128F209CF000F901B /* ProxyLaunchViewModel.swift in Sources */,
 				64468BD828F1F38B000F901B /* StorageAssembly.swift in Sources */,
