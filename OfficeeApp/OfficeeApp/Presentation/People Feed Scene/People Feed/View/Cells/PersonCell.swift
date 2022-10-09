@@ -8,7 +8,7 @@
 import UIKit
 import OfficeeiOSCore
 
-final class PersonCellModel: BaseTableCellModel {
+final class PersonCellModel: BaseTableCellModel, ApplicableActionModel {
   
   // MARK: - Properties
   
@@ -19,6 +19,7 @@ final class PersonCellModel: BaseTableCellModel {
   let fullName: String
   let avatar: String
   let meetingDescription: String?
+  let onAction: VoidCallback
   
   // MARK: - Constructor
   
@@ -26,11 +27,13 @@ final class PersonCellModel: BaseTableCellModel {
     identifier: TableCellIdentifier,
     fullName: String,
     avatar: String,
-    meetingDescription: String?
+    meetingDescription: String?,
+    onAction: @escaping VoidCallback
   ) {
     self.fullName = fullName
     self.avatar = avatar
     self.meetingDescription = meetingDescription
+    self.onAction = onAction
     super.init(identifier: identifier)
   }
 }

@@ -37,11 +37,16 @@ final class PeopleFeedViewModel: SearchFeedViewModel {
   private var queryCancellable: Combine.Cancellable?
   
   private let getPeopleUseCase: GetPeopleUseCase
+  private let navigationActions: PeopleFeedNavigationActions
   
   // MARK: - Constructor
   
-  init(getPeopleUseCase: GetPeopleUseCase) {
+  init(
+    getPeopleUseCase: GetPeopleUseCase,
+    navigationActions: PeopleFeedNavigationActions
+  ) {
     self.getPeopleUseCase = getPeopleUseCase
+    self.navigationActions = navigationActions
     
     publishersCancellable = Publishers.CombineLatest(
       refreshDataSubject.eraseToAnyPublisher(),
@@ -134,7 +139,10 @@ final class PeopleFeedViewModel: SearchFeedViewModel {
           identifier: person.id + person.fullName,
           fullName: person.fullName,
           avatar: person.avatar,
-          meetingDescription: person.meetingDescription)
+          meetingDescription: person.meetingDescription,
+          onAction: { [navigationActions] in
+            navigationActions.openPersonDetails(PersonDetailsInput(person: person))
+          })
         items.append(model)
         items.append(SpacingCellModel(height: 10.0))
       }

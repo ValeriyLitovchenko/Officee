@@ -24,10 +24,19 @@ final class PeopleFeedFlowCoordinatorImpl: PeopleFeedFlowCoordinator {
   
   @discardableResult
   func start() -> UIViewController {
-    let peopleFeedController = sceneFactory.peopleFeedController()
+    let navigationActions = PeopleFeedNavigationActions(openPersonDetails: openPersonDetails(_:))
+    let peopleFeedController = sceneFactory.peopleFeedController(with: navigationActions)
     let navigationController = UINavigationController(rootViewController: peopleFeedController)
     self.navigationController = navigationController
     return navigationController
+  }
+  
+  // MARK: - Private Functions
+  
+  private func openPersonDetails(_ inputModel: PersonDetailsInput) {
+    let personDetails = sceneFactory.personDetailsController(with: inputModel)
+    personDetails.hidesBottomBarWhenPushed = true
+    navigationController?.pushViewController(personDetails, animated: true)
   }
 }
 

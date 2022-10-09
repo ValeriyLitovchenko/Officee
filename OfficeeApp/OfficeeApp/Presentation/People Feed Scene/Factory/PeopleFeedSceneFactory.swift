@@ -13,12 +13,20 @@ struct PeopleFeedSceneFactoryImpl: PeopleFeedSceneFactory {
 
 protocol PeopleFeedSceneFactory {
   var serviceLocating: ServiceLocating { get }
-  func peopleFeedController() -> PeopleFeedController
+  func peopleFeedController(with navigationActions: PeopleFeedNavigationActions) -> PeopleFeedController
+  func personDetailsController(with inputModel: PersonDetailsInput) -> PersonDetailsController
 }
 
 extension PeopleFeedSceneFactory {
-  func peopleFeedController() -> PeopleFeedController {
-    let viewModel = PeopleFeedViewModel(getPeopleUseCase: serviceLocating.resolve())
+  func peopleFeedController(with navigationActions: PeopleFeedNavigationActions) -> PeopleFeedController {
+    let viewModel = PeopleFeedViewModel(
+      getPeopleUseCase: serviceLocating.resolve(),
+      navigationActions: navigationActions)
     return PeopleFeedController(viewModel: viewModel)
+  }
+  
+  func personDetailsController(with inputModel: PersonDetailsInput) -> PersonDetailsController {
+    let viewModel = PersonDetailsViewModelImpl(inputModel: inputModel)
+    return PersonDetailsController(viewModel: viewModel)
   }
 }
