@@ -14,5 +14,9 @@ struct UsecaseAssembly: Swinject.Assembly {
         peopleRepository: resolver.resolve(),
         roomsRepository: resolver.resolve())
     }
+    
+    container.register(GetPeopleUseCase.self) { resolver in
+      GetPeopleUseCaseImpl(repository: resolver.resolve())
+    }
   }
 }

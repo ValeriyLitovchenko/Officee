@@ -52,6 +52,8 @@
 		64A5995028F2C2E2007090E2 /* SearchFeedControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994F28F2C2E2007090E2 /* SearchFeedControllerView.swift */; };
 		64A5995228F2C2EA007090E2 /* SearchFeedControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64A5995128F2C2EA007090E2 /* SearchFeedControllerView.xib */; };
 		64A5995528F2CF54007090E2 /* String+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5995428F2CF54007090E2 /* String+Extended.swift */; };
+		64A5995A28F2D672007090E2 /* GetPeopleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5995928F2D672007090E2 /* GetPeopleUseCase.swift */; };
+		64A5995C28F2D6C3007090E2 /* GetPeopleUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5995B28F2D6C3007090E2 /* GetPeopleUseCaseImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,6 +115,8 @@
 		64A5994F28F2C2E2007090E2 /* SearchFeedControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeedControllerView.swift; sourceTree = "<group>"; };
 		64A5995128F2C2EA007090E2 /* SearchFeedControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchFeedControllerView.xib; sourceTree = "<group>"; };
 		64A5995428F2CF54007090E2 /* String+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extended.swift"; sourceTree = "<group>"; };
+		64A5995928F2D672007090E2 /* GetPeopleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPeopleUseCase.swift; sourceTree = "<group>"; };
+		64A5995B28F2D6C3007090E2 /* GetPeopleUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPeopleUseCaseImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +355,8 @@
 			children = (
 				64468BFA28F20FA9000F901B /* LoadFeedsUseCase.swift */,
 				64468BFC28F20FCF000F901B /* LoadFeedsUseCaseImpl.swift */,
+				64A5995928F2D672007090E2 /* GetPeopleUseCase.swift */,
+				64A5995B28F2D6C3007090E2 /* GetPeopleUseCaseImpl.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -550,6 +556,7 @@
 				64A5994128F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift in Sources */,
 				64468BF628F20B58000F901B /* ProxyLaunchViewModelImpl.swift in Sources */,
 				64A5994E28F2C2D4007090E2 /* SearchFeedController.swift in Sources */,
+				64A5995C28F2D6C3007090E2 /* GetPeopleUseCaseImpl.swift in Sources */,
 				64468BD028F1EFFA000F901B /* SwinjectServiceLocator.swift in Sources */,
 				641DFE0A28F1AED200F13AEA /* RoomsFeedRequest.swift in Sources */,
 				64A5994228F2BDC9007090E2 /* ActivityIndicatorView.swift in Sources */,
@@ -561,6 +568,7 @@
 				64A5994728F2BDD2007090E2 /* KeyboardScrollViewObserver.swift in Sources */,
 				64468BDE28F1FA2D000F901B /* AppFlowFactory.swift in Sources */,
 				64468BF128F209CF000F901B /* ProxyLaunchViewModel.swift in Sources */,
+				64A5995A28F2D672007090E2 /* GetPeopleUseCase.swift in Sources */,
 				64A5995028F2C2E2007090E2 /* SearchFeedControllerView.swift in Sources */,
 				64468BD828F1F38B000F901B /* StorageAssembly.swift in Sources */,
 			);
