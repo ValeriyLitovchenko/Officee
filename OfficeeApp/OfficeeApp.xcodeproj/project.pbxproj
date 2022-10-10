@@ -111,6 +111,7 @@
 		64A5998828F30DDD007090E2 /* PeopleFeedControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64A5998728F30DDD007090E2 /* PeopleFeedControllerView.xib */; };
 		64A5998A28F31C8F007090E2 /* PeopleFeedFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5998928F31C8F007090E2 /* PeopleFeedFlowCoordinator.swift */; };
 		64A5998D28F31E2E007090E2 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5998C28F31E2E007090E2 /* FlowCoordinator.swift */; };
+		64B3255E28F3F3B1005C2145 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 64B3255D28F3F3B1005C2145 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -230,6 +231,7 @@
 		64A5998728F30DDD007090E2 /* PeopleFeedControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleFeedControllerView.xib; sourceTree = "<group>"; };
 		64A5998928F31C8F007090E2 /* PeopleFeedFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedFlowCoordinator.swift; sourceTree = "<group>"; };
 		64A5998C28F31E2E007090E2 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		64B3255D28F3F3B1005C2145 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 		641DFD2628F095C200F13AEA = {
 			isa = PBXGroup;
 			children = (
+				64B3255D28F3F3B1005C2145 /* README.md */,
 				641DFD3128F095C200F13AEA /* OfficeeApp */,
 				641DFD3028F095C200F13AEA /* Products */,
 				641DFD9A28F09CE200F13AEA /* Frameworks */,
@@ -962,6 +965,7 @@
 				64816EF028F384F400F0385F /* PersonDetailsTitleCell~iPad.xib in Resources */,
 				6449FFFE28F34FA800B52F05 /* PersonDetailsSubtitleCell.xib in Resources */,
 				64A5996A28F2EED2007090E2 /* SearchFeedNoResultsCell.xib in Resources */,
+				64B3255E28F3F3B1005C2145 /* README.md in Resources */,
 				64553D5C28F3265F00EA58DB /* RoomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
