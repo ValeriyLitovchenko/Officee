@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProxyLaunchFlowCoordinator {
+final class ProxyLaunchFlowCoordinatorImpl: ProxyLaunchFlowCoordinator {
   
   // MARK: - Properties
   
@@ -24,13 +24,22 @@ final class ProxyLaunchFlowCoordinator {
     self.flowFactory = flowFactory
   }
   
-  func start() {
+  // MARK: - Functions
+  
+  @discardableResult
+  func start() -> UIViewController {
     let navigatioActions = ProxyLaunchNavigationActions(openTabBar: openTabBar)
-    window.rootViewController = flowFactory.proxyLaunchController(with: navigatioActions)
+    let controller = flowFactory.proxyLaunchController(with: navigatioActions)
+    window.rootViewController = controller
+    return controller
   }
+  
+  // MARK: - Private Functions
   
   private func openTabBar() {
     let coordinator = flowFactory.tabBarCoordinator()
     window.rootViewController = coordinator.start()
   }
 }
+
+typealias ProxyLaunchFlowCoordinator = FlowCoordinator

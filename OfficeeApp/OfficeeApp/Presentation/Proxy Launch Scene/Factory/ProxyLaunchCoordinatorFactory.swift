@@ -14,7 +14,7 @@ protocol ProxyLaunchCoordinatorFactory {
 
 extension ProxyLaunchCoordinatorFactory {
   func flowCoordinator(with window: UIWindow) -> ProxyLaunchFlowCoordinator {
-    ProxyLaunchFlowCoordinator(
+    ProxyLaunchFlowCoordinatorImpl(
       window: window,
       flowFactory: ProxyLaunchFlowFactoryImpl(serviceLocating: serviceLocating))
   }
