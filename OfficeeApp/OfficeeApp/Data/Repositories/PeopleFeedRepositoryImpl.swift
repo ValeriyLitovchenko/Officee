@@ -68,6 +68,7 @@ final class PeopleFeedRepositoryImpl: PeopleFeedRepository {
   private func getPeopleFromNetwork() -> AnyPublisher<[Person], Error> {
     let apiEndpoint = PeopleFeedApiEndpoint.getPeople
     return networkService.getPublisher(from: apiEndpoint.urlRequest(baseURL:))
+      .tryMap(HTTPURLResponseDataMapper.map)
       .tryMap(PeopleFeedResultMapper.map)
       .eraseToAnyPublisher()
   }

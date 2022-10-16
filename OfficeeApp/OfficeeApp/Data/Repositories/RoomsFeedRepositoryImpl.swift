@@ -68,6 +68,7 @@ final class RoomsFeedRepositoryImpl: RoomsFeedRepository {
   private func getRoomsFromNetwork() -> AnyPublisher<[Room], Error> {
     let apiEndpoint = RoomsFeedApiEndpoint.getRooms
     return networkService.getPublisher(from: apiEndpoint.urlRequest(baseURL:))
+      .tryMap(HTTPURLResponseDataMapper.map)
       .tryMap(RoomsFeedResultMapper.map)
       .eraseToAnyPublisher()
   }

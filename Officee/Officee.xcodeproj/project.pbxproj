@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64123A4828F6E04C0061264E /* HTTPURLResponseDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A4728F6E04C0061264E /* HTTPURLResponseDataMapper.swift */; };
 		641DFDAC28F0B0B000F13AEA /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDAB28F0B0B000F13AEA /* HTTPClient.swift */; };
 		641DFDB228F0B2EA00F13AEA /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDB128F0B2EA00F13AEA /* URLSessionHTTPClient.swift */; };
 		641DFDB528F0B34F00F13AEA /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDB428F0B34F00F13AEA /* Aliases.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64123A4728F6E04C0061264E /* HTTPURLResponseDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseDataMapper.swift; sourceTree = "<group>"; };
 		641DFD5F28F0982100F13AEA /* OfficeeiOSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OfficeeiOSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		641DFD9328F099A500F13AEA /* Officee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Officee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		641DFDAB28F0B0B000F13AEA /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				641DFDC128F163AF00F13AEA /* ApiEndpoint.swift */,
 				641DFDAB28F0B0B000F13AEA /* HTTPClient.swift */,
 				641DFDB128F0B2EA00F13AEA /* URLSessionHTTPClient.swift */,
+				64123A4728F6E04C0061264E /* HTTPURLResponseDataMapper.swift */,
 				641DFDAE28F0B2B700F13AEA /* Helpers */,
 			);
 			path = API;
@@ -543,6 +546,7 @@
 				641DFDB528F0B34F00F13AEA /* Aliases.swift in Sources */,
 				641DFDEA28F18B8D00F13AEA /* ManagedRoom+Operations.swift in Sources */,
 				641DFDC228F163AF00F13AEA /* ApiEndpoint.swift in Sources */,
+				64123A4828F6E04C0061264E /* HTTPURLResponseDataMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

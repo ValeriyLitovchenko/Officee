@@ -9,8 +9,7 @@ import Foundation
 
 /// Provide functionality for response + data validation while People Feed  decoding from  response
 public enum PeopleFeedResultMapper {
-  public static func map(data: Data, from response: HTTPURLResponse) throws -> [Person] {
-    try HTTPURLResponseValidator.validate(response)
+  public static func map(_ data: Data) throws -> [Person] {
     let people = try JSONDecoder().decode([RemotePersonModel].self, from: data)
     return people.map(\.asDomainModel)
   }
