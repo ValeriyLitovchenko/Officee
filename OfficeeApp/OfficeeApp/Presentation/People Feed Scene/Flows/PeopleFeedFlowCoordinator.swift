@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class PeopleFeedFlowCoordinatorImpl: PeopleFeedFlowCoordinator {
+final class PeopleFeedFlowCoordinatorImpl: PeopleFeedFlowCoordinator, ToastViewPresenter {
   
   // MARK: - Properties
   
@@ -24,7 +24,10 @@ final class PeopleFeedFlowCoordinatorImpl: PeopleFeedFlowCoordinator {
   
   @discardableResult
   func start() -> UIViewController {
-    let navigationActions = PeopleFeedNavigationActions(openPersonDetails: openPersonDetails(_:))
+    let navigationActions = PeopleFeedNavigationActions(
+      openPersonDetails: openPersonDetails(_:),
+      showToastMessage: showAutohidingToastView(with:)
+    )
     let peopleFeedController = sceneFactory.peopleFeedController(with: navigationActions)
     let navigationController = UINavigationController(rootViewController: peopleFeedController)
     self.navigationController = navigationController

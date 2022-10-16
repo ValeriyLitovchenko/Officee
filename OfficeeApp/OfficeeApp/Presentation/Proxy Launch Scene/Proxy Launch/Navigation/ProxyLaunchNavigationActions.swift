@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import Officee
 import OfficeeiOSCore
 
 struct ProxyLaunchNavigationActions {
   let openTabBar: VoidCallback
+  let showToastMessage: ValueCallback<String>
 }

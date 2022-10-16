@@ -13,12 +13,14 @@ struct RoomsFeedSceneFactoryImpl: RoomsFeedSceneFactory {
 
 protocol RoomsFeedSceneFactory {
   var serviceLocating: ServiceLocating { get }
-  func roomsFeedController() -> RoomsFeedController
+  func roomsFeedController(with navigationActions: RoomsFeedNavigationActions) -> RoomsFeedController
 }
 
 extension RoomsFeedSceneFactory {
-  func roomsFeedController() -> RoomsFeedController {
-    let viewModel = RoomsFeedViewModel(getRoomsUseCase: serviceLocating.resolve())
+  func roomsFeedController(with navigationActions: RoomsFeedNavigationActions) -> RoomsFeedController {
+    let viewModel = RoomsFeedViewModel(
+      getRoomsUseCase: serviceLocating.resolve(),
+      navigationActions: navigationActions)
     return RoomsFeedController(viewModel: viewModel)
   }
 }

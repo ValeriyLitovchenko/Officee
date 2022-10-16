@@ -9,4 +9,5 @@ import Officee
 
 struct PeopleFeedNavigationActions {
   let openPersonDetails: ValueCallback<PersonDetailsInput>
+  let showToastMessage: ValueCallback<String>
 }

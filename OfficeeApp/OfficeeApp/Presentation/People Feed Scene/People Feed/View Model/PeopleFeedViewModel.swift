@@ -88,17 +88,18 @@ final class PeopleFeedViewModel: SearchFeedViewModel {
         self?.buildContent(people) ?? []
       }
       .receive(on: DispatchQueue.main)
-      .handleEvents(receiveSubscription: { [weak self] _ in
-        self?.stateSubject.send(.loading)
+      .handleEvents(receiveSubscription: { [stateSubject] _ in
+        stateSubject.send(.loading)
       })
-      .sink(receiveCompletion: { [weak self] completion in
+      .sink(receiveCompletion: { [stateSubject, navigationActions] completion in
         switch completion {
         case .finished: break
         case let .failure(error):
-          self?.stateSubject.send(.error(error))
+          stateSubject.send(.error(error))
+          navigationActions.showToastMessage(error.localizedDescription)
         }
-      }, receiveValue: { [weak self] content in
-        self?.stateSubject.send(.contentReady(content))
+      }, receiveValue: { [stateSubject] content in
+        stateSubject.send(.contentReady(content))
       })
   }
   

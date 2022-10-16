@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RoomsFeedFlowCoordinatorImpl: RoomsFeedFlowCoordinator {
+final class RoomsFeedFlowCoordinatorImpl: RoomsFeedFlowCoordinator, ToastViewPresenter {
   
   // MARK: - Properties
   
@@ -24,7 +24,8 @@ final class RoomsFeedFlowCoordinatorImpl: RoomsFeedFlowCoordinator {
   
   @discardableResult
   func start() -> UIViewController {
-    let roomsFeedController = sceneFactory.roomsFeedController()
+    let navigationActions = RoomsFeedNavigationActions(showToastMessage: showAutohidingToastView(with:))
+    let roomsFeedController = sceneFactory.roomsFeedController(with: navigationActions)
     let navigationController = UINavigationController(rootViewController: roomsFeedController)
     self.navigationController = navigationController
     return navigationController

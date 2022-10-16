@@ -37,11 +37,16 @@ final class RoomsFeedViewModel: SearchFeedViewModel {
   private var queryCancellable: Combine.Cancellable?
   
   private let getRoomsUseCase: GetRoomsUseCase
+  private let navigationActions: RoomsFeedNavigationActions
   
   // MARK: - Constructor
   
-  init(getRoomsUseCase: GetRoomsUseCase) {
+  init(
+    getRoomsUseCase: GetRoomsUseCase,
+    navigationActions: RoomsFeedNavigationActions
+  ) {
     self.getRoomsUseCase = getRoomsUseCase
+    self.navigationActions = navigationActions
     
     publishersCancellable = Publishers.CombineLatest(
       refreshDataSubject.eraseToAnyPublisher(),
@@ -84,17 +89,18 @@ final class RoomsFeedViewModel: SearchFeedViewModel {
       }
       .receive(on: DispatchQueue.main)
       .eraseToAnyPublisher()
-      .handleEvents(receiveSubscription: { [weak self] _ in
-        self?.stateSubject.send(.loading)
+      .handleEvents(receiveSubscription: { [stateSubject] _ in
+        stateSubject.send(.loading)
       })
-      .sink(receiveCompletion: { [weak self] completion in
+      .sink(receiveCompletion: { [stateSubject, navigationActions] completion in
         switch completion {
         case .finished: break
         case let .failure(error):
-          self?.stateSubject.send(.error(error))
+          stateSubject.send(.error(error))
+          navigationActions.showToastMessage(error.localizedDescription)
         }
-      }, receiveValue: { [weak self] content in
-        self?.stateSubject.send(.contentReady(content))
+      }, receiveValue: { [stateSubject] content in
+        stateSubject.send(.contentReady(content))
       })
   }
   

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64123A4D28FC51810061264E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A4C28FC51810061264E /* ToastView.swift */; };
+		64123A4F28FC51AF0061264E /* ToastViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A4E28FC51AF0061264E /* ToastViewPresenter.swift */; };
+		64123A5128FC5B9C0061264E /* UIApplication+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A5028FC5B9C0061264E /* UIApplication+Extended.swift */; };
+		64123A5428FC605E0061264E /* RoomsFeedNavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A5328FC605E0061264E /* RoomsFeedNavigationActions.swift */; };
 		641DFD3328F095C200F13AEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFD3228F095C200F13AEA /* AppDelegate.swift */; };
 		641DFD3C28F095C300F13AEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 641DFD3B28F095C300F13AEA /* Assets.xcassets */; };
 		641DFD3F28F095C300F13AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 641DFD3D28F095C300F13AEA /* LaunchScreen.storyboard */; };
@@ -130,6 +134,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		64123A4C28FC51810061264E /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		64123A4E28FC51AF0061264E /* ToastViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewPresenter.swift; sourceTree = "<group>"; };
+		64123A5028FC5B9C0061264E /* UIApplication+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extended.swift"; sourceTree = "<group>"; };
+		64123A5328FC605E0061264E /* RoomsFeedNavigationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedNavigationActions.swift; sourceTree = "<group>"; };
 		641DFD2F28F095C200F13AEA /* OfficeeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfficeeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		641DFD3228F095C200F13AEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		641DFD3B28F095C300F13AEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -249,6 +257,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64123A4B28FC51770061264E /* Toast View */ = {
+			isa = PBXGroup;
+			children = (
+				64123A4C28FC51810061264E /* ToastView.swift */,
+				64123A4E28FC51AF0061264E /* ToastViewPresenter.swift */,
+			);
+			path = "Toast View";
+			sourceTree = "<group>";
+		};
+		64123A5228FC604C0061264E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				64123A5328FC605E0061264E /* RoomsFeedNavigationActions.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		641DFD2628F095C200F13AEA = {
 			isa = PBXGroup;
 			children = (
@@ -614,6 +639,7 @@
 		64553D4D28F321B800EA58DB /* Rooms Feed */ = {
 			isa = PBXGroup;
 			children = (
+				64123A5228FC604C0061264E /* Navigation */,
 				64553D4E28F321C500EA58DB /* View Model */,
 				64553D4F28F321CA00EA58DB /* View */,
 			);
@@ -707,6 +733,7 @@
 		64A5993D28F2BD81007090E2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				64123A4B28FC51770061264E /* Toast View */,
 				6449000E28F35FC700B52F05 /* PlatformFlow */,
 				64A5993E28F2BDC9007090E2 /* ActivityIndicatorView */,
 				64A5994328F2BDD2007090E2 /* KeyboardObservers */,
@@ -758,6 +785,7 @@
 				64A5995428F2CF54007090E2 /* String+Extended.swift */,
 				64A5997328F2FCF5007090E2 /* UIImageView+SetImage.swift */,
 				6449001128F361CB00B52F05 /* UIViewController+CloseButton.swift */,
+				64123A5028FC5B9C0061264E /* UIApplication+Extended.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1032,11 +1060,13 @@
 				64A5996D28F2F5D9007090E2 /* PersonCell.swift in Sources */,
 				6449FFD428F329A500B52F05 /* RoomsFeedControllerView.swift in Sources */,
 				641DFE0028F1ACD100F13AEA /* PeopleFeedRepository.swift in Sources */,
+				64123A5428FC605E0061264E /* RoomsFeedNavigationActions.swift in Sources */,
 				64468BE228F20474000F901B /* ProxyLaunchFlowCoordinator.swift in Sources */,
 				64468BDC28F1F7E7000F901B /* AppFlowCoordinator.swift in Sources */,
 				64A5995528F2CF54007090E2 /* String+Extended.swift in Sources */,
 				64A5994128F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift in Sources */,
 				64A5997428F2FCF5007090E2 /* UIImageView+SetImage.swift in Sources */,
+				64123A4F28FC51AF0061264E /* ToastViewPresenter.swift in Sources */,
 				64468BF628F20B58000F901B /* ProxyLaunchViewModelImpl.swift in Sources */,
 				64A5998D28F31E2E007090E2 /* FlowCoordinator.swift in Sources */,
 				6449000428F350E200B52F05 /* PersonDetailsAttributeCell.swift in Sources */,
@@ -1044,11 +1074,13 @@
 				64A5998428F30A4D007090E2 /* ProxyLaunchNavigationActions.swift in Sources */,
 				64A5995C28F2D6C3007090E2 /* GetPeopleUseCaseImpl.swift in Sources */,
 				6449FFDA28F32A6100B52F05 /* RoomsFeedSceneFactory.swift in Sources */,
+				64123A4D28FC51810061264E /* ToastView.swift in Sources */,
 				64468BD028F1EFFA000F901B /* SwinjectServiceLocator.swift in Sources */,
 				641DFE0A28F1AED200F13AEA /* RoomsFeedRequest.swift in Sources */,
 				64A5994228F2BDC9007090E2 /* ActivityIndicatorView.swift in Sources */,
 				64A5997728F2FFD0007090E2 /* SpacingCell.swift in Sources */,
 				64553D5528F322C800EA58DB /* GetRoomsUseCase.swift in Sources */,
+				64123A5128FC5B9C0061264E /* UIApplication+Extended.swift in Sources */,
 				64A5996628F2E796007090E2 /* SearchFeedNoResultsCell.swift in Sources */,
 				6449FFE728F33EEE00B52F05 /* PersonDetailsViewModelImpl.swift in Sources */,
 				6449000D28F35E2F00B52F05 /* SendEmailUseCaseImpl.swift in Sources */,

@@ -39,10 +39,13 @@ final class ProxyLaunchViewModelImpl: ProxyLaunchViewModel {
       .handleEvents(receiveSubscription: { [weak self] _ in
         self?.isLoadingSubject.send(true)
       })
-      .sink(receiveCompletion: { [weak self] _ in
+      .sink(receiveCompletion: { [weak self] result in
         guard let self = self else { return }
         
         self.isLoadingSubject.send(false)
+        if case let .failure(error) = result {
+          self.navigationActions.showToastMessage(error.localizedDescription)
+        }
         self.navigationActions.openTabBar()
       }, receiveValue: { _ in })
   }
