@@ -74,8 +74,9 @@ open class ToastView: UIView {
   
   func hideAsynchronously(with delay: TimeInterval? = nil) {
     debugPrint("hideAsynchronously")
-    DispatchQueue.main.async {
-      self.hide(with: delay ?? .zero)
+    let delay = delay?.dispatchInterval ?? .seconds(.zero)
+    DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+      self?.hide()
     }
   }
   
@@ -84,6 +85,11 @@ open class ToastView: UIView {
   }
   
   // MARK: - Private Functions
+  
+  @objc
+  private func onTapHideAction() {
+    hide()
+  }
   
   private func show(
     with message: String,
@@ -109,15 +115,14 @@ open class ToastView: UIView {
         
         guard let autoHideDelay = autoHideDelay,
                 let self = self else { return }
-        self.hide(with: autoHideDelay)
+        self.hideAsynchronously(with: autoHideDelay)
       })
   }
   
-  private func hide(with delay: TimeInterval = .zero) {
+  private func hide() {
     debugPrint("Start hiding")
     UIView.animate(
       withDuration: 0.18,
-      delay: delay,
       animations: { [topConstraint, bottomConstraint, superview] in
         topConstraint?.priority = ConstraintState.active
         bottomConstraint?.priority = ConstraintState.inactive
@@ -200,6 +205,11 @@ open class ToastView: UIView {
       containerView.topAnchor.constraint(equalTo: topAnchor, constant: .zero)
     ])
     debugPrint("finish setup")
+    
+    textLabel.isUserInteractionEnabled = false
+    containerView.isUserInteractionEnabled = true
+    let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onTapHideAction))
+    containerView.addGestureRecognizer(tapGesture)
     
     configs = .default
   }

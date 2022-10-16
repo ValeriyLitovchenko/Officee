@@ -11,6 +11,7 @@
 		64123A4F28FC51AF0061264E /* ToastViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A4E28FC51AF0061264E /* ToastViewPresenter.swift */; };
 		64123A5128FC5B9C0061264E /* UIApplication+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A5028FC5B9C0061264E /* UIApplication+Extended.swift */; };
 		64123A5428FC605E0061264E /* RoomsFeedNavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A5328FC605E0061264E /* RoomsFeedNavigationActions.swift */; };
+		64123A5628FC68B30061264E /* TimeInterval+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A5528FC68B30061264E /* TimeInterval+Extended.swift */; };
 		641DFD3328F095C200F13AEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFD3228F095C200F13AEA /* AppDelegate.swift */; };
 		641DFD3C28F095C300F13AEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 641DFD3B28F095C300F13AEA /* Assets.xcassets */; };
 		641DFD3F28F095C300F13AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 641DFD3D28F095C300F13AEA /* LaunchScreen.storyboard */; };
@@ -138,6 +139,7 @@
 		64123A4E28FC51AF0061264E /* ToastViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewPresenter.swift; sourceTree = "<group>"; };
 		64123A5028FC5B9C0061264E /* UIApplication+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extended.swift"; sourceTree = "<group>"; };
 		64123A5328FC605E0061264E /* RoomsFeedNavigationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedNavigationActions.swift; sourceTree = "<group>"; };
+		64123A5528FC68B30061264E /* TimeInterval+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extended.swift"; sourceTree = "<group>"; };
 		641DFD2F28F095C200F13AEA /* OfficeeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfficeeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		641DFD3228F095C200F13AEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		641DFD3B28F095C300F13AEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -786,6 +788,7 @@
 				64A5997328F2FCF5007090E2 /* UIImageView+SetImage.swift */,
 				6449001128F361CB00B52F05 /* UIViewController+CloseButton.swift */,
 				64123A5028FC5B9C0061264E /* UIApplication+Extended.swift */,
+				64123A5528FC68B30061264E /* TimeInterval+Extended.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1066,6 +1069,7 @@
 				64A5995528F2CF54007090E2 /* String+Extended.swift in Sources */,
 				64A5994128F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift in Sources */,
 				64A5997428F2FCF5007090E2 /* UIImageView+SetImage.swift in Sources */,
+				64123A5628FC68B30061264E /* TimeInterval+Extended.swift in Sources */,
 				64123A4F28FC51AF0061264E /* ToastViewPresenter.swift in Sources */,
 				64468BF628F20B58000F901B /* ProxyLaunchViewModelImpl.swift in Sources */,
 				64A5998D28F31E2E007090E2 /* FlowCoordinator.swift in Sources */,
