@@ -70,6 +70,7 @@ final class RoomsFeedRepositoryImpl: RoomsFeedRepository {
     return networkService.getPublisher(from: apiEndpoint.urlRequest(baseURL:))
       .tryMap(HTTPURLResponseDataMapper.map)
       .tryMap(RoomsFeedResultMapper.map)
+      .retry(2)
       .eraseToAnyPublisher()
   }
   

@@ -70,6 +70,7 @@ final class PeopleFeedRepositoryImpl: PeopleFeedRepository {
     return networkService.getPublisher(from: apiEndpoint.urlRequest(baseURL:))
       .tryMap(HTTPURLResponseDataMapper.map)
       .tryMap(PeopleFeedResultMapper.map)
+      .retry(2)
       .eraseToAnyPublisher()
   }
   
