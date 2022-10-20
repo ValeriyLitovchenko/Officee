@@ -32,10 +32,10 @@ final class ProxyLaunchController: BaseViewController<ProxyLaunchControllerView,
   private func setupUI() {
     let `view` = contentView
     
-    cancellable = viewModel.isLoading
+    cancellable = viewModel.statePublisher
       .receive(on: DispatchQueue.main)
-      .sink { isLoading in
-        isLoading ?
+      .sink { state in
+        state == .loading ?
           view.activityIndicator.startAnimating() :
           view.activityIndicator.stopAnimating()
       }

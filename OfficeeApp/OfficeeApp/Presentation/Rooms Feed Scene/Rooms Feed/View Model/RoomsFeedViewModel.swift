@@ -89,16 +89,11 @@ final class RoomsFeedViewModel: SearchFeedViewModel {
       }
       .receive(on: DispatchQueue.main)
       .eraseToAnyPublisher()
-      .handleEvents(receiveSubscription: { [stateSubject] _ in
-        stateSubject.send(.loading)
-      })
-      .sink(receiveCompletion: { [stateSubject, navigationActions] completion in
-        switch completion {
-        case .finished: break
-        case let .failure(error):
-          stateSubject.send(.error(error))
-          navigationActions.showToastMessage(error.localizedDescription)
-        }
+      .add(operationStatePublisher: stateSubject.statePublisher)
+      .sink(receiveCompletion: { [navigationActions] completion in
+        guard case let .failure(error) = completion else { return }
+        
+        navigationActions.showToastMessage(error.localizedDescription)
       }, receiveValue: { [stateSubject] content in
         stateSubject.send(.contentReady(content))
       })

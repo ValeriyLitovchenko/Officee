@@ -12,10 +12,10 @@ final class ProxyLaunchViewModelImpl: ProxyLaunchViewModel {
   
   // MARK: - Properties
   
-  var isLoading: ValuePublisher<Bool> {
-    isLoadingSubject.eraseToAnyPublisher()
+  var statePublisher: ValuePublisher<ProxyLaunchViewModelState> {
+    stateSubject.eraseToAnyPublisher()
   }
-  private let isLoadingSubject = ValueSubject<Bool>(false)
+  private let stateSubject = ValueSubject<ProxyLaunchViewModelState>(.initial)
   
   private let loadFeedsUseCase: LoadFeedsUseCase
   private let navigationActions: ProxyLaunchNavigationActions
@@ -36,13 +36,11 @@ final class ProxyLaunchViewModelImpl: ProxyLaunchViewModel {
   func loadData() {
     cancelable = loadFeedsUseCase.invoke()
       .receive(on: DispatchQueue.main)
-      .handleEvents(receiveSubscription: { [weak self] _ in
-        self?.isLoadingSubject.send(true)
-      })
+      .eraseToAnyPublisher()
+      .add(operationStatePublisher: stateSubject.statePublisher)
       .sink(receiveCompletion: { [weak self] result in
         guard let self = self else { return }
         
-        self.isLoadingSubject.send(false)
         if case let .failure(error) = result {
           self.navigationActions.showToastMessage(error.localizedDescription)
         }
