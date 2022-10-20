@@ -86,6 +86,10 @@
 		64816EEE28F384D000F0385F /* PersonDetailsSubtitleCell~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64816EED28F384D000F0385F /* PersonDetailsSubtitleCell~iPad.xib */; };
 		64816EF028F384F400F0385F /* PersonDetailsTitleCell~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64816EEF28F384F400F0385F /* PersonDetailsTitleCell~iPad.xib */; };
 		64816EF328F3880E00F0385F /* DefinedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64816EF228F3880E00F0385F /* DefinedColors.swift */; };
+		649905FF290193D100C12BAC /* OperationStatePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649905FE290193D100C12BAC /* OperationStatePublisher.swift */; };
+		64990601290199B200C12BAC /* OperationStatePublisher+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64990600290199B200C12BAC /* OperationStatePublisher+Combine.swift */; };
+		6499060329019ADC00C12BAC /* CommonViewModelStatePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499060229019ADC00C12BAC /* CommonViewModelStatePublisher.swift */; };
+		649906052901A46C00C12BAC /* CommonTableViewModelStatePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649906042901A46C00C12BAC /* CommonTableViewModelStatePublisher.swift */; };
 		64A5994128F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5993F28F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift */; };
 		64A5994228F2BDC9007090E2 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */; };
 		64A5994628F2BDD2007090E2 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */; };
@@ -702,6 +706,15 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		649905FD290193BA00C12BAC /* Operation State */ = {
+			isa = PBXGroup;
+			children = (
+				649905FE290193D100C12BAC /* OperationStatePublisher.swift */,
+				64990600290199B200C12BAC /* OperationStatePublisher+Combine.swift */,
+			);
+			path = "Operation State";
+			sourceTree = "<group>";
+		};
 		64A5993928F2BC0B007090E2 /* People Feed Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -735,6 +748,7 @@
 		64A5993D28F2BD81007090E2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				649905FD290193BA00C12BAC /* Operation State */,
 				64123A4B28FC51770061264E /* Toast View */,
 				6449000E28F35FC700B52F05 /* Platform Flow */,
 				64A5993E28F2BDC9007090E2 /* Activity Indicator View */,
@@ -1052,6 +1066,7 @@
 				6449001028F35FF200B52F05 /* PlatformFlowUseCase.swift in Sources */,
 				64A5998628F30CCC007090E2 /* TabBarSceneFactory.swift in Sources */,
 				64553D5A28F3247500EA58DB /* RoomCell.swift in Sources */,
+				64990601290199B200C12BAC /* OperationStatePublisher+Combine.swift in Sources */,
 				64553D4B28F31F9500EA58DB /* PeopleFeedCoordinatorFactory.swift in Sources */,
 				6449FFF428F3480500B52F05 /* PersonDetailsAvatarCell.swift in Sources */,
 				6449FFEB28F340C700B52F05 /* PersonDetailsController.swift in Sources */,
