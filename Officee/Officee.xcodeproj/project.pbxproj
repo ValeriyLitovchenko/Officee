@@ -35,6 +35,7 @@
 		641DFDF728F1922D00F13AEA /* CoreDataRoomsFeedStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFDF628F1922D00F13AEA /* CoreDataRoomsFeedStorage.swift */; };
 		641DFE1F28F1BB3800F13AEA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFE1E28F1BB3800F13AEA /* Person.swift */; };
 		641DFE2228F1BB6B00F13AEA /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFE2128F1BB6B00F13AEA /* Room.swift */; };
+		64400F282901783B0079243A /* KeyPath+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64400F272901783B0079243A /* KeyPath+NSObject.swift */; };
 		64468BB428F1D6CB000F901B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468B9F28F1D6CB000F901B /* BaseViewController.swift */; };
 		64468BB528F1D6CB000F901B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BA028F1D6CB000F901B /* BaseView.swift */; };
 		64468BB628F1D6CB000F901B /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BA228F1D6CB000F901B /* UITableViewCell+Identifier.swift */; };
@@ -84,6 +85,7 @@
 		641DFDF628F1922D00F13AEA /* CoreDataRoomsFeedStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRoomsFeedStorage.swift; sourceTree = "<group>"; };
 		641DFE1E28F1BB3800F13AEA /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		641DFE2128F1BB6B00F13AEA /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		64400F272901783B0079243A /* KeyPath+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyPath+NSObject.swift"; sourceTree = "<group>"; };
 		64468B9F28F1D6CB000F901B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		64468BA028F1D6CB000F901B /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		64468BA228F1D6CB000F901B /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				641DFDB428F0B34F00F13AEA /* Aliases.swift */,
 				641DFDBD28F15F5700F13AEA /* Cancellable.swift */,
+				64400F272901783B0079243A /* KeyPath+NSObject.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				641DFDD528F17AD900F13AEA /* RoomsFeedResultMapper.swift in Sources */,
 				641DFDF728F1922D00F13AEA /* CoreDataRoomsFeedStorage.swift in Sources */,
 				641DFDBC28F15C8C00F13AEA /* NetworkService.swift in Sources */,
+				64400F282901783B0079243A /* KeyPath+NSObject.swift in Sources */,
 				641DFDE828F187D600F13AEA /* ManagedPerson+Operations.swift in Sources */,
 				641DFDE628F1868E00F13AEA /* LocalRoom.swift in Sources */,
 				641DFE2228F1BB6B00F13AEA /* Room.swift in Sources */,

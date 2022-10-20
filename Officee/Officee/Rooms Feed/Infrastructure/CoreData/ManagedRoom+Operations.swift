@@ -23,9 +23,10 @@ extension ManagedRoom {
     // swiftlint:disable force_unwrapping
     let request = NSFetchRequest<ManagedRoom>(entityName: entity().name!)
     request.returnsObjectsAsFaults = false
-    request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+    let nameKey = (\ManagedRoom.name).string
+    request.sortDescriptors = [NSSortDescriptor(key: nameKey, ascending: true)]
     if let query = query {
-      request.predicate = NSPredicate(format: "name CONTAINS[cd] %@", query)
+      request.predicate = NSPredicate(format: "\(nameKey) CONTAINS[cd] %@", query)
     }
     return try context.fetch(request)
   }
@@ -33,9 +34,10 @@ extension ManagedRoom {
   static func deleteAll(in context: NSManagedObjectContext, where ids: [String]? = nil) throws {
     let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: entity().name!)
     if let ids = ids {
+      let idKey = (\ManagedRoom.id).string
+      deleteFetch.propertiesToFetch = [idKey]
+      deleteFetch.predicate = NSPredicate(format: "\(idKey) in %@", ids)
       deleteFetch.returnsDistinctResults = true
-      deleteFetch.propertiesToFetch = ["id"]
-      deleteFetch.predicate = NSPredicate(format: "id in %@", ids)
     }
     let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
     try context.execute(deleteRequest)

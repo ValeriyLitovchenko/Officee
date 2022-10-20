@@ -23,9 +23,10 @@ extension ManagedPerson {
     // swiftlint:disable force_unwrapping
     let request = NSFetchRequest<ManagedPerson>(entityName: entity().name!)
     request.returnsObjectsAsFaults = false
-    request.sortDescriptors = [NSSortDescriptor(key: "fullName", ascending: true)]
+    let fullNameKey = (\ManagedPerson.fullName).string
+    request.sortDescriptors = [NSSortDescriptor(key: fullNameKey, ascending: true)]
     if let query = query {
-      request.predicate = NSPredicate(format: "fullName CONTAINS[cd] %@", query)
+      request.predicate = NSPredicate(format: "\(fullNameKey) CONTAINS[cd] %@", query)
     }
     return try context.fetch(request)
   }
@@ -33,9 +34,10 @@ extension ManagedPerson {
   static func deleteAll(in context: NSManagedObjectContext, where ids: [String]? = nil) throws {
     let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: entity().name!)
     if let ids = ids {
+      let idKey = (\ManagedPerson.id).string
       deleteFetch.returnsDistinctResults = true
-      deleteFetch.propertiesToFetch = ["id"]
-      deleteFetch.predicate = NSPredicate(format: "id in %@", ids)
+      deleteFetch.propertiesToFetch = [idKey]
+      deleteFetch.predicate = NSPredicate(format: "\(idKey) in %@", ids)
     }
     let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
     try context.execute(deleteRequest)
