@@ -1,24 +1,23 @@
 //
-//  CommonTableViewModelState.swift
+//  CommonViewModelState.swift
+//  OfficeeiOSCore
 //
-//  Created by Valeriy L on 27.09.2022.
+//  Created by Valeriy L on 20.10.2022.
 //
 
 import Foundation
 
-public enum CommonTableViewModelState: Equatable {
+public enum CommonViewModelState: Equatable {
   case initial
   case loading
   case dataLoaded
-  case contentReady(_ content: TableSections)
   case error(Error)
   
-  public static func == (lhs: CommonTableViewModelState, rhs: CommonTableViewModelState) -> Bool {
+  public static func == (lhs: CommonViewModelState, rhs: CommonViewModelState) -> Bool {
     switch (lhs, rhs) {
     case (.initial, .initial),
         (.loading, .loading),
         (.dataLoaded, .dataLoaded),
-        (.contentReady, .contentReady),
         (.error, .error):
       return true
       
