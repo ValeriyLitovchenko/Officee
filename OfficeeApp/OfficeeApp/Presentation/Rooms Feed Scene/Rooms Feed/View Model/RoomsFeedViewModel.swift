@@ -87,8 +87,7 @@ final class RoomsFeedViewModel: SearchFeedViewModel {
       .map { [weak self] rooms in
         self?.buildContent(rooms) ?? []
       }
-      .receive(on: DispatchQueue.main)
-      .eraseToAnyPublisher()
+      .dispatchOnMainQueue()
       .add(operationStatePublisher: stateSubject.statePublisher)
       .sink(receiveCompletion: { [navigationActions] completion in
         guard case let .failure(error) = completion else { return }

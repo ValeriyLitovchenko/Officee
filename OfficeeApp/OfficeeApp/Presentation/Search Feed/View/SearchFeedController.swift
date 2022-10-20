@@ -85,7 +85,7 @@ class SearchFeedController<View: SearchFeedControllerView>:
     }
     
     cancellable = viewModel.statePublisher
-      .receive(on: DispatchQueue.main)
+      .dispatchOnMainQueue()
       .sink(receiveValue: { [weak self] state in
         view.activityIndicator.setIsAnimating(state == .loading)
         view.tableView.refreshControl?.endRefreshing()

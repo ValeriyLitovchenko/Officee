@@ -87,8 +87,7 @@ final class PeopleFeedViewModel: SearchFeedViewModel {
       .map { [weak self] people in
         self?.buildContent(people) ?? []
       }
-      .receive(on: DispatchQueue.main)
-      .eraseToAnyPublisher()
+      .dispatchOnMainQueue()
       .add(operationStatePublisher: stateSubject.statePublisher)
       .sink(receiveCompletion: { [navigationActions] completion in
         guard case let .failure(error) = completion else { return }

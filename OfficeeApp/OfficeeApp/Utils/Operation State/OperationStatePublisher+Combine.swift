@@ -7,8 +7,8 @@
 
 import Combine
 
-extension AnyPublisher {
-  func add(operationStatePublisher: OperationStatePublisher) -> Self {
+extension Publisher {
+  func add(operationStatePublisher: OperationStatePublisher) -> AnyPublisher<Output, Failure> {
     handleEvents(receiveSubscription: { _ in
       operationStatePublisher.publishInProgress()
     }, receiveOutput: { _ in
