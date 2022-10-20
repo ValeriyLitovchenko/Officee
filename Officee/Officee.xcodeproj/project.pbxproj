@@ -143,8 +143,8 @@
 		641DFD6028F0982100F13AEA /* OfficeeiOSCore */ = {
 			isa = PBXGroup;
 			children = (
-				64468B9D28F1D6CB000F901B /* BaseSceneClasses */,
-				64468BAB28F1D6CB000F901B /* BaseTableViewSceneClasses */,
+				64468B9D28F1D6CB000F901B /* Base Scene Classes */,
+				64468BAB28F1D6CB000F901B /* Base TableView Scene Classes */,
 				64468BA128F1D6CB000F901B /* Extensions */,
 				64468BA628F1D6CB000F901B /* Helpers */,
 			);
@@ -315,12 +315,12 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		64468B9D28F1D6CB000F901B /* BaseSceneClasses */ = {
+		64468B9D28F1D6CB000F901B /* Base Scene Classes */ = {
 			isa = PBXGroup;
 			children = (
 				64468B9E28F1D6CB000F901B /* View */,
 			);
-			path = BaseSceneClasses;
+			path = "Base Scene Classes";
 			sourceTree = "<group>";
 		};
 		64468B9E28F1D6CB000F901B /* View */ = {
@@ -354,13 +354,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		64468BAB28F1D6CB000F901B /* BaseTableViewSceneClasses */ = {
+		64468BAB28F1D6CB000F901B /* Base TableView Scene Classes */ = {
 			isa = PBXGroup;
 			children = (
 				64468BAC28F1D6CB000F901B /* Models */,
 				64468BB128F1D6CB000F901B /* View */,
 			);
-			path = BaseTableViewSceneClasses;
+			path = "Base TableView Scene Classes";
 			sourceTree = "<group>";
 		};
 		64468BAC28F1D6CB000F901B /* Models */ = {

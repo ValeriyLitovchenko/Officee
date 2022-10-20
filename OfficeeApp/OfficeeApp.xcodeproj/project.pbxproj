@@ -544,12 +544,12 @@
 			path = PersonDetailsAttributeCell;
 			sourceTree = "<group>";
 		};
-		6449000E28F35FC700B52F05 /* PlatformFlow */ = {
+		6449000E28F35FC700B52F05 /* Platform Flow */ = {
 			isa = PBXGroup;
 			children = (
 				6449000F28F35FF200B52F05 /* PlatformFlowUseCase.swift */,
 			);
-			path = PlatformFlow;
+			path = "Platform Flow";
 			sourceTree = "<group>";
 		};
 		6449FFDF28F33D2700B52F05 /* Person Details */ = {
@@ -736,30 +736,30 @@
 			isa = PBXGroup;
 			children = (
 				64123A4B28FC51770061264E /* Toast View */,
-				6449000E28F35FC700B52F05 /* PlatformFlow */,
-				64A5993E28F2BDC9007090E2 /* ActivityIndicatorView */,
-				64A5994328F2BDD2007090E2 /* KeyboardObservers */,
+				6449000E28F35FC700B52F05 /* Platform Flow */,
+				64A5993E28F2BDC9007090E2 /* Activity Indicator View */,
+				64A5994328F2BDD2007090E2 /* Keyboard Observers */,
 				64A5995328F2CF40007090E2 /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		64A5993E28F2BDC9007090E2 /* ActivityIndicatorView */ = {
+		64A5993E28F2BDC9007090E2 /* Activity Indicator View */ = {
 			isa = PBXGroup;
 			children = (
 				64A5993F28F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift */,
 				64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */,
 			);
-			path = ActivityIndicatorView;
+			path = "Activity Indicator View";
 			sourceTree = "<group>";
 		};
-		64A5994328F2BDD2007090E2 /* KeyboardObservers */ = {
+		64A5994328F2BDD2007090E2 /* Keyboard Observers */ = {
 			isa = PBXGroup;
 			children = (
 				64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */,
 				64A5994528F2BDD2007090E2 /* KeyboardScrollViewObserver.swift */,
 			);
-			path = KeyboardObservers;
+			path = "Keyboard Observers";
 			sourceTree = "<group>";
 		};
 		64A5994828F2BE58007090E2 /* View */ = {
