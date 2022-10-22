@@ -22,12 +22,16 @@ var anyData: Data {
   Data("any dta".utf8)
 }
 
+var anyNSError: Error {
+  NSError(domain: "any error", code: .zero)
+}
+
 extension HTTPURLResponse {
   convenience init(statusCode: Int) {
     self.init(url: anyURL, statusCode: statusCode, httpVersion: nil, headerFields: nil)!
   }
   
-  static var response_200: HTTPURLResponse {
-    HTTPURLResponse(statusCode: 200)
+  static var any_response_200: HTTPURLResponse {
+    self.init(url: anyURL, statusCode: 200, httpVersion: nil, headerFields: nil)!
   }
 }

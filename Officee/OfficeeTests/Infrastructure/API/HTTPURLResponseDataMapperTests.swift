@@ -23,7 +23,7 @@ final class HTTPURLResponseDataMapperTests: XCTestCase {
   func test_map_deliversReceivedNotModifiedData_On200HTTPResponse() throws {
     let anyData = anyData
     
-    let mapResultData = try HTTPURLResponseDataMapper.map(anyData, from: .response_200)
+    let mapResultData = try HTTPURLResponseDataMapper.map(anyData, from: .any_response_200)
     
     XCTAssertEqual(anyData, mapResultData)
   }
