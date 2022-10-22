@@ -19,6 +19,7 @@ public final class CoreDataStorage {
   }()
   
   private let persistentContainer: NSPersistentContainer
+  /// Background context
   private let context: NSManagedObjectContext
   
   enum StoreError: Error {
@@ -32,16 +33,19 @@ public final class CoreDataStorage {
       throw StoreError.modelNotFound
     }
     
-    let description = NSPersistentStoreDescription(url: storeURL)
-    let container = NSPersistentContainer(name: CoreDataStorage.modelName, managedObjectModel: model)
-    container.persistentStoreDescriptions = [description]
-    persistentContainer = container
+    let container = NSPersistentContainer(
+      name: CoreDataStorage.modelName,
+      managedObjectModel: model)
+    container.persistentStoreDescriptions = [
+      NSPersistentStoreDescription(url: storeURL)
+    ]
     
     var error: Swift.Error?
-    persistentContainer.loadPersistentStores { error = $1 }
+    container.loadPersistentStores { error = $1 }
     try error.map { throw $0 }
     
-    context = persistentContainer.newBackgroundContext()
+    persistentContainer = container
+    context = container.newBackgroundContext()
   }
   
   deinit {
@@ -50,18 +54,19 @@ public final class CoreDataStorage {
   
   // MARK: - Functions
   
-  public func performSync<Result>(_ action: (NSManagedObjectContext) -> Swift.Result<Result, Error>) throws -> Result {
-    let context = self.context
+  public func performSync<Result>(
+    _ action: (NSManagedObjectContext) -> Swift.Result<Result, Error>
+  ) throws -> Result {
     var result: Swift.Result<Result, Error>!
-    context.performAndWait {
+    context.performAndWait { [context] in
       result = action(context)
     }
     return try result.get()
   }
   
   private func cleanUpReferencesToPersistentStores() {
-    context.performAndWait {
-      let coordinator = self.persistentContainer.persistentStoreCoordinator
+    context.performAndWait { [persistentContainer] in
+      let coordinator = persistentContainer.persistentStoreCoordinator
       try? coordinator.persistentStores.forEach(coordinator.remove)
     }
   }

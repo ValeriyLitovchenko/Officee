@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import OfficeeiOSCore
 
 protocol ProxyLaunchViewModel {
-  var isLoading: ValuePublisher<Bool> { get }
+  var statePublisher: ValuePublisher<ProxyLaunchViewModelState> { get }
   
   func loadData()
 }
+
+typealias ProxyLaunchViewModelState = CommonViewModelState

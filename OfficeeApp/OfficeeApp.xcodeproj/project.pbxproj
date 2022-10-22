@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64123A4D28FC51810061264E /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A4C28FC51810061264E /* ToastView.swift */; };
+		64123A4F28FC51AF0061264E /* ToastViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A4E28FC51AF0061264E /* ToastViewPresenter.swift */; };
+		64123A5128FC5B9C0061264E /* UIApplication+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A5028FC5B9C0061264E /* UIApplication+Extended.swift */; };
+		64123A5428FC605E0061264E /* RoomsFeedNavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A5328FC605E0061264E /* RoomsFeedNavigationActions.swift */; };
+		64123A5628FC68B30061264E /* TimeInterval+Extended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64123A5528FC68B30061264E /* TimeInterval+Extended.swift */; };
 		641DFD3328F095C200F13AEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFD3228F095C200F13AEA /* AppDelegate.swift */; };
 		641DFD3C28F095C300F13AEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 641DFD3B28F095C300F13AEA /* Assets.xcassets */; };
 		641DFD3F28F095C300F13AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 641DFD3D28F095C300F13AEA /* LaunchScreen.storyboard */; };
@@ -81,6 +86,11 @@
 		64816EEE28F384D000F0385F /* PersonDetailsSubtitleCell~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64816EED28F384D000F0385F /* PersonDetailsSubtitleCell~iPad.xib */; };
 		64816EF028F384F400F0385F /* PersonDetailsTitleCell~iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64816EEF28F384F400F0385F /* PersonDetailsTitleCell~iPad.xib */; };
 		64816EF328F3880E00F0385F /* DefinedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64816EF228F3880E00F0385F /* DefinedColors.swift */; };
+		649905FF290193D100C12BAC /* OperationStatePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649905FE290193D100C12BAC /* OperationStatePublisher.swift */; };
+		64990601290199B200C12BAC /* OperationStatePublisher+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64990600290199B200C12BAC /* OperationStatePublisher+Combine.swift */; };
+		6499060329019ADC00C12BAC /* CommonViewModelStatePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6499060229019ADC00C12BAC /* CommonViewModelStatePublisher.swift */; };
+		649906052901A46C00C12BAC /* CommonTableViewModelStatePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649906042901A46C00C12BAC /* CommonTableViewModelStatePublisher.swift */; };
+		6499060A2901AE8F00C12BAC /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649906092901AE8F00C12BAC /* CombineHelpers.swift */; };
 		64A5994128F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5993F28F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift */; };
 		64A5994228F2BDC9007090E2 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */; };
 		64A5994628F2BDD2007090E2 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */; };
@@ -130,6 +140,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		64123A4C28FC51810061264E /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		64123A4E28FC51AF0061264E /* ToastViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewPresenter.swift; sourceTree = "<group>"; };
+		64123A5028FC5B9C0061264E /* UIApplication+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extended.swift"; sourceTree = "<group>"; };
+		64123A5328FC605E0061264E /* RoomsFeedNavigationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedNavigationActions.swift; sourceTree = "<group>"; };
+		64123A5528FC68B30061264E /* TimeInterval+Extended.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extended.swift"; sourceTree = "<group>"; };
 		641DFD2F28F095C200F13AEA /* OfficeeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfficeeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		641DFD3228F095C200F13AEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		641DFD3B28F095C300F13AEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,6 +217,11 @@
 		64816EED28F384D000F0385F /* PersonDetailsSubtitleCell~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "PersonDetailsSubtitleCell~iPad.xib"; sourceTree = "<group>"; };
 		64816EEF28F384F400F0385F /* PersonDetailsTitleCell~iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "PersonDetailsTitleCell~iPad.xib"; sourceTree = "<group>"; };
 		64816EF228F3880E00F0385F /* DefinedColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinedColors.swift; sourceTree = "<group>"; };
+		649905FE290193D100C12BAC /* OperationStatePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationStatePublisher.swift; sourceTree = "<group>"; };
+		64990600290199B200C12BAC /* OperationStatePublisher+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OperationStatePublisher+Combine.swift"; sourceTree = "<group>"; };
+		6499060229019ADC00C12BAC /* CommonViewModelStatePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModelStatePublisher.swift; sourceTree = "<group>"; };
+		649906042901A46C00C12BAC /* CommonTableViewModelStatePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTableViewModelStatePublisher.swift; sourceTree = "<group>"; };
+		649906092901AE8F00C12BAC /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 		64A5993F28F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicatorView.swift"; sourceTree = "<group>"; };
 		64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
@@ -249,6 +269,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64123A4B28FC51770061264E /* Toast View */ = {
+			isa = PBXGroup;
+			children = (
+				64123A4C28FC51810061264E /* ToastView.swift */,
+				64123A4E28FC51AF0061264E /* ToastViewPresenter.swift */,
+			);
+			path = "Toast View";
+			sourceTree = "<group>";
+		};
+		64123A5228FC604C0061264E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				64123A5328FC605E0061264E /* RoomsFeedNavigationActions.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		641DFD2628F095C200F13AEA = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +488,9 @@
 			isa = PBXGroup;
 			children = (
 				64468BF328F20AA3000F901B /* Aliases.swift */,
+				6499060229019ADC00C12BAC /* CommonViewModelStatePublisher.swift */,
+				649906042901A46C00C12BAC /* CommonTableViewModelStatePublisher.swift */,
+				649906092901AE8F00C12BAC /* CombineHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -517,12 +557,12 @@
 			path = PersonDetailsAttributeCell;
 			sourceTree = "<group>";
 		};
-		6449000E28F35FC700B52F05 /* PlatformFlow */ = {
+		6449000E28F35FC700B52F05 /* Platform Flow */ = {
 			isa = PBXGroup;
 			children = (
 				6449000F28F35FF200B52F05 /* PlatformFlowUseCase.swift */,
 			);
-			path = PlatformFlow;
+			path = "Platform Flow";
 			sourceTree = "<group>";
 		};
 		6449FFDF28F33D2700B52F05 /* Person Details */ = {
@@ -614,6 +654,7 @@
 		64553D4D28F321B800EA58DB /* Rooms Feed */ = {
 			isa = PBXGroup;
 			children = (
+				64123A5228FC604C0061264E /* Navigation */,
 				64553D4E28F321C500EA58DB /* View Model */,
 				64553D4F28F321CA00EA58DB /* View */,
 			);
@@ -674,6 +715,15 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		649905FD290193BA00C12BAC /* Operation State */ = {
+			isa = PBXGroup;
+			children = (
+				649905FE290193D100C12BAC /* OperationStatePublisher.swift */,
+				64990600290199B200C12BAC /* OperationStatePublisher+Combine.swift */,
+			);
+			path = "Operation State";
+			sourceTree = "<group>";
+		};
 		64A5993928F2BC0B007090E2 /* People Feed Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -707,30 +757,32 @@
 		64A5993D28F2BD81007090E2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				6449000E28F35FC700B52F05 /* PlatformFlow */,
-				64A5993E28F2BDC9007090E2 /* ActivityIndicatorView */,
-				64A5994328F2BDD2007090E2 /* KeyboardObservers */,
+				649905FD290193BA00C12BAC /* Operation State */,
+				64123A4B28FC51770061264E /* Toast View */,
+				6449000E28F35FC700B52F05 /* Platform Flow */,
+				64A5993E28F2BDC9007090E2 /* Activity Indicator View */,
+				64A5994328F2BDD2007090E2 /* Keyboard Observers */,
 				64A5995328F2CF40007090E2 /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		64A5993E28F2BDC9007090E2 /* ActivityIndicatorView */ = {
+		64A5993E28F2BDC9007090E2 /* Activity Indicator View */ = {
 			isa = PBXGroup;
 			children = (
 				64A5993F28F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift */,
 				64A5994028F2BDC9007090E2 /* ActivityIndicatorView.swift */,
 			);
-			path = ActivityIndicatorView;
+			path = "Activity Indicator View";
 			sourceTree = "<group>";
 		};
-		64A5994328F2BDD2007090E2 /* KeyboardObservers */ = {
+		64A5994328F2BDD2007090E2 /* Keyboard Observers */ = {
 			isa = PBXGroup;
 			children = (
 				64A5994428F2BDD2007090E2 /* KeyboardObserver.swift */,
 				64A5994528F2BDD2007090E2 /* KeyboardScrollViewObserver.swift */,
 			);
-			path = KeyboardObservers;
+			path = "Keyboard Observers";
 			sourceTree = "<group>";
 		};
 		64A5994828F2BE58007090E2 /* View */ = {
@@ -758,6 +810,8 @@
 				64A5995428F2CF54007090E2 /* String+Extended.swift */,
 				64A5997328F2FCF5007090E2 /* UIImageView+SetImage.swift */,
 				6449001128F361CB00B52F05 /* UIViewController+CloseButton.swift */,
+				64123A5028FC5B9C0061264E /* UIApplication+Extended.swift */,
+				64123A5528FC68B30061264E /* TimeInterval+Extended.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1021,6 +1075,7 @@
 				6449001028F35FF200B52F05 /* PlatformFlowUseCase.swift in Sources */,
 				64A5998628F30CCC007090E2 /* TabBarSceneFactory.swift in Sources */,
 				64553D5A28F3247500EA58DB /* RoomCell.swift in Sources */,
+				64990601290199B200C12BAC /* OperationStatePublisher+Combine.swift in Sources */,
 				64553D4B28F31F9500EA58DB /* PeopleFeedCoordinatorFactory.swift in Sources */,
 				6449FFF428F3480500B52F05 /* PersonDetailsAvatarCell.swift in Sources */,
 				6449FFEB28F340C700B52F05 /* PersonDetailsController.swift in Sources */,
@@ -1032,11 +1087,14 @@
 				64A5996D28F2F5D9007090E2 /* PersonCell.swift in Sources */,
 				6449FFD428F329A500B52F05 /* RoomsFeedControllerView.swift in Sources */,
 				641DFE0028F1ACD100F13AEA /* PeopleFeedRepository.swift in Sources */,
+				64123A5428FC605E0061264E /* RoomsFeedNavigationActions.swift in Sources */,
 				64468BE228F20474000F901B /* ProxyLaunchFlowCoordinator.swift in Sources */,
 				64468BDC28F1F7E7000F901B /* AppFlowCoordinator.swift in Sources */,
 				64A5995528F2CF54007090E2 /* String+Extended.swift in Sources */,
 				64A5994128F2BDC9007090E2 /* UIView+ActivityIndicatorView.swift in Sources */,
 				64A5997428F2FCF5007090E2 /* UIImageView+SetImage.swift in Sources */,
+				64123A5628FC68B30061264E /* TimeInterval+Extended.swift in Sources */,
+				64123A4F28FC51AF0061264E /* ToastViewPresenter.swift in Sources */,
 				64468BF628F20B58000F901B /* ProxyLaunchViewModelImpl.swift in Sources */,
 				64A5998D28F31E2E007090E2 /* FlowCoordinator.swift in Sources */,
 				6449000428F350E200B52F05 /* PersonDetailsAttributeCell.swift in Sources */,
@@ -1044,22 +1102,28 @@
 				64A5998428F30A4D007090E2 /* ProxyLaunchNavigationActions.swift in Sources */,
 				64A5995C28F2D6C3007090E2 /* GetPeopleUseCaseImpl.swift in Sources */,
 				6449FFDA28F32A6100B52F05 /* RoomsFeedSceneFactory.swift in Sources */,
+				64123A4D28FC51810061264E /* ToastView.swift in Sources */,
 				64468BD028F1EFFA000F901B /* SwinjectServiceLocator.swift in Sources */,
 				641DFE0A28F1AED200F13AEA /* RoomsFeedRequest.swift in Sources */,
 				64A5994228F2BDC9007090E2 /* ActivityIndicatorView.swift in Sources */,
 				64A5997728F2FFD0007090E2 /* SpacingCell.swift in Sources */,
 				64553D5528F322C800EA58DB /* GetRoomsUseCase.swift in Sources */,
+				64123A5128FC5B9C0061264E /* UIApplication+Extended.swift in Sources */,
 				64A5996628F2E796007090E2 /* SearchFeedNoResultsCell.swift in Sources */,
 				6449FFE728F33EEE00B52F05 /* PersonDetailsViewModelImpl.swift in Sources */,
 				6449000D28F35E2F00B52F05 /* SendEmailUseCaseImpl.swift in Sources */,
 				64468BEB28F20979000F901B /* ProxyLaunchControllerView.swift in Sources */,
+				649906052901A46C00C12BAC /* CommonTableViewModelStatePublisher.swift in Sources */,
+				649905FF290193D100C12BAC /* OperationStatePublisher.swift in Sources */,
 				64468BFF28F210A5000F901B /* UsecaseAssembly.swift in Sources */,
 				641DFD3328F095C200F13AEA /* AppDelegate.swift in Sources */,
 				641DFE2328F1BC7000F13AEA /* PeopleFeedRepositoryImpl.swift in Sources */,
+				6499060329019ADC00C12BAC /* CommonViewModelStatePublisher.swift in Sources */,
 				64468BC628F1ED1B000F901B /* AppConstants.swift in Sources */,
 				64A5996828F2EE65007090E2 /* PeopleFeedControllerView.swift in Sources */,
 				64A5994728F2BDD2007090E2 /* KeyboardScrollViewObserver.swift in Sources */,
 				6449000B28F35E1600B52F05 /* SendEmailUseCase.swift in Sources */,
+				6499060A2901AE8F00C12BAC /* CombineHelpers.swift in Sources */,
 				6449FFE528F33E5200B52F05 /* PersonDetailsViewModel.swift in Sources */,
 				64468BDE28F1FA2D000F901B /* AppFlowFactory.swift in Sources */,
 				64A5997E28F30842007090E2 /* TabBarSceneFlowCoordinator.swift in Sources */,

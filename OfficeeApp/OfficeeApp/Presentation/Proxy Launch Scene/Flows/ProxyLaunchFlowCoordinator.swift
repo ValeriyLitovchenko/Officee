@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProxyLaunchFlowCoordinatorImpl: ProxyLaunchFlowCoordinator {
+final class ProxyLaunchFlowCoordinatorImpl: ProxyLaunchFlowCoordinator, ToastViewPresenter {
   
   // MARK: - Properties
   
@@ -28,7 +28,9 @@ final class ProxyLaunchFlowCoordinatorImpl: ProxyLaunchFlowCoordinator {
   
   @discardableResult
   func start() -> UIViewController {
-    let navigatioActions = ProxyLaunchNavigationActions(openTabBar: openTabBar)
+    let navigatioActions = ProxyLaunchNavigationActions(
+      openTabBar: openTabBar,
+      showToastMessage: showAutohidingToastView(with:))
     let controller = flowFactory.proxyLaunchController(with: navigatioActions)
     window.rootViewController = controller
     return controller

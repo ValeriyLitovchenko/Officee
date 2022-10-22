@@ -6,7 +6,7 @@
 
 import Foundation
 
-public enum CommonTableViewModelState {
+public enum CommonTableViewModelState: Equatable {
   case initial
   case loading
   case dataLoaded
@@ -15,7 +15,8 @@ public enum CommonTableViewModelState {
   
   public static func == (lhs: CommonTableViewModelState, rhs: CommonTableViewModelState) -> Bool {
     switch (lhs, rhs) {
-    case (.loading, .loading),
+    case (.initial, .initial),
+        (.loading, .loading),
         (.dataLoaded, .dataLoaded),
         (.contentReady, .contentReady),
         (.error, .error):

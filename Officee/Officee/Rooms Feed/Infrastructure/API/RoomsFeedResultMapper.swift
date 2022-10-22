@@ -9,8 +9,7 @@ import Foundation
 
 /// Provide functionality for response + data validation while Rooms Feed  decoding from  response
 public enum RoomsFeedResultMapper {
-  public static func map(data: Data, from response: HTTPURLResponse) throws -> [Room] {
-    try HTTPURLResponseValidator.validate(response)
+  public static func map(_ data: Data) throws -> [Room] {
     let rooms = try JSONDecoder().decode([RemoteRoomModel].self, from: data)
     return rooms.map(\.asDomainModel)
   }

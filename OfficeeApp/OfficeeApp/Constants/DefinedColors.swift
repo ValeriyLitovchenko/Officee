@@ -12,6 +12,10 @@ enum DefinedColors {
   static let avatarBorder = ColorResource(name: "AvatarBorder")
   static let flushMahogany = ColorResource(name: "FlushMahogany")
   static let activityIndicator = ColorResource(name: "ActivityIndicator")
+  enum ToastView {
+    static let background = ColorResource(name: "ToastViewBackground")
+    static let foreground = ColorResource(name: "ToastViewForeground")
+  }
 }
 
 struct ColorResource {
