@@ -35,3 +35,9 @@ extension HTTPURLResponse {
     self.init(url: anyURL, statusCode: 200, httpVersion: nil, headerFields: nil)!
   }
 }
+
+extension URLResponse {
+  static var nonHTTP_response: URLResponse {
+    URLResponse(url: anyURL, mimeType: nil, expectedContentLength: .zero, textEncodingName: nil)
+  }
+}
