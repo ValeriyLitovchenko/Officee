@@ -53,9 +53,19 @@
 		644D1D432905A84E0006AFBF /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644D1D422905A84E0006AFBF /* URLRequestFactory.swift */; };
 		644D1D452905A8890006AFBF /* URLRequestFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644D1D442905A8890006AFBF /* URLRequestFactoryImpl.swift */; };
 		644D1D492905BF2E0006AFBF /* URLRequestFactory+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644D1D482905BF2E0006AFBF /* URLRequestFactory+API.swift */; };
+		644C4E0D2904249D004AA277 /* Officee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641DFD9328F099A500F13AEA /* Officee.framework */; };
 		649906082901A69000C12BAC /* CommonViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649906072901A69000C12BAC /* CommonViewModelState.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		644C4E0E2904249D004AA277 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 641DFD4728F096C100F13AEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 641DFD9228F099A500F13AEA;
+			remoteInfo = Officee;
+		};
+/* End PBXContainerItemProxy section */
 /* Begin PBXFileReference section */
 		64123A4728F6E04C0061264E /* HTTPURLResponseDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseDataMapper.swift; sourceTree = "<group>"; };
 		641DFD5F28F0982100F13AEA /* OfficeeiOSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OfficeeiOSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +115,7 @@
 		644D1D422905A84E0006AFBF /* URLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
 		644D1D442905A8890006AFBF /* URLRequestFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactoryImpl.swift; sourceTree = "<group>"; };
 		644D1D482905BF2E0006AFBF /* URLRequestFactory+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequestFactory+API.swift"; sourceTree = "<group>"; };
+		644C4E092904249D004AA277 /* OfficeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfficeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		649906072901A69000C12BAC /* CommonViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModelState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +134,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		644C4E062904249D004AA277 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				644C4E0D2904249D004AA277 /* Officee.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -131,6 +150,7 @@
 			children = (
 				641DFD9428F099A500F13AEA /* Officee */,
 				641DFD6028F0982100F13AEA /* OfficeeiOSCore */,
+				644C4E0A2904249D004AA277 /* OfficeeTests */,
 				641DFD5128F096C100F13AEA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -140,6 +160,7 @@
 			children = (
 				641DFD5F28F0982100F13AEA /* OfficeeiOSCore.framework */,
 				641DFD9328F099A500F13AEA /* Officee.framework */,
+				644C4E092904249D004AA277 /* OfficeeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -381,6 +402,10 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		644C4E0A2904249D004AA277 /* OfficeeTests */ = {
+			isa = PBXGroup;
+			path = OfficeeTests;
+			sourceTree = "<group>";
 		649906062901A68200C12BAC /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,6 +470,19 @@
 			productReference = 641DFD9328F099A500F13AEA /* Officee.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		644C4E082904249D004AA277 /* OfficeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 644C4E122904249D004AA277 /* Build configuration list for PBXNativeTarget "OfficeeTests" */;
+			buildRules = (
+			);
+			dependencies = (
+				644C4E0F2904249D004AA277 /* PBXTargetDependency */,
+			);
+			name = OfficeeTests;
+			productName = OfficeeTests;
+			productReference = 644C4E092904249D004AA277 /* OfficeeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -452,7 +490,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					641DFD5E28F0982100F13AEA = {
@@ -461,6 +499,9 @@
 					641DFD9228F099A500F13AEA = {
 						CreatedOnToolsVersion = 13.4.1;
 						LastSwiftMigration = 1340;
+					};
+					644C4E082904249D004AA277 = {
+						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
 			};
@@ -479,6 +520,7 @@
 			targets = (
 				641DFD9228F099A500F13AEA /* Officee */,
 				641DFD5E28F0982100F13AEA /* OfficeeiOSCore */,
+				644C4E082904249D004AA277 /* OfficeeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -492,6 +534,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		641DFD9128F099A500F13AEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		644C4E072904249D004AA277 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -562,8 +611,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		644C4E052904249D004AA277 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		644C4E0F2904249D004AA277 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 641DFD9228F099A500F13AEA /* Officee */;
+			targetProxy = 644C4E0E2904249D004AA277 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 /* Begin XCBuildConfiguration section */
 		641DFD5528F096C100F13AEA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -800,6 +861,40 @@
 			};
 			name = Release;
 		};
+		644C4E102904249D004AA277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = valeriy.litovchenko.OfficeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		644C4E112904249D004AA277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = valeriy.litovchenko.OfficeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -826,6 +921,15 @@
 			buildConfigurations = (
 				641DFD9828F099A600F13AEA /* Debug */,
 				641DFD9928F099A600F13AEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		644C4E122904249D004AA277 /* Build configuration list for PBXNativeTarget "OfficeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				644C4E102904249D004AA277 /* Debug */,
+				644C4E112904249D004AA277 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
