@@ -54,6 +54,8 @@
 		644D1D452905A8890006AFBF /* URLRequestFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644D1D442905A8890006AFBF /* URLRequestFactoryImpl.swift */; };
 		644D1D492905BF2E0006AFBF /* URLRequestFactory+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644D1D482905BF2E0006AFBF /* URLRequestFactory+API.swift */; };
 		644C4E0D2904249D004AA277 /* Officee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641DFD9328F099A500F13AEA /* Officee.framework */; };
+		644C4E162904251B004AA277 /* HTTPURLResponseDataMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644C4E152904251B004AA277 /* HTTPURLResponseDataMapperTests.swift */; };
+		644C4E19290425C6004AA277 /* SharedTestsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644C4E18290425C6004AA277 /* SharedTestsHelpers.swift */; };
 		649906082901A69000C12BAC /* CommonViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649906072901A69000C12BAC /* CommonViewModelState.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +118,8 @@
 		644D1D442905A8890006AFBF /* URLRequestFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactoryImpl.swift; sourceTree = "<group>"; };
 		644D1D482905BF2E0006AFBF /* URLRequestFactory+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequestFactory+API.swift"; sourceTree = "<group>"; };
 		644C4E092904249D004AA277 /* OfficeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfficeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		644C4E152904251B004AA277 /* HTTPURLResponseDataMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLResponseDataMapperTests.swift; sourceTree = "<group>"; };
+		644C4E18290425C6004AA277 /* SharedTestsHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestsHelpers.swift; sourceTree = "<group>"; };
 		649906072901A69000C12BAC /* CommonViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModelState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -404,8 +408,36 @@
 		};
 		644C4E0A2904249D004AA277 /* OfficeeTests */ = {
 			isa = PBXGroup;
+			children = (
+				644C4E172904256F004AA277 /* Helpers */,
+				644C4E13290424E6004AA277 /* Infrastructure */,
+			);
 			path = OfficeeTests;
 			sourceTree = "<group>";
+		644C4E13290424E6004AA277 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				644C4E14290424F5004AA277 /* API */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		644C4E14290424F5004AA277 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				644C4E152904251B004AA277 /* HTTPURLResponseDataMapperTests.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		644C4E172904256F004AA277 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				644C4E18290425C6004AA277 /* SharedTestsHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		649906062901A68200C12BAC /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,6 +505,11 @@
 		644C4E082904249D004AA277 /* OfficeeTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 644C4E122904249D004AA277 /* Build configuration list for PBXNativeTarget "OfficeeTests" */;
+			buildPhases = (
+				644C4E052904249D004AA277 /* Sources */,
+				644C4E062904249D004AA277 /* Frameworks */,
+				644C4E072904249D004AA277 /* Resources */,
+			);
 			buildRules = (
 			);
 			dependencies = (
@@ -614,6 +651,10 @@
 		644C4E052904249D004AA277 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
+			files = (
+				644C4E19290425C6004AA277 /* SharedTestsHelpers.swift in Sources */,
+				644C4E162904251B004AA277 /* HTTPURLResponseDataMapperTests.swift in Sources */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
@@ -625,6 +666,7 @@
 			targetProxy = 644C4E0E2904249D004AA277 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		641DFD5528F096C100F13AEA /* Debug */ = {
 			isa = XCBuildConfiguration;
