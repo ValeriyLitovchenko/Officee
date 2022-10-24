@@ -8,6 +8,6 @@
 import Foundation
 
 public protocol ApiEndpoint {
-  /// Instantiates URLRequest with baseURL
-  func urlRequest(baseURL: URL) -> URLRequest
+  /// Instantiates URLRequest with provided URL
+  func urlRequest(url: URL) -> URLRequest
 }

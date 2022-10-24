@@ -12,16 +12,19 @@ final class RoomsFeedRepositoryImpl: RoomsFeedRepository {
   
   // MARK: - Properties
   
-  private let networkService: NetworkService
+  private let httpClient: HTTPClient
+  private let urlRequestFactory: URLRequestFactory
   private let roomsStorage: RoomsFeedStorage
   
   // MARK: - Constructor
   
   init(
-    networkService: NetworkService,
+    httpClient: HTTPClient,
+    urlRequestFactory: URLRequestFactory,
     roomsStorage: RoomsFeedStorage
   ) {
-    self.networkService = networkService
+    self.httpClient = httpClient
+    self.urlRequestFactory = urlRequestFactory
     self.roomsStorage = roomsStorage
   }
   
@@ -67,7 +70,9 @@ final class RoomsFeedRepositoryImpl: RoomsFeedRepository {
   
   private func getRoomsFromNetwork() -> AnyPublisher<[Room], Error> {
     let apiEndpoint = RoomsFeedApiEndpoint.getRooms
-    return networkService.getPublisher(from: apiEndpoint.urlRequest(baseURL:))
+    let request = urlRequestFactory.requestFor(api: apiEndpoint)
+    
+    return httpClient.getPublisher(from: request)
       .tryMap(HTTPURLResponseDataMapper.map)
       .tryMap(RoomsFeedResultMapper.map)
       .retry(2)

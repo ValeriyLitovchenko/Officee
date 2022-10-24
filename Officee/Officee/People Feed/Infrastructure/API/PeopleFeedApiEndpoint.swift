@@ -10,17 +10,10 @@ import Foundation
 public enum PeopleFeedApiEndpoint: ApiEndpoint {
   case getPeople
   
-  public func urlRequest(baseURL: URL) -> URLRequest {
-    var components = URLComponents()
-    components.scheme = baseURL.scheme
-    components.host = baseURL.host
-    
+  public func urlRequest(url: URL) -> URLRequest {
     switch self {
     case .getPeople:
-      components.path = baseURL.path + "/people"
+      return URLRequest(url: url.appendingPathComponent("people"))
     }
-    
-    // swiftlint:disable force_unwrapping
-    return URLRequest(url: components.url!)
   }
 }

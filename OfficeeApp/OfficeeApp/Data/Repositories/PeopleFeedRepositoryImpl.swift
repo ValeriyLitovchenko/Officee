@@ -12,16 +12,19 @@ final class PeopleFeedRepositoryImpl: PeopleFeedRepository {
   
   // MARK: - Properties
   
-  private let networkService: NetworkService
+  private let httpClient: HTTPClient
+  private let urlRequestFactory: URLRequestFactory
   private let peopleStorage: PeopleFeedStorage
   
   // MARK: - Constructor
   
   init(
-    networkService: NetworkService,
+    httpClient: HTTPClient,
+    urlRequestFactory: URLRequestFactory,
     peopleStorage: PeopleFeedStorage
   ) {
-    self.networkService = networkService
+    self.httpClient = httpClient
+    self.urlRequestFactory = urlRequestFactory
     self.peopleStorage = peopleStorage
   }
   
@@ -67,7 +70,9 @@ final class PeopleFeedRepositoryImpl: PeopleFeedRepository {
   
   private func getPeopleFromNetwork() -> AnyPublisher<[Person], Error> {
     let apiEndpoint = PeopleFeedApiEndpoint.getPeople
-    return networkService.getPublisher(from: apiEndpoint.urlRequest(baseURL:))
+    let request = urlRequestFactory.requestFor(api: apiEndpoint)
+    
+    return httpClient.getPublisher(from: request)
       .tryMap(HTTPURLResponseDataMapper.map)
       .tryMap(PeopleFeedResultMapper.map)
       .retry(2)

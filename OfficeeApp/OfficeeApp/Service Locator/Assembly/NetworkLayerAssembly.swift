@@ -17,10 +17,8 @@ struct NetworkLayerAssembly: Swinject.Assembly {
       URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
     }
     
-    container.register(NetworkService.self) { resolver in
-      RestApiNetworkService(
-        baseURL: URL(string: AppConstants.apiBaseURLString)!,
-        httpClient: resolver.resolve())
+    container.register(URLRequestFactory.self) { _ in
+      URLRequestFactoryImpl(url: URL(string: AppConstants.apiBaseURLString)!)
     }
   }
 }
