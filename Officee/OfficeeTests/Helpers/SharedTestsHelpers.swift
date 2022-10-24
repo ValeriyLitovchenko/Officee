@@ -26,6 +26,10 @@ var anyNSError: Error {
   NSError(domain: "any error", code: .zero)
 }
 
+func makeJSONData(from json: [String: Any]) -> Data {
+  try! JSONSerialization.data(withJSONObject: json)
+}
+
 extension HTTPURLResponse {
   convenience init(statusCode: Int) {
     self.init(url: anyURL, statusCode: statusCode, httpVersion: nil, headerFields: nil)!
