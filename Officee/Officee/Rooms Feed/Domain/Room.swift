@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Room: Identifiable {
+public struct Room: Identifiable, Equatable {
   public typealias Identifier = String
   public let id: Identifier
   public let name: String

@@ -67,6 +67,8 @@
 		649906082901A69000C12BAC /* CommonViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649906072901A69000C12BAC /* CommonViewModelState.swift */; };
 		64B653742906F63F00958206 /* PeopleFeedApiEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B653732906F63F00958206 /* PeopleFeedApiEndpointTests.swift */; };
 		64B653762906F76700958206 /* PeopleFeedResultMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B653752906F76700958206 /* PeopleFeedResultMapperTests.swift */; };
+		64B653792907277200958206 /* RoomsFeedApiEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B653782907277200958206 /* RoomsFeedApiEndpointTests.swift */; };
+		64B6537B290727B000958206 /* RoomsFeedResultMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B6537A290727B000958206 /* RoomsFeedResultMapperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,8 @@
 		649906072901A69000C12BAC /* CommonViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewModelState.swift; sourceTree = "<group>"; };
 		64B653732906F63F00958206 /* PeopleFeedApiEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedApiEndpointTests.swift; sourceTree = "<group>"; };
 		64B653752906F76700958206 /* PeopleFeedResultMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedResultMapperTests.swift; sourceTree = "<group>"; };
+		64B653782907277200958206 /* RoomsFeedApiEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedApiEndpointTests.swift; sourceTree = "<group>"; };
+		64B6537A290727B000958206 /* RoomsFeedResultMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedResultMapperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,6 +438,7 @@
 				644C4E172904256F004AA277 /* Helpers */,
 				644C4E13290424E6004AA277 /* Infrastructure */,
 				64B6536F2906F60A00958206 /* People Feed */,
+				64B653772907275700958206 /* Rooms Feed */,
 			);
 			path = OfficeeTests;
 			sourceTree = "<group>";
@@ -495,6 +500,23 @@
 			children = (
 				64B653732906F63F00958206 /* PeopleFeedApiEndpointTests.swift */,
 				64B653752906F76700958206 /* PeopleFeedResultMapperTests.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		64B653772907275700958206 /* Rooms Feed */ = {
+			isa = PBXGroup;
+			children = (
+				64B6537C2907298F00958206 /* API */,
+			);
+			path = "Rooms Feed";
+			sourceTree = "<group>";
+		};
+		64B6537C2907298F00958206 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				64B653782907277200958206 /* RoomsFeedApiEndpointTests.swift */,
+				64B6537A290727B000958206 /* RoomsFeedResultMapperTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -710,9 +732,11 @@
 				64B653742906F63F00958206 /* PeopleFeedApiEndpointTests.swift in Sources */,
 				644D1D4D2905C9310006AFBF /* APIEndpointSTUB.swift in Sources */,
 				644C4E162904251B004AA277 /* HTTPURLResponseDataMapperTests.swift in Sources */,
+				64B6537B290727B000958206 /* RoomsFeedResultMapperTests.swift in Sources */,
 				64B653762906F76700958206 /* PeopleFeedResultMapperTests.swift in Sources */,
 				644C4E1D29042BDB004AA277 /* URLSessionHTTPClientTests.swift in Sources */,
 				644D1D4B2905C0F80006AFBF /* URLRequestFactoryTests.swift in Sources */,
+				64B653792907277200958206 /* RoomsFeedApiEndpointTests.swift in Sources */,
 				644C4E2029042F69004AA277 /* URLProtocolStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
