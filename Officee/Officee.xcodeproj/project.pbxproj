@@ -178,8 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				641DFD9428F099A500F13AEA /* Officee */,
-				641DFD6028F0982100F13AEA /* OfficeeiOSCore */,
 				644C4E0A2904249D004AA277 /* OfficeeTests */,
+				641DFD6028F0982100F13AEA /* OfficeeiOSCore */,
 				641DFD5128F096C100F13AEA /* Products */,
 			);
 			sourceTree = "<group>";

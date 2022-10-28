@@ -122,7 +122,18 @@
 		64A5998A28F31C8F007090E2 /* PeopleFeedFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5998928F31C8F007090E2 /* PeopleFeedFlowCoordinator.swift */; };
 		64A5998D28F31E2E007090E2 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5998C28F31E2E007090E2 /* FlowCoordinator.swift */; };
 		64B3255E28F3F3B1005C2145 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 64B3255D28F3F3B1005C2145 /* README.md */; };
+		64C8BFCE290BDB7F008E043C /* OfficeeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C8BFCD290BDB7F008E043C /* OfficeeAppTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64C8BFCF290BDB7F008E043C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 641DFD2728F095C200F13AEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 641DFD2E28F095C200F13AEA;
+			remoteInfo = OfficeeApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		641DFD9F28F09D1300F13AEA /* Embed Frameworks */ = {
@@ -252,6 +263,8 @@
 		64A5998928F31C8F007090E2 /* PeopleFeedFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedFlowCoordinator.swift; sourceTree = "<group>"; };
 		64A5998C28F31E2E007090E2 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		64B3255D28F3F3B1005C2145 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		64C8BFCB290BDB7F008E043C /* OfficeeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfficeeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64C8BFCD290BDB7F008E043C /* OfficeeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeeAppTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +276,13 @@
 				641DFD9E28F09CE600F13AEA /* OfficeeiOSCore.framework in Frameworks */,
 				641DFD9C28F09CE200F13AEA /* Officee.framework in Frameworks */,
 				64468BC928F1EEF1000F901B /* Swinject in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64C8BFC8290BDB7F008E043C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +311,7 @@
 			children = (
 				64B3255D28F3F3B1005C2145 /* README.md */,
 				641DFD3128F095C200F13AEA /* OfficeeApp */,
+				64C8BFCC290BDB7F008E043C /* OfficeeAppTests */,
 				641DFD3028F095C200F13AEA /* Products */,
 				641DFD9A28F09CE200F13AEA /* Frameworks */,
 			);
@@ -300,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				641DFD2F28F095C200F13AEA /* OfficeeApp.app */,
+				64C8BFCB290BDB7F008E043C /* OfficeeAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -931,6 +953,14 @@
 			path = Flow;
 			sourceTree = "<group>";
 		};
+		64C8BFCC290BDB7F008E043C /* OfficeeAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				64C8BFCD290BDB7F008E043C /* OfficeeAppTests.swift */,
+			);
+			path = OfficeeAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -957,6 +987,24 @@
 			productReference = 641DFD2F28F095C200F13AEA /* OfficeeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		64C8BFCA290BDB7F008E043C /* OfficeeAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64C8BFD1290BDB7F008E043C /* Build configuration list for PBXNativeTarget "OfficeeAppTests" */;
+			buildPhases = (
+				64C8BFC7290BDB7F008E043C /* Sources */,
+				64C8BFC8290BDB7F008E043C /* Frameworks */,
+				64C8BFC9290BDB7F008E043C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64C8BFD0290BDB7F008E043C /* PBXTargetDependency */,
+			);
+			name = OfficeeAppTests;
+			productName = OfficeeAppTests;
+			productReference = 64C8BFCB290BDB7F008E043C /* OfficeeAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -964,11 +1012,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					641DFD2E28F095C200F13AEA = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					64C8BFCA290BDB7F008E043C = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 641DFD2E28F095C200F13AEA;
 					};
 				};
 			};
@@ -990,6 +1042,7 @@
 			projectRoot = "";
 			targets = (
 				641DFD2E28F095C200F13AEA /* OfficeeApp */,
+				64C8BFCA290BDB7F008E043C /* OfficeeAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1021,6 +1074,13 @@
 				64A5996A28F2EED2007090E2 /* SearchFeedNoResultsCell.xib in Resources */,
 				64B3255E28F3F3B1005C2145 /* README.md in Resources */,
 				64553D5C28F3265F00EA58DB /* RoomCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64C8BFC9290BDB7F008E043C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1142,7 +1202,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		64C8BFC7290BDB7F008E043C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64C8BFCE290BDB7F008E043C /* OfficeeAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64C8BFD0290BDB7F008E043C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 641DFD2E28F095C200F13AEA /* OfficeeApp */;
+			targetProxy = 64C8BFCF290BDB7F008E043C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		641DFD3D28F095C300F13AEA /* LaunchScreen.storyboard */ = {
@@ -1328,6 +1404,44 @@
 			};
 			name = Release;
 		};
+		64C8BFD2290BDB7F008E043C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = valeriy.litovchenko.OfficeeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfficeeApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OfficeeApp";
+			};
+			name = Debug;
+		};
+		64C8BFD3290BDB7F008E043C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = valeriy.litovchenko.OfficeeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfficeeApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/OfficeeApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1345,6 +1459,15 @@
 			buildConfigurations = (
 				641DFD4428F095C300F13AEA /* Debug */,
 				641DFD4528F095C300F13AEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64C8BFD1290BDB7F008E043C /* Build configuration list for PBXNativeTarget "OfficeeAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64C8BFD2290BDB7F008E043C /* Debug */,
+				64C8BFD3290BDB7F008E043C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

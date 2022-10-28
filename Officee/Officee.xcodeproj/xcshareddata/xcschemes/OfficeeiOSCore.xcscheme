@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "641DFD2E28F095C200F13AEA"
-               BuildableName = "OfficeeApp.app"
-               BlueprintName = "OfficeeApp"
-               ReferencedContainer = "container:OfficeeApp.xcodeproj">
+               BlueprintIdentifier = "641DFD5E28F0982100F13AEA"
+               BuildableName = "OfficeeiOSCore.framework"
+               BlueprintName = "OfficeeiOSCore"
+               ReferencedContainer = "container:Officee.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,17 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "64C8BFCA290BDB7F008E043C"
-               BuildableName = "OfficeeAppTests.xctest"
-               BlueprintName = "OfficeeAppTests"
-               ReferencedContainer = "container:OfficeeApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -51,16 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "641DFD2E28F095C200F13AEA"
-            BuildableName = "OfficeeApp.app"
-            BlueprintName = "OfficeeApp"
-            ReferencedContainer = "container:OfficeeApp.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -68,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "641DFD2E28F095C200F13AEA"
-            BuildableName = "OfficeeApp.app"
-            BlueprintName = "OfficeeApp"
-            ReferencedContainer = "container:OfficeeApp.xcodeproj">
+            BlueprintIdentifier = "641DFD5E28F0982100F13AEA"
+            BuildableName = "OfficeeiOSCore.framework"
+            BlueprintName = "OfficeeiOSCore"
+            ReferencedContainer = "container:Officee.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
