@@ -20,10 +20,19 @@ enum DefinedColors {
 
 struct ColorResource {
   let name: String
+  let bundle: Bundle
+  
+  init(
+    name: String,
+    bundle: Bundle = Bundle(for: ColorResourceBundleClass.self)
+  ) {
+    self.name = name
+    self.bundle = bundle
+  }
   
   var color: UIColor? {
-    let color = UIColor(named: name)
-    assert(color != nil, "Asset Color with name \(name) does not exist")
-    return color
+    UIColor(named: name, in: bundle, compatibleWith: nil)
   }
 }
+
+final class ColorResourceBundleClass {}

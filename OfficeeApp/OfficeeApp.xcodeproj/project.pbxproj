@@ -122,7 +122,8 @@
 		64A5998A28F31C8F007090E2 /* PeopleFeedFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5998928F31C8F007090E2 /* PeopleFeedFlowCoordinator.swift */; };
 		64A5998D28F31E2E007090E2 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5998C28F31E2E007090E2 /* FlowCoordinator.swift */; };
 		64B3255E28F3F3B1005C2145 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 64B3255D28F3F3B1005C2145 /* README.md */; };
-		64C8BFCE290BDB7F008E043C /* OfficeeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C8BFCD290BDB7F008E043C /* OfficeeAppTests.swift */; };
+		64C8BFD6290BDED3008E043C /* DefinedColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C8BFD5290BDED3008E043C /* DefinedColorsTests.swift */; };
+		64C8BFD8290BDFAC008E043C /* ColorsForTest.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C8BFD7290BDFAC008E043C /* ColorsForTest.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,7 +265,8 @@
 		64A5998C28F31E2E007090E2 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		64B3255D28F3F3B1005C2145 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		64C8BFCB290BDB7F008E043C /* OfficeeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfficeeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		64C8BFCD290BDB7F008E043C /* OfficeeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeeAppTests.swift; sourceTree = "<group>"; };
+		64C8BFD5290BDED3008E043C /* DefinedColorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinedColorsTests.swift; sourceTree = "<group>"; };
+		64C8BFD7290BDFAC008E043C /* ColorsForTest.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorsForTest.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -956,9 +958,18 @@
 		64C8BFCC290BDB7F008E043C /* OfficeeAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				64C8BFCD290BDB7F008E043C /* OfficeeAppTests.swift */,
+				64C8BFD4290BDEC5008E043C /* Constants */,
 			);
 			path = OfficeeAppTests;
+			sourceTree = "<group>";
+		};
+		64C8BFD4290BDEC5008E043C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				64C8BFD5290BDED3008E043C /* DefinedColorsTests.swift */,
+				64C8BFD7290BDFAC008E043C /* ColorsForTest.xcassets */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1081,6 +1092,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64C8BFD8290BDFAC008E043C /* ColorsForTest.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1206,7 +1218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64C8BFCE290BDB7F008E043C /* OfficeeAppTests.swift in Sources */,
+				64C8BFD6290BDED3008E043C /* DefinedColorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
