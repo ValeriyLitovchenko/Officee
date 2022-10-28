@@ -20,7 +20,7 @@ protocol PeopleFeedSceneFactory {
 extension PeopleFeedSceneFactory {
   func peopleFeedController(with navigationActions: PeopleFeedNavigationActions) -> PeopleFeedController {
     let viewModel = PeopleFeedViewModel(
-      getPeopleUseCase: serviceLocating.resolve(),
+      getPeopleUseCase: serviceLocating.unsafeResolve(),
       navigationActions: navigationActions)
     return PeopleFeedController(viewModel: viewModel)
   }
@@ -28,7 +28,7 @@ extension PeopleFeedSceneFactory {
   func personDetailsController(with inputModel: PersonDetailsInput) -> PersonDetailsController {
     let viewModel = PersonDetailsViewModelImpl(
       inputModel: inputModel,
-      sendEmailUseCase: serviceLocating.resolve())
+      sendEmailUseCase: serviceLocating.unsafeResolve())
     return PersonDetailsController(viewModel: viewModel)
   }
 }

@@ -14,10 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
+  private(set) lazy var serviceLocator = SwinjectServiceLocator.serviceLocatorWithAllProjectAssemblies
+  
   private lazy var appFlowCoordinator = AppFlowCoordinator(
     window: UIWindow(frame: UIScreen.main.bounds),
     appFlowFactory: AppFlowFactoryImpl(
-      serviceLocating: SwinjectServiceLocator()))
+      serviceLocating: serviceLocator)
+  )
   
   // MARK: - Functions
   

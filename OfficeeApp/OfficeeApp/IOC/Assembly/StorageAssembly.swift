@@ -25,11 +25,11 @@ struct StorageAssembly: Swinject.Assembly {
     .inObjectScope(.container)
     
     container.register(PeopleFeedStorage.self) { resolver in
-      resolver.resolve(type: CoreDataStorage.self)
+      resolver.unsafeResolve(CoreDataStorage.self)
     }
     
     container.register(RoomsFeedStorage.self) { resolver in
-      resolver.resolve(type: CoreDataStorage.self)
+      resolver.unsafeResolve(CoreDataStorage.self)
     }
   }
 }

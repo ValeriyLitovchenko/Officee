@@ -19,7 +19,7 @@ protocol RoomsFeedSceneFactory {
 extension RoomsFeedSceneFactory {
   func roomsFeedController(with navigationActions: RoomsFeedNavigationActions) -> RoomsFeedController {
     let viewModel = RoomsFeedViewModel(
-      getRoomsUseCase: serviceLocating.resolve(),
+      getRoomsUseCase: serviceLocating.unsafeResolve(),
       navigationActions: navigationActions)
     return RoomsFeedController(viewModel: viewModel)
   }

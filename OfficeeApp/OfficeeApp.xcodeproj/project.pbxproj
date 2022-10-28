@@ -24,6 +24,9 @@
 		641DFE0828F1AE6C00F13AEA /* PeopleFeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFE0728F1AE6C00F13AEA /* PeopleFeedRequest.swift */; };
 		641DFE0A28F1AED200F13AEA /* RoomsFeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFE0928F1AED200F13AEA /* RoomsFeedRequest.swift */; };
 		641DFE2328F1BC7000F13AEA /* PeopleFeedRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641DFE1128F1B16000F13AEA /* PeopleFeedRepositoryImpl.swift */; };
+		64314BC0290C25F500144CE4 /* ServiceLocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64314BBF290C25F500144CE4 /* ServiceLocatorTests.swift */; };
+		64314BC2290C274600144CE4 /* AssembliesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64314BC1290C274600144CE4 /* AssembliesTests.swift */; };
+		64314BC8290C48C400144CE4 /* ServiceResolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64314BC7290C48C400144CE4 /* ServiceResolving.swift */; };
 		64468B9B28F1D077000F901B /* RoomsFeedRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468B9A28F1D077000F901B /* RoomsFeedRepositoryImpl.swift */; };
 		64468BC628F1ED1B000F901B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BC528F1ED1B000F901B /* AppConstants.swift */; };
 		64468BC928F1EEF1000F901B /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 64468BC828F1EEF1000F901B /* Swinject */; };
@@ -168,6 +171,9 @@
 		641DFE0728F1AE6C00F13AEA /* PeopleFeedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedRequest.swift; sourceTree = "<group>"; };
 		641DFE0928F1AED200F13AEA /* RoomsFeedRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedRequest.swift; sourceTree = "<group>"; };
 		641DFE1128F1B16000F13AEA /* PeopleFeedRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleFeedRepositoryImpl.swift; sourceTree = "<group>"; };
+		64314BBF290C25F500144CE4 /* ServiceLocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocatorTests.swift; sourceTree = "<group>"; };
+		64314BC1290C274600144CE4 /* AssembliesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembliesTests.swift; sourceTree = "<group>"; };
+		64314BC7290C48C400144CE4 /* ServiceResolving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResolving.swift; sourceTree = "<group>"; };
 		64468B9A28F1D077000F901B /* RoomsFeedRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedRepositoryImpl.swift; sourceTree = "<group>"; };
 		64468BC528F1ED1B000F901B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		64468BCC28F1EFD2000F901B /* ServiceLocating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocating.swift; sourceTree = "<group>"; };
@@ -336,7 +342,7 @@
 				641DFE1528F1B66600F13AEA /* Infrastructure */,
 				641DFE1028F1B15100F13AEA /* Data */,
 				641DFE0B28F1AFC700F13AEA /* Domain */,
-				64468BCA28F1EFAB000F901B /* Service Locator */,
+				64468BCA28F1EFAB000F901B /* IOC */,
 				64468BDF28F20290000F901B /* Presentation */,
 				64468BF228F20A99000F901B /* Helpers */,
 				64468C0228F21619000F901B /* Resources */,
@@ -397,6 +403,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		64314BBE290C25BD00144CE4 /* IOC */ = {
+			isa = PBXGroup;
+			children = (
+				64314BC1290C274600144CE4 /* AssembliesTests.swift */,
+				64314BBF290C25F500144CE4 /* ServiceLocatorTests.swift */,
+			);
+			path = IOC;
+			sourceTree = "<group>";
+		};
 		64468BC428F1ED03000F901B /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,14 +423,15 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		64468BCA28F1EFAB000F901B /* Service Locator */ = {
+		64468BCA28F1EFAB000F901B /* IOC */ = {
 			isa = PBXGroup;
 			children = (
 				64468BD428F1F204000F901B /* Assembly */,
 				64468BCE28F1EFF4000F901B /* Driver */,
 				64468BCC28F1EFD2000F901B /* ServiceLocating.swift */,
+				64314BC7290C48C400144CE4 /* ServiceResolving.swift */,
 			);
-			path = "Service Locator";
+			path = IOC;
 			sourceTree = "<group>";
 		};
 		64468BCE28F1EFF4000F901B /* Driver */ = {
@@ -959,6 +975,7 @@
 			isa = PBXGroup;
 			children = (
 				64C8BFD4290BDEC5008E043C /* Constants */,
+				64314BBE290C25BD00144CE4 /* IOC */,
 			);
 			path = OfficeeAppTests;
 			sourceTree = "<group>";
@@ -1147,6 +1164,7 @@
 				6449001028F35FF200B52F05 /* PlatformFlowUseCase.swift in Sources */,
 				64A5998628F30CCC007090E2 /* TabBarSceneFactory.swift in Sources */,
 				64553D5A28F3247500EA58DB /* RoomCell.swift in Sources */,
+				64314BC8290C48C400144CE4 /* ServiceResolving.swift in Sources */,
 				64990601290199B200C12BAC /* OperationStatePublisher+Combine.swift in Sources */,
 				64553D4B28F31F9500EA58DB /* PeopleFeedCoordinatorFactory.swift in Sources */,
 				6449FFF428F3480500B52F05 /* PersonDetailsAvatarCell.swift in Sources */,
@@ -1218,6 +1236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64314BC0290C25F500144CE4 /* ServiceLocatorTests.swift in Sources */,
+				64314BC2290C274600144CE4 /* AssembliesTests.swift in Sources */,
 				64C8BFD6290BDED3008E043C /* DefinedColorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

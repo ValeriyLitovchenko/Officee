@@ -12,7 +12,7 @@ struct ProxyLaunchFlowFactoryImpl: ProxyLaunchFlowFactory {
   
   func proxyLaunchController(with navigationActions: ProxyLaunchNavigationActions) -> ProxyLaunchController {
     let viewModel = ProxyLaunchViewModelImpl(
-      loadFeedsUseCase: serviceLocating.resolve(),
+      loadFeedsUseCase: serviceLocating.unsafeResolve(),
       navigationActions: navigationActions)
     return ProxyLaunchController(viewModel: viewModel)
   }

@@ -11,16 +11,16 @@ struct UsecaseAssembly: Swinject.Assembly {
   func assemble(container: Container) {
     container.register(LoadFeedsUseCase.self) { resolver in
       LoadFeedsUseCaseImpl(
-        peopleRepository: resolver.resolve(),
-        roomsRepository: resolver.resolve())
+        peopleRepository: resolver.unsafeResolve(),
+        roomsRepository: resolver.unsafeResolve())
     }
     
     container.register(GetPeopleUseCase.self) { resolver in
-      GetPeopleUseCaseImpl(repository: resolver.resolve())
+      GetPeopleUseCaseImpl(repository: resolver.unsafeResolve())
     }
     
     container.register(GetRoomsUseCase.self) { resolver in
-      GetRoomsUseCaseImpl(repository: resolver.resolve())
+      GetRoomsUseCaseImpl(repository: resolver.unsafeResolve())
     }
     
     container.register(SendEmailUseCase.self) { _ in

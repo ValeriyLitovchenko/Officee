@@ -12,16 +12,16 @@ struct RepositoryAssembly: Swinject.Assembly {
   func assemble(container: Container) {
     container.register(PeopleFeedRepository.self) { resolver in
       PeopleFeedRepositoryImpl(
-        httpClient: resolver.resolve(),
-        urlRequestFactory: resolver.resolve(),
-        peopleStorage: resolver.resolve())
+        httpClient: resolver.unsafeResolve(),
+        urlRequestFactory: resolver.unsafeResolve(),
+        peopleStorage: resolver.unsafeResolve())
     }
     
     container.register(RoomsFeedRepository.self) { resolver in
       RoomsFeedRepositoryImpl(
-        httpClient: resolver.resolve(),
-        urlRequestFactory: resolver.resolve(),
-        roomsStorage: resolver.resolve())
+        httpClient: resolver.unsafeResolve(),
+        urlRequestFactory: resolver.unsafeResolve(),
+        roomsStorage: resolver.unsafeResolve())
     }
   }
 }
