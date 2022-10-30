@@ -14,7 +14,10 @@ struct PeopleFeedSceneFactoryImpl: PeopleFeedSceneFactory {
 protocol PeopleFeedSceneFactory {
   var serviceLocating: ServiceLocating { get }
   func peopleFeedController(with navigationActions: PeopleFeedNavigationActions) -> PeopleFeedController
-  func personDetailsController(with inputModel: PersonDetailsInput) -> PersonDetailsController
+  func personDetailsController(
+    with inputModel: PersonDetailsInput,
+    navigationActions: PersonDetailsNavigationActions
+  ) -> PersonDetailsController
 }
 
 extension PeopleFeedSceneFactory {
@@ -25,10 +28,14 @@ extension PeopleFeedSceneFactory {
     return PeopleFeedController(viewModel: viewModel)
   }
   
-  func personDetailsController(with inputModel: PersonDetailsInput) -> PersonDetailsController {
+  func personDetailsController(
+    with inputModel: PersonDetailsInput,
+    navigationActions: PersonDetailsNavigationActions
+  ) -> PersonDetailsController {
     let viewModel = PersonDetailsViewModelImpl(
       inputModel: inputModel,
-      sendEmailUseCase: serviceLocating.unsafeResolve())
+      sendEmailUseCase: serviceLocating.unsafeResolve(),
+      navigationActions: navigationActions)
     return PersonDetailsController(viewModel: viewModel)
   }
 }

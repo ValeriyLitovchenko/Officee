@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SendEmailUseCase {
-  func invoke(with email: String)
+  func invoke(with email: String) throws
 }

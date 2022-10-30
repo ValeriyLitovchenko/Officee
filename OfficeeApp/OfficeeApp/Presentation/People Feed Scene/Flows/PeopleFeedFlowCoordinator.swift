@@ -37,7 +37,10 @@ final class PeopleFeedFlowCoordinatorImpl: PeopleFeedFlowCoordinator, ToastViewP
   // MARK: - Private Functions
   
   private func openPersonDetails(_ inputModel: PersonDetailsInput) {
-    let personDetails = sceneFactory.personDetailsController(with: inputModel)
+    let navigationActions = PersonDetailsNavigationActions(showToastMessage: showAutohidingToastView(with:))
+    let personDetails = sceneFactory.personDetailsController(
+      with: inputModel,
+      navigationActions: navigationActions)
     personDetails.hidesBottomBarWhenPushed = true
     
     PlatformFlowUseCase.invoke(

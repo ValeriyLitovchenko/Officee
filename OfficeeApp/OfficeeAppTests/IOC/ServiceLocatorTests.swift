@@ -16,24 +16,24 @@ final class ServiceLocatorTests: XCTestCase {
     XCTAssertNil(sut.resolve(DummyService.self))
   }
   
-  func test_ServiceLocatorRegistersDummyServiceForDumyServiceAssemblySpy() {
+  func test_ServiceLocatorRegistersDummyServiceForDumyServiceAssemblySpyOnlyOnce() {
     let dummyService = DumyServiceAssemblySpy()
     let sut = SwinjectServiceLocator(assemblies: [dummyService])
     
-    XCTAssert(dummyService.isAssembleMethodCalled)
     XCTAssertNotNil(sut.resolve(DummyService.self))
+    XCTAssertEqual(dummyService.assembleeMethodCallingCount, 1)
   }
 }
 
 final class DumyServiceAssemblySpy: Swinject.Assembly {
-  private(set) var isAssembleMethodCalled = false
+  private(set) var assembleeMethodCallingCount = 0
   
   func assemble(container: Container) {
     container.register(DummyService.self) { _ in
       DummyService()
     }
     
-    isAssembleMethodCalled = true
+    assembleeMethodCallingCount += 1
   }
 }
 

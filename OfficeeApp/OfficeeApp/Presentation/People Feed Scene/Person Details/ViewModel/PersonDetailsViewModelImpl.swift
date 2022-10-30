@@ -24,15 +24,18 @@ final class PersonDetailsViewModelImpl: PersonDetailsViewModel {
   
   private let person: Person
   private let sendEmailUseCase: SendEmailUseCase
+  private let navigationActions: PersonDetailsNavigationActions
   
   // MARK: - Constructor
   
   init(
     inputModel: PersonDetailsInput,
-    sendEmailUseCase: SendEmailUseCase
+    sendEmailUseCase: SendEmailUseCase,
+    navigationActions: PersonDetailsNavigationActions
   ) {
     self.person = inputModel.person
     self.sendEmailUseCase = sendEmailUseCase
+    self.navigationActions = navigationActions
     loadData()
   }
   
@@ -44,7 +47,11 @@ final class PersonDetailsViewModelImpl: PersonDetailsViewModel {
   }
   
   func sendMessageAction() {
-    sendEmailUseCase.invoke(with: person.email)
+    do {
+      try sendEmailUseCase.invoke(with: person.email)
+    } catch {
+      navigationActions.showToastMessage(error.localizedDescription)
+    }
   }
   
   // MARK: - Private Functions

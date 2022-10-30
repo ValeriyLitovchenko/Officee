@@ -6,6 +6,7 @@
 //
 
 import Swinject
+import UIKit.UIApplication
 
 struct UsecaseAssembly: Swinject.Assembly {
   func assemble(container: Container) {
@@ -24,7 +25,7 @@ struct UsecaseAssembly: Swinject.Assembly {
     }
     
     container.register(SendEmailUseCase.self) { _ in
-      SendEmailUseCaseImpl()
+      SendEmailUseCaseImpl(urlOpening: UIApplication.shared)
     }
   }
 }

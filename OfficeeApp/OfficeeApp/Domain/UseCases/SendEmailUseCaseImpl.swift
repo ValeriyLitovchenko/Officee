@@ -5,15 +5,30 @@
 //  Created by Valeriy L on 09.10.2022.
 //
 
-import UIKit
+import Foundation
 
 struct SendEmailUseCaseImpl: SendEmailUseCase {
-  func invoke(with email: String) {
-    guard let mailtoString = "mailto:\(email)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-          let mailtoUrl = URL(string: mailtoString),
-             UIApplication.shared.canOpenURL(mailtoUrl)
-    else { return }
+  enum Error: LocalizedError {
+    case emailAppUnavailable
     
-    UIApplication.shared.open(mailtoUrl, options: [:])
+    var errorDescription: String? {
+      NSLocalizedString("Email application unvailable.", comment: "")
+    }
+  }
+  
+  let urlOpening: URLOpening
+  
+  func invoke(with email: String) throws {
+    guard let mailtoString = "mailto:\(email)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+          let mailtoUrl = URL(string: mailtoString)
+    else {
+      throw SendEmailUseCaseImpl.Error.emailAppUnavailable
+    }
+    
+    do {
+      try urlOpening.open(url: mailtoUrl)
+    } catch {
+      throw error
+    }
   }
 }
