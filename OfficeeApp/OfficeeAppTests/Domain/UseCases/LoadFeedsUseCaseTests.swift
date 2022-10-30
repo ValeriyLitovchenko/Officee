@@ -19,7 +19,7 @@ final class LoadFeedsUseCaseTests: XCTestCase {
     cancellable = nil
   }
   
-  func test_LoadFeedUseCasePerformGetEmptyPeopleAndGetEmptyRoomsWithoutErrorOnce() {
+  func test_performGetEmptyPeopleAndGetEmptyRoomsWithoutErrorOnce() {
     let peopleRepository = PeopleFeedRepositorySpy(error: nil, people: [])
     let roomsRepository = RoomsFeedRepositorySpy(error: nil, rooms: [])
     
@@ -32,7 +32,7 @@ final class LoadFeedsUseCaseTests: XCTestCase {
     XCTAssertEqual(roomsRepository.receivedMessages.count, 1)
   }
   
-  func test_LoadFeedUseCaseReceiveErrorWhileGetPeopleOnce() {
+  func test_receiveErrorWhileGetPeopleOnce() {
     let error = EquatableError.anyError
     let peopleRepository = PeopleFeedRepositorySpy(error: error, people: [])
     let roomsRepository = DummyRoomsFeedRepository()
@@ -45,7 +45,7 @@ final class LoadFeedsUseCaseTests: XCTestCase {
     XCTAssertEqual(peopleRepository.receivedMessages.count, 1)
   }
   
-  func test_LoadFeedUseCaseReceiveErrorWhileGetRooms() {
+  func test_receiveErrorWhileGetRooms() {
     let error = EquatableError.anyError
     let peopleRepository = DummyPeopleFeedRepository()
     let roomsRepository = RoomsFeedRepositorySpy(error: error, rooms: [])

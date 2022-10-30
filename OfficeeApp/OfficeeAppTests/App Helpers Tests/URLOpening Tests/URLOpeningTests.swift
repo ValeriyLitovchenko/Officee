@@ -9,14 +9,14 @@ import XCTest
 @testable import OfficeeApp
 
 final class URLOpeningTests: XCTest {
-  func test_URLOpeningThrowsAnErrorWhileOpensUnavailableURL() {
+  func test_throwsAnErrorWhileOpensUnavailableURL() {
     let unavailableURL = unavailableURL
     let sut = makeSUT()
     
     XCTAssertThrowsError(try sut.open(url: unavailableURL))
   }
   
-  func test_URLOpeningNotThrowsErrorWhileOpensOpenableURL() {
+  func test_notThrowsAnErrorWhileOpensOpenableURL() {
     let openableURL = appleURL
     let sut = makeSUT()
     

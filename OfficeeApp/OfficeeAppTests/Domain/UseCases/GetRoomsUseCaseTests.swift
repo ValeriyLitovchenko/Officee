@@ -1,5 +1,5 @@
 //
-//  GetPeopleUseCaseTests.swift
+//  GetRoomsUseCaseTests.swift
 //  OfficeeAppTests
 //
 //  Created by Valeriy L on 30.10.2022.
@@ -10,7 +10,7 @@ import Officee
 @testable import OfficeeApp
 import Combine
 
-final class GetPeopleUseCaseTests: XCTestCase {
+final class GetRoomsUseCaseTests: XCTestCase {
   private var cancellable: Combine.Cancellable?
   
   override func tearDown() {
@@ -19,28 +19,28 @@ final class GetPeopleUseCaseTests: XCTestCase {
     cancellable = nil
   }
   
-  func test_getEmptyPeopleListWithoutError() {
-    let request = PeopleFeedRequest.refreshRequest
+  func test_getEmptyRoomsListWithoutError() {
+    let request = RoomsFeedRequest.refreshRequest
     
-    let receivedPeople = peopleResult(for: request, with: (nil, []))
+    let receivedRooms = roomsResult(for: request, with: (nil, []))
     
-    XCTAssertEqual(receivedPeople, [])
+    XCTAssertEqual(receivedRooms, [])
   }
   
-  func test_getListOfTwoPersonsWithoutError() {
-    let request = PeopleFeedRequest.refreshRequest
-    let people = [
-      PersonForTestFactory.makePerson(id: "1"),
-      PersonForTestFactory.makePerson(id: "2")
+  func test_getListOfTwoRoomsWithoutError() {
+    let request = RoomsFeedRequest.refreshRequest
+    let rooms = [
+      RoomForTestFactory.makeRoom(id: "1"),
+      RoomForTestFactory.makeRoom(id: "2")
     ]
     
-    let receivedPeople = peopleResult(for: request, with: (nil, people))
+    let receivedRooms = roomsResult(for: request, with: (nil, rooms))
     
-    XCTAssertEqual(receivedPeople, people)
+    XCTAssertEqual(receivedRooms, rooms)
   }
   
-  func test_getPeopleFailsOnError() {
-    let request = PeopleFeedRequest.refreshRequest
+  func test_getRoomsFailsOnError() {
+    let request = RoomsFeedRequest.refreshRequest
     let error = EquatableError.anyError
     
     let receivedError = errorResult(for: request, with: (error, [])) as? EquatableError
@@ -51,16 +51,16 @@ final class GetPeopleUseCaseTests: XCTestCase {
   // MARK: - Helpers
   
   private func errorResult(
-    for request: PeopleFeedRequest,
-    with data: (error: Error?, people: [Person]),
+    for request: RoomsFeedRequest,
+    with data: (error: Error?, rooms: [Room]),
     file: StaticString = #filePath,
     line: UInt = #line
   ) -> Error {
     let result = resultFor(request: request, with: data, file: file, line: line)
     
     switch result {
-    case let .success(people):
-      XCTFail("Expected failure, got \(people) instead")
+    case let .success(rooms):
+      XCTFail("Expected failure, got \(rooms) instead")
       return EquatableError.anyError
       
     case let .failure(error):
@@ -68,17 +68,17 @@ final class GetPeopleUseCaseTests: XCTestCase {
     }
   }
   
-  private func peopleResult(
-    for request: PeopleFeedRequest,
-    with data: (error: Error?, people: [Person]),
+  private func roomsResult(
+    for request: RoomsFeedRequest,
+    with data: (error: Error?, rooms: [Room]),
     file: StaticString = #filePath,
     line: UInt = #line
-  ) -> [Person] {
+  ) -> [Room] {
     let result = resultFor(request: request, with: data, file: file, line: line)
     
     switch result {
-    case let .success(people):
-      return people
+    case let .success(rooms):
+      return rooms
     case let .failure(error):
       XCTFail("Expected success, got \(error) instead")
       return []
@@ -86,16 +86,16 @@ final class GetPeopleUseCaseTests: XCTestCase {
   }
   
   private func resultFor(
-    request: PeopleFeedRequest,
-    with data: (error: Error?, people: [Person]),
+    request: RoomsFeedRequest,
+    with data: (error: Error?, rooms: [Room]),
     file: StaticString = #filePath,
     line: UInt = #line
-  ) -> Swift.Result<[Person], Error> {
-    let peopleRepository = PeopleFeedRepositorySpy(error: data.error, people: data.people)
-    let sut = GetPeopleUseCaseImpl(repository: peopleRepository)
+  ) -> Swift.Result<[Room], Error> {
+    let roomsRepository = RoomsFeedRepositorySpy(error: data.error, rooms: data.rooms)
+    let sut = GetRoomsUseCaseImpl(repository: roomsRepository)
     let exp = expectation(description: "Wait for result.")
     
-    var receivedResult: Result<[Person], Error>!
+    var receivedResult: Result<[Room], Error>!
     cancellable = sut.invoke(with: request)
       .sink(
         receiveCompletion: { result in
@@ -104,15 +104,15 @@ final class GetPeopleUseCaseTests: XCTestCase {
           }
           exp.fulfill()
         },
-        receiveValue: { people in
-          receivedResult = .success(people)
+        receiveValue: { rooms in
+          receivedResult = .success(rooms)
         })
     
     wait(for: [exp], timeout: 1.0)
     
-    XCTAssertEqual(peopleRepository.receivedMessages.count, 1)
+    XCTAssertEqual(roomsRepository.receivedMessages.count, 1)
     
-    if case let .getPeople(receivedRequest) = peopleRepository.receivedMessages.first {
+    if case let .getRooms(receivedRequest) = roomsRepository.receivedMessages.first {
       XCTAssertEqual(receivedRequest, request)
     }
     

@@ -9,7 +9,7 @@ import XCTest
 @testable import OfficeeApp
 
 final class SendEmailUseCaseTests: XCTest {
-  func test_SendEmailUseCaseThrowsAnErrorOnURLOpeningError_andPerformEmailSendingToReceiverOnlyOnce() {
+  func test_throwsAnErrorOnURLOpeningError_andPerformEmailSendingToReceiverOnlyOnce() {
     let recipientEmail = someEmailString
     let urlOpening = URLOpeningSpy(error: anyNSError)
     let sut = SendEmailUseCaseImpl(urlOpening: urlOpening)
@@ -19,7 +19,7 @@ final class SendEmailUseCaseTests: XCTest {
     XCTAssert(urlOpening.openingURLs[0].absoluteString.contains(recipientEmail) == true)
   }
   
-  func test_SendEmailUseCasePerformEmailSendingToTheFirstAndSecondRecipientsWithoutError() {
+  func test_performEmailSendingToTheFirstAndSecondRecipientsWithoutError() {
     let firstRecipient  = "first.recipient@email.com"
     let secondRecipient = "second.recipient@email.com"
     let urlOpening = URLOpeningSpy(error: nil)

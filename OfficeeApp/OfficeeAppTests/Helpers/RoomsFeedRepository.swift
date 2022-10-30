@@ -12,7 +12,7 @@ import Combine
 
 final class RoomsFeedRepositorySpy: RoomsFeedRepository {
   enum ReceivedMessage: Equatable {
-    case getPeople(RoomsFeedRequest)
+    case getRooms(RoomsFeedRequest)
   }
   
   // MARK: - Properties
@@ -31,7 +31,7 @@ final class RoomsFeedRepositorySpy: RoomsFeedRepository {
   // MARK: - Methods
   
   func getRooms(with request: RoomsFeedRequest) -> AnyPublisher<[Officee.Room], Error> {
-    receivedMessages.append(.getPeople(request))
+    receivedMessages.append(.getRooms(request))
     
     if let error = error {
       return Fail<[Room], Error>(error: error).eraseToAnyPublisher()

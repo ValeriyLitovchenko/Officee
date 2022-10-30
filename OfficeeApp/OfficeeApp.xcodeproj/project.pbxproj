@@ -126,6 +126,8 @@
 		64A5998D28F31E2E007090E2 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A5998C28F31E2E007090E2 /* FlowCoordinator.swift */; };
 		64A6CB31290EBCB100235CC5 /* GetPeopleUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6CB30290EBCB100235CC5 /* GetPeopleUseCaseTests.swift */; };
 		64A6CB33290EC70700235CC5 /* PersonForTestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6CB32290EC70700235CC5 /* PersonForTestFactory.swift */; };
+		64A6CB35290EC75900235CC5 /* GetRoomsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6CB34290EC75900235CC5 /* GetRoomsUseCaseTests.swift */; };
+		64A6CB37290EC7C700235CC5 /* RoomForTestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6CB36290EC7C700235CC5 /* RoomForTestFactory.swift */; };
 		64B3255E28F3F3B1005C2145 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 64B3255D28F3F3B1005C2145 /* README.md */; };
 		64C8BFD6290BDED3008E043C /* DefinedColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C8BFD5290BDED3008E043C /* DefinedColorsTests.swift */; };
 		64C8BFD8290BDFAC008E043C /* ColorsForTest.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C8BFD7290BDFAC008E043C /* ColorsForTest.xcassets */; };
@@ -282,6 +284,8 @@
 		64A5998C28F31E2E007090E2 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		64A6CB30290EBCB100235CC5 /* GetPeopleUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPeopleUseCaseTests.swift; sourceTree = "<group>"; };
 		64A6CB32290EC70700235CC5 /* PersonForTestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonForTestFactory.swift; sourceTree = "<group>"; };
+		64A6CB34290EC75900235CC5 /* GetRoomsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomsUseCaseTests.swift; sourceTree = "<group>"; };
+		64A6CB36290EC7C700235CC5 /* RoomForTestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomForTestFactory.swift; sourceTree = "<group>"; };
 		64B3255D28F3F3B1005C2145 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		64C8BFCB290BDB7F008E043C /* OfficeeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfficeeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C8BFD5290BDED3008E043C /* DefinedColorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinedColorsTests.swift; sourceTree = "<group>"; };
@@ -1037,6 +1041,7 @@
 			children = (
 				64F8C21A290EA73B0087B27E /* LoadFeedsUseCaseTests.swift */,
 				64A6CB30290EBCB100235CC5 /* GetPeopleUseCaseTests.swift */,
+				64A6CB34290EC75900235CC5 /* GetRoomsUseCaseTests.swift */,
 				64F8C20C290E98B50087B27E /* SendEmailUseCaseTests.swift */,
 			);
 			path = UseCases;
@@ -1074,6 +1079,7 @@
 				64F8C21C290EB48A0087B27E /* PeopleFeedRepository.swift */,
 				64F8C21E290EB4B10087B27E /* RoomsFeedRepository.swift */,
 				64A6CB32290EC70700235CC5 /* PersonForTestFactory.swift */,
+				64A6CB36290EC7C700235CC5 /* RoomForTestFactory.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1333,9 +1339,11 @@
 				64F8C20D290E98B50087B27E /* SendEmailUseCaseTests.swift in Sources */,
 				64A6CB33290EC70700235CC5 /* PersonForTestFactory.swift in Sources */,
 				64F8C219290E9EEF0087B27E /* SharedTestsHelpers.swift in Sources */,
+				64A6CB35290EC75900235CC5 /* GetRoomsUseCaseTests.swift in Sources */,
 				64314BC0290C25F500144CE4 /* ServiceLocatorTests.swift in Sources */,
 				64F8C21D290EB48A0087B27E /* PeopleFeedRepository.swift in Sources */,
 				64314BC2290C274600144CE4 /* AssembliesTests.swift in Sources */,
+				64A6CB37290EC7C700235CC5 /* RoomForTestFactory.swift in Sources */,
 				64C8BFD6290BDED3008E043C /* DefinedColorsTests.swift in Sources */,
 				64F8C21F290EB4B10087B27E /* RoomsFeedRepository.swift in Sources */,
 				64A6CB31290EBCB100235CC5 /* GetPeopleUseCaseTests.swift in Sources */,

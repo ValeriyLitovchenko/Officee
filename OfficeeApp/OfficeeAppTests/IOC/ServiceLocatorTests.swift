@@ -10,30 +10,30 @@ import XCTest
 import Swinject
 
 final class ServiceLocatorTests: XCTestCase {
-  func test_ServiceLocatorWithEmptyAssemblyListReturnNilOnResolve() {
+  func test_returnNilOnResolveForEmptyAssemblyList() {
     let sut = SwinjectServiceLocator(assemblies: [])
     
     XCTAssertNil(sut.resolve(DummyService.self))
   }
   
-  func test_ServiceLocatorRegistersDummyServiceForDumyServiceAssemblySpyOnlyOnce() {
+  func test_registersDummyServiceForDummyServiceAssemblySpyOnlyOnce() {
     let dummyService = DumyServiceAssemblySpy()
     let sut = SwinjectServiceLocator(assemblies: [dummyService])
     
     XCTAssertNotNil(sut.resolve(DummyService.self))
-    XCTAssertEqual(dummyService.assembleeMethodCallingCount, 1)
+    XCTAssertEqual(dummyService.assembleMethodCallingCount, 1)
   }
 }
 
 final class DumyServiceAssemblySpy: Swinject.Assembly {
-  private(set) var assembleeMethodCallingCount = 0
+  private(set) var assembleMethodCallingCount = 0
   
   func assemble(container: Container) {
     container.register(DummyService.self) { _ in
       DummyService()
     }
     
-    assembleeMethodCallingCount += 1
+    assembleMethodCallingCount += 1
   }
 }
 
