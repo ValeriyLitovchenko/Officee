@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PeopleFeedRequest {
+struct PeopleFeedRequest: Equatable {
   let query: String?
   let shouldRefresh: Bool
   

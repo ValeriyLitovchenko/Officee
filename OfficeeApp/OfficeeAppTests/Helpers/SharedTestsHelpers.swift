@@ -24,3 +24,7 @@ var anyNSError: Error {
 var someEmailString: String {
   "someemail@email.com"
 }
+
+enum EquatableError: Error, Equatable {
+  case anyError
+}

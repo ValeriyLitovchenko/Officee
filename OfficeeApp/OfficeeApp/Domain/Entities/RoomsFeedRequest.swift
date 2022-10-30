@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RoomsFeedRequest {
+struct RoomsFeedRequest: Equatable {
   let query: String?
   let shouldRefresh: Bool
   
