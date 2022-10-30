@@ -70,11 +70,8 @@ final class LoadFeedsUseCaseTests: XCTestCase {
     var receivedError: Error?
     cancellable = sut.invoke()
       .sink(receiveCompletion: { result in
-        switch result {
-        case let .failure(error):
+        if case let .failure(error) = result {
           receivedError = error
-        case .finished:
-          break
         }
         exp.fulfill()
       }, receiveValue: { _ in })
