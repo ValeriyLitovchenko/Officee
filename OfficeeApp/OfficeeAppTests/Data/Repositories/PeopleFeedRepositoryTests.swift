@@ -88,13 +88,12 @@ final class PeopleFeedRepositoryTests: XCTestCase {
     
     let peopleStorage = PeopleFeedStorageSpy(people: people.map(\.person))
     
-    let etalonReceivedMessagesList = [
-      PeopleFeedStorageSpy.ReceivedMessage.checkStoredPeople,
-      .deleteAllPeople,
-      .savePeople([]),
-      .getPeople(query: request.query)
-    ]
+    let peopleResult = peopleResult(
+      httpClient: httpClient,
+      peopleStorage: peopleStorage,
+      request: request)
     
+    XCTAssertEqual(peopleResult, people.map(\.person).map(\.toDomain))
   }
   
   // MARK: - Helpers

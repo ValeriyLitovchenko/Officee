@@ -24,4 +24,21 @@ enum RoomForTestFactory {
     
     return (room, json)
   }
+  
+  static func makeLocalRoom(id: String) -> (room: LocalRoom, json: [String: Any]) {
+    let room = LocalRoom(
+      id: id,
+      name: "mane_ \(id)",
+      isOccupied: false,
+      maxOccupancy: .zero)
+    
+    let json = [
+      "id": room.id,
+      "name": room.name,
+      "isOccupied": room.isOccupied,
+      "maxOccupancy": room.maxOccupancy
+    ].compactMapValues { $0 }
+    
+    return (room, json)
+  }
 }
