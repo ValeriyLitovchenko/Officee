@@ -75,7 +75,6 @@ final class RoomsFeedRepositoryImpl: RoomsFeedRepository {
     return httpClient.getPublisher(from: request)
       .tryMap(HTTPURLResponseDataMapper.map)
       .tryMap(RoomsFeedResultMapper.map)
-      .retry(2)
       .eraseToAnyPublisher()
   }
   

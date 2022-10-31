@@ -30,8 +30,8 @@ final class GetRoomsUseCaseTests: XCTestCase {
   func test_getListOfTwoRoomsWithoutError() {
     let request = RoomsFeedRequest.refreshRequest
     let rooms = [
-      RoomForTestFactory.makeRoom(id: "1"),
-      RoomForTestFactory.makeRoom(id: "2")
+      RoomForTestFactory.makeRoom(id: "1").room,
+      RoomForTestFactory.makeRoom(id: "2").room
     ]
     
     let receivedRooms = roomsResult(for: request, with: (nil, rooms))

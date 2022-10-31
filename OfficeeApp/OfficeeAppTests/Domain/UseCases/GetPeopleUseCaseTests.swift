@@ -30,8 +30,8 @@ final class GetPeopleUseCaseTests: XCTestCase {
   func test_getListOfTwoPersonsWithoutError() {
     let request = PeopleFeedRequest.refreshRequest
     let people = [
-      PersonForTestFactory.makePerson(id: "1"),
-      PersonForTestFactory.makePerson(id: "2")
+      PersonForTestFactory.makePerson(id: "1").person,
+      PersonForTestFactory.makePerson(id: "2").person
     ]
     
     let receivedPeople = peopleResult(for: request, with: (nil, people))

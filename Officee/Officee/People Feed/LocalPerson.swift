@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct LocalPerson: Identifiable {
+public struct LocalPerson: Identifiable, Equatable {
   public typealias Identifier = String
   public let id: Identifier
   public let firstName: String

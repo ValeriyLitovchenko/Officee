@@ -13,7 +13,7 @@ public struct HTTPURLResponseDataMapper {
   }
   
   public static func map(_ data: Data, from response: HTTPURLResponse) throws -> Data {
-    guard response.isSuccessful, !data.isEmpty else {
+    guard response.isSuccessful else {
       throw Error.invalidData
     }
     

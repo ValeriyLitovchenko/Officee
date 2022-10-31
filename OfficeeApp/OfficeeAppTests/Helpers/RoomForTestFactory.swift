@@ -8,11 +8,20 @@
 import Officee
 
 enum RoomForTestFactory {
-  static func makeRoom(id: String) -> Room {
-    Room(
+  static func makeRoom(id: String) -> (room: Room, json: [String: Any]) {
+    let room = Room(
       id: id,
       name: "mane_ \(id)",
       isOccupied: false,
       maxOccupancy: .zero)
+    
+    let json = [
+      "id": room.id,
+      "name": room.name,
+      "isOccupied": room.isOccupied,
+      "maxOccupancy": room.maxOccupancy
+    ].compactMapValues { $0 }
+    
+    return (room, json)
   }
 }
