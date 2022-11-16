@@ -50,7 +50,6 @@
 		64468BC228F1D6CB000F901B /* BaseTableViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BB228F1D6CB000F901B /* BaseTableViewControllerView.swift */; };
 		64468BC328F1D6CB000F901B /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64468BB328F1D6CB000F901B /* BaseTableViewController.swift */; };
 		6449001428F3636400B52F05 /* PlatformInterfaseSuffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6449001328F3636400B52F05 /* PlatformInterfaseSuffix.swift */; };
-		644C4E22290431A9004AA277 /* URLRequest+HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644C4E21290431A9004AA277 /* URLRequest+HTTPMethod.swift */; };
 		644D1D432905A84E0006AFBF /* URLRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644D1D422905A84E0006AFBF /* URLRequestFactory.swift */; };
 		644D1D452905A8890006AFBF /* URLRequestFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644D1D442905A8890006AFBF /* URLRequestFactoryImpl.swift */; };
 		644D1D492905BF2E0006AFBF /* URLRequestFactory+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644D1D482905BF2E0006AFBF /* URLRequestFactory+API.swift */; };
@@ -74,8 +73,8 @@
 		641DFDD428F17AD900F13AEA /* RoomsFeedResultMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsFeedResultMapper.swift; sourceTree = "<group>"; };
 		641DFDD728F17DB800F13AEA /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		641DFDDD28F182EC00F13AEA /* OfficeeStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OfficeeStore.xcdatamodel; sourceTree = "<group>"; };
-		641DFDDF28F1848900F13AEA /* ManagedPerson+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ManagedPerson+CoreDataClass.swift"; path = "/Users/valeriyl/Desktop/Projects/TechnicalTask/Officee/Officee/Officee/Infrastructure/CoreData/ManagedPerson+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		641DFDE028F1848900F13AEA /* ManagedRoom+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ManagedRoom+CoreDataClass.swift"; path = "/Users/valeriyl/Desktop/Projects/TechnicalTask/Officee/Officee/Officee/Infrastructure/CoreData/ManagedRoom+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		641DFDDF28F1848900F13AEA /* ManagedPerson+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedPerson+CoreDataClass.swift"; sourceTree = "<group>"; };
+		641DFDE028F1848900F13AEA /* ManagedRoom+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedRoom+CoreDataClass.swift"; sourceTree = "<group>"; };
 		641DFDE328F1865700F13AEA /* LocalPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPerson.swift; sourceTree = "<group>"; };
 		641DFDE528F1868E00F13AEA /* LocalRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRoom.swift; sourceTree = "<group>"; };
 		641DFDE728F187D600F13AEA /* ManagedPerson+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedPerson+Operations.swift"; sourceTree = "<group>"; };
@@ -103,7 +102,6 @@
 		64468BB228F1D6CB000F901B /* BaseTableViewControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewControllerView.swift; sourceTree = "<group>"; };
 		64468BB328F1D6CB000F901B /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		6449001328F3636400B52F05 /* PlatformInterfaseSuffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformInterfaseSuffix.swift; sourceTree = "<group>"; };
-		644C4E21290431A9004AA277 /* URLRequest+HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+HTTPMethod.swift"; sourceTree = "<group>"; };
 		644D1D422905A84E0006AFBF /* URLRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactory.swift; sourceTree = "<group>"; };
 		644D1D442905A8890006AFBF /* URLRequestFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestFactoryImpl.swift; sourceTree = "<group>"; };
 		644D1D482905BF2E0006AFBF /* URLRequestFactory+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequestFactory+API.swift"; sourceTree = "<group>"; };
